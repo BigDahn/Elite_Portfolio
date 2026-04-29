@@ -1,23 +1,15 @@
-import React from "react";
 import GridBackground from "./components/GridBackground";
-import { Unbounded } from "next/font/google";
 import { Play, Send } from "lucide-react";
 import Image from "next/image";
 
-const unbounded = Unbounded({
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-});
-
-function page() {
+export default function Page() {
   return (
     <GridBackground>
       <div className="flex flex-col gap-[2em] items-center justify-center  max-w-[872px] max-h-[355px] h-full w-full ">
         <div className="flex flex-col items-center gap-3 justify-center text-center w-full">
           <div>
             <h1
-              className={`${unbounded.className} text-[70px] font-bold leading-[107%] tracking-[-8%] text-white relative`}
+              className="unbounded text-[70px] font-bold leading-[107%] tracking-[-8%] text-white relative"
             >
               A crypto trader that makes you money.
             </h1>
@@ -51,5 +43,3 @@ function page() {
     </GridBackground>
   );
 }
-
-export default page;

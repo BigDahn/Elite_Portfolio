@@ -1,8 +1,9 @@
+import type { Metadata } from "next";
 import { Jost, Unbounded } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 
-export const unbounded = Unbounded({
+const unbounded = Unbounded({
   variable: "--font-unbounded",
   subsets: ["latin"],
   display: "swap",
@@ -16,22 +17,21 @@ const jost = Jost({
   preload: true,
 });
 
-const satoshi = localFont({
-  src: "../assets/fonts/Satoshi-Variable.ttf",
-  variable: "--font-satoshi",
-});
-
-export const metadata = {
+export const metadata: Metadata = {
   title: "Elite Ayomide",
   description:
     "A Crypto Trader with 6 years of experience, helping traders and investors navigate the trading space profitably with information and education.",
 };
 
-export default function RootLayout({ children }) {
+type RootLayoutProps = Readonly<{
+  children: React.ReactNode;
+}>;
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
       lang="en"
-      className={`${unbounded.variable} ${jost.variable} ${satoshi.variable} h-full antialiased`}
+      className={`${unbounded.variable} ${jost.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col max-w-screen overflow-x-hidden">
         <Header />

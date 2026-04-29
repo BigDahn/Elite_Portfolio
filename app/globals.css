@@ -8,9 +8,24 @@
 :root {
     --bg-home: #0d0b1a;
     --grid-line: rgba(80, 70, 140, 0.35);
-        --grid-glow: rgba(100, 60, 200, 0.15);
+    --grid-glow: rgba(100, 60, 200, 0.15);
 }
 
 body {
     background-color: var(--bg);
+}
+
+.unbounded,
+.Unbounded {
+    font-family: var(--font-unbounded), sans-serif;
+}
+
+.jost,
+.Jost {
+    font-family: var(--font-jost), sans-serif;
+}
+
+.satoshi,
+.Satoshi {
+    font-family: "Satoshi", var(--font-jost), sans-serif;
 }

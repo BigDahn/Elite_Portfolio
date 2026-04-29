@@ -1,6 +1,7 @@
-import { Bitcoin, Check, Send, SquareArrowOutUpRight } from "lucide-react";
+import { Check, Send, SquareArrowOutUpRight } from "lucide-react";
 import { Jost, Plus_Jakarta_Sans, Unbounded } from "next/font/google";
 import Image from "next/image";
+import type { ReactNode } from "react";
 import CryptoVec from "./CryptoVec";
 
 const unbounded = Unbounded({
@@ -21,7 +22,11 @@ const jakari = Plus_Jakarta_Sans({
 });
 
 // components/HeroBackground.jsx
-export default function HeroBackground({ children }) {
+type HeroBackgroundProps = {
+  children: ReactNode;
+};
+
+export default function HeroBackground({ children }: HeroBackgroundProps) {
   return (
     <main className="min-h-screen bg-black">
       <div className="relative h-[714px] w-full overflow-hidden bg-[#05060d]">
@@ -370,7 +375,7 @@ export default function HeroBackground({ children }) {
               className={`${jost.className} text-[25px] leading-[120%] tracking-[-4%] font-normal max-w-[464px] text-white`}
             >
               Video testimonials. Portfolio screenshots. Real numbers. The
-              members who got in early are writing the stories — here's a
+              members who got in early are writing the stories — here&apos;s a
               sample.
             </h4>
           </div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ContactUsBtn from "./ContactUs";
 
 function Header() {
   return (
@@ -19,7 +20,7 @@ function Header() {
           <li>Blogs</li>
           <li>Book Consultation</li>
         </ul>
-        <h3>2nd logo</h3>
+        <ContactUsBtn />
       </nav>
     </header>
   );

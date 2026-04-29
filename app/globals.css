@@ -5,6 +5,19 @@
     
 } */
 
+
+@keyframes blink {
+
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+}
+
 :root {
 	--bg-home: #0d0b1a;
 	--grid-line: rgba(80, 70, 140, 0.35);
@@ -29,4 +42,8 @@ body {
 .satoshi,
 .Satoshi {
 	font-family: var(--font-satoshi), var(--font-jost), sans-serif;
+}
+
+@theme {
+	--animate-blink: blink 1s step-end infinite;
 }

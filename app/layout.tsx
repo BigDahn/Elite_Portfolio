@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "./components/Header";
 import { jost, satoshi, unbounded } from "./fonts";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Elite Ayomide",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className="min-h-full flex flex-col max-w-screen overflow-x-hidden">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

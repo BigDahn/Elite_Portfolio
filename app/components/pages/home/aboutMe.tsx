@@ -2,14 +2,17 @@ import Headings from "../../headings"
 import SectionContainer from "../../SectionContainer"
 import { Check, Send } from "lucide-react";
 import Image from "next/image";
+import TypewriterText from "../../Typewriter";
 
 const AboutMe = () => {
   return (
-    <SectionContainer id="aboutMe">
-      <div className="py-5 border-b">
-        <Headings text="About Me" />
+    <SectionContainer id="aboutMe" className="bg-black">
+      <div className="py-5 border-b px-10">
+        <div className="h-19">
+          <Headings text="About Me" textClassName="text-[#D9D9D9]" />
+          <div className="border-b-2 border-gray-200/10 h-15  w-[96%] m-auto " />
+        </div>
         <section className="flex flex-col justify-center w-full m-auto ">
-          <div className="border border-gray-800  w-[96%] m-auto " />
           <div
             className="flex items-center  w-full justify-center"
             style={{ height: "718px" }}
@@ -24,23 +27,15 @@ const AboutMe = () => {
             </div>
             <div className="flex flex-col gap-3">
               <h3
-                className={`unbounded text-[70px] font-bold leading-[107%] tracking-[-8%] text-white`}
-              >
+                className="unbounded uppercase text-[50px] font-bold leading-[113%] tracking-[-11%] text-white">
                 Who is <span className="text-[#F8A308]">Elite ayomide?</span>
               </h3>
-              <div className="h-[80px]">
+              <div className="h-17.5">
                 <h3
-                  className={`unbounded text-[70px] font-bold leading-[107%] tracking-[-8%] text-white `}
+                  className={`unbounded text-[50px] font-bold leading-[107%] tracking-[-8%] text-white `}
                 >
-                  A <span className="text-[#F8A308] relative">Trader.</span>
+                  A <TypewriterText />
                 </h3>
-                <Image
-                  src="/linethrough.png"
-                  alt="line"
-                  width={100}
-                  height={100}
-                  className="w-[2px] h-[60px] relative bottom-[62px]  left-[39.6%]"
-                />
               </div>
               <p className="jost text-[25px] leading-[120%] tracking-[4%] text-gray-500  max-w-200 relative">
                 A Crypto Trader with 6 years of experience, helping traders and
@@ -54,7 +49,7 @@ const AboutMe = () => {
                     <Check />
                   </div>
                   <h4
-                    className="jost.className} text-[25px] leading-[120%] tracking-[4%] text-gray-500"
+                    className="jost text-[25px] leading-[120%] tracking-[4%] text-gray-500"
                   >
                     Trader + Content Creator
                   </h4>

@@ -1,11 +1,16 @@
+"use client"
+
+import { useRouter } from "next/navigation"
 import GridBackground from "./components/GridBackground";
 import { Play, Send } from "lucide-react";
 import Image from "next/image";
+import { motion } from "motion/react"
 
 export default function Page() {
+  const router = useRouter()
   return (
     <GridBackground>
-      <div className="flex flex-col gap-[2em] items-center justify-center  max-w-[872px] max-h-[355px] h-full w-full ">
+      <div className="flex flex-col gap-[2em] items-center justify-center space-y-5  max-w-218 max-h-88.75 h-full w-full ">
         <div className="flex flex-col items-center gap-3 justify-center text-center w-full">
           <div>
             <h1
@@ -18,23 +23,41 @@ export default function Page() {
               alt="Home Arrow"
               width={100}
               height={100}
-              className="w-[370px] absolute bottom-[170px] right-[104px] "
+              className="w-92.5 absolute bottom-48.75 right-26 "
             />
           </div>
-          <h4 className="text-center max-w-[700px] text-[26px] font-[400px] leading-[130%] tracking-[-4%] text-gray-500 mt-5">
+          <h4 className="text-center jost max-w-175 text-[30px] font-[400px] leading-[130%] tracking-[-4%] text-gray-500 mt-5">
             Helping traders and investors navigate the trading space profitably
             with information and education.
           </h4>
         </div>
-        <div className="flex items-center gap-4">
-          <button className="py-[1em] bg-white text-[15px] rounded-full px-[2em] font-semibold flex items-center gap-2">
-            <Send fill="black" className="rotate-[260deg]" />{" "}
-            <h3>view my portfolio</h3>
+        <div className="flex items-center gap-7">
+          <button onClick={() => router.push("/about-me#professional-experiences")} className="py-[1em] bg-white text-[15px] w-65.5 flex items-center text-center rounded-full px-[2em] font-semibold gap-2 h-16.25">
+            <div className="flex items-center justify-center w-full gap-x-3.75">
+              <Send fill="black" className="rotate-290 size-4" />{" "}
+              <h3 className="capitalize jost leading-[130%] tracking-[-2%] text-[15px]">view my portfolio</h3>
+            </div>
           </button>
-          <div className="flex items-center gap-4 text-[14px] text-white font-semibold">
-            <button className="bg-yellow-400 py-2 px-2 rounded-full flex items-center gap-2 ">
-              <Play size={19} fill="white" />
-            </button>
+
+          <div className="flex items-center relative gap-4 text-[14px] text-white font-semibold">
+
+            <div className="flex items-center relative">
+              <motion.div
+                className="absolute inset-0 rounded-full bg-slate-50/30"
+                animate={{
+                  scale: [1, 1.4],
+                  opacity: [1, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeIn",
+                }}
+              />
+              <button className="w-[49.9px] h-[49.9px] justify-center bg-yellow-500 z-20 rounded-full flex items-center gap-2" >
+                <Play size={30} fill="white" />
+              </button>
+            </div>
             <h2>More Results</h2>
           </div>
         </div>

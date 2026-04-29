@@ -12,8 +12,8 @@ function Header() {
           loading="eager"
           style={{ width: "auto", height: "auto" }}
         />
-        <ul className="flex items-center gap-[2em] uppercase text-[14px] border-2 border-transparent px-6 py-[1.4em] rounded-full text-white">
-          <li className="border rounded-4xl py-3 px-4">navbar</li>
+        <ul className="flex items-center gap-[2em] uppercase border-2 border-primary/50 backdrop-blur-3xl text-[11.76px] drop-shadow-2xl jost bg-black/50 px-6 py-[1.4em] rounded-full text-white">
+          <li className="rounded-4xl py-3 px-4">Home</li>
           <li>About Me</li>
           <li>Services</li>
           <li>Blogs</li>

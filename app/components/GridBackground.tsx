@@ -1,25 +1,10 @@
 import { Check, Send, SquareArrowOutUpRight } from "lucide-react";
-import { Jost, Plus_Jakarta_Sans, Unbounded } from "next/font/google";
 import Image from "next/image";
 import type { ReactNode } from "react";
+import { jost, satoshi, unbounded } from "../fonts";
 import CryptoVec from "./CryptoVec";
 
-const unbounded = Unbounded({
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-});
-
-const jost = Jost({
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-});
-const jakari = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
-});
+const jakari = satoshi;
 
 // components/HeroBackground.jsx
 type HeroBackgroundProps = {
@@ -31,8 +16,7 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
     <main className="min-h-screen bg-black">
       <div className="relative h-[714px] w-full overflow-hidden bg-[#05060d]">
         {/* MAIN EXACT BACKGROUND COLORS */}
-        <div
-          className="absolute inset-0"
+        <div className="absolute inset-0"
           style={{
             background: `
             radial-gradient(circle at 50% 8%, rgba(88,56,255,0.95) 0%, rgba(70,45,220,0.85) 18%, rgba(30,25,95,0.72) 42%, rgba(8,9,18,1) 78%),
@@ -51,8 +35,6 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
           `,
           }}
         />
-
-        {/* CENTER SOFT GLOW */}
         <div
           className="absolute inset-0"
           style={{
@@ -74,8 +56,6 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
             opacity: 0.9,
           }}
         />
-
-        {/* CONTENT */}
         <div className="relative  max-w-[872px] flex  m-auto top-[40%] z-10">
           {children}
         </div>
@@ -89,9 +69,7 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
           className="w-full h-full object-cover"
         />
       </div>
-      {/* ABOUT ME SECTION */}
       <section className="px-[5em] py-[3em] max-w-[1800px] m-auto flex flex-col gap-[0.5em]">
-        {/* ABOUT ME SECTION */}
         <div className="flex gap-[3px] items-center ">
           <div className="border border-[#F8A308] w-[60px] h-[7px] bg-[#F8A308]" />
           <h2
@@ -100,7 +78,6 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
             About me
           </h2>
         </div>
-        {/* ABOUT ME CONTENT */}
         <section className="flex flex-col justify-center w-full m-auto ">
           <div className="border border-gray-800  w-[96%] m-auto " />
           <div
@@ -115,16 +92,15 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
                 className=" object-contain"
               />
             </div>
-
             <div className="flex flex-col gap-3">
               <h3
-                className={`${unbounded.className} text-[70px] font-bold leading-[107%] tracking-[-8%] text-white`}
+                className={`unbounded text-[70px] font-bold leading-[107%] tracking-[-8%] text-white`}
               >
                 Who is <span className="text-[#F8A308]">Elite ayomide?</span>
               </h3>
               <div className="h-[80px]">
                 <h3
-                  className={`${unbounded.className} text-[70px] font-bold leading-[107%] tracking-[-8%] text-white `}
+                  className={`unbounded text-[70px] font-bold leading-[107%] tracking-[-8%] text-white `}
                 >
                   A <span className="text-[#F8A308] relative">Trader.</span>
                 </h3>
@@ -245,7 +221,7 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
             <div className="flex items-center gap-[4em]">
               <div className="flex items-center gap-3">
                 <h3
-                  className={`${unbounded.className} text-[70px] font-bold leading-[107%] tracking-[-8%] text-white flex items-center`}
+                  className={`unbounded text-[70px] font-bold leading-[107%] tracking-[-8%] text-white flex items-center`}
                 >
                   538+
                 </h3>
@@ -256,7 +232,7 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
               </div>
               <div className="flex gap-3 items-center">
                 <h3
-                  className={`${unbounded.className} text-[70px] font-bold leading-[107%] tracking-[-8%] text-white flex items-center`}
+                  className={`unbounded text-[70px] font-bold leading-[107%] tracking-[-8%] text-white flex items-center`}
                 >
                   6+
                 </h3>
@@ -266,7 +242,7 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
               </div>
             </div>
             <h6
-              className={`${unbounded.className} text-[25px] leading-[142%] tracking-[-6%] font-normal max-w-[629px] text-white`}
+              className={`unbounded text-[25px] leading-[142%] tracking-[-6%] font-normal max-w-[629px] text-white`}
             >
               Words are futile without evidence. My results are loud, not
               silent. Scroll to discover the magic.
@@ -277,7 +253,7 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
             <div className="w-[320px] border border-gray-400 h-[310px] bg-[#222126] rounded-2xl ">
               <div className="px-[2em] py-3">
                 <h3
-                  className={`${unbounded.className} text-[50px] font-bold leading-[130%] tracking-[-2%] text-white flex items-center`}
+                  className={`unbounded text-[50px] font-bold leading-[130%] tracking-[-2%] text-white flex items-center`}
                 >
                   800+
                 </h3>
@@ -295,7 +271,7 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
             <div className="w-[320px] h-[310px] rounded-2xl border border-gray-700">
               <div className="px-[2em] pt-3 h-[30%] ">
                 <h3
-                  className={`${unbounded.className} text-[50px] font-bold leading-[130%] tracking-[-2%] text-white flex items-center`}
+                  className={`unbounded text-[50px] font-bold leading-[130%] tracking-[-2%] text-white flex items-center`}
                 >
                   50+
                 </h3>
@@ -318,7 +294,7 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
             <div className="border border-gray-400 w-[320px] h-[310px] bg-[url('/student.jpg')] bg-cover bg-center flex flex-col justify-between  rounded-2xl">
               <div className="relative px-[2em] py-3">
                 <h3
-                  className={`${unbounded.className} text-[50px] font-bold leading-[130%] tracking-[-2%] text-white flex items-center`}
+                  className={`unbounded text-[50px] font-bold leading-[130%] tracking-[-2%] text-white flex items-center`}
                 >
                   4000+
                 </h3>
@@ -336,7 +312,7 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
               <div className="absolute inset-0 bg-black/50"></div>
               <div className="relative px-[2em] py-3">
                 <h3
-                  className={`${unbounded.className} text-[50px] font-bold leading-[130%] tracking-[-2%] text-white flex items-center`}
+                  className={`unbounded text-[50px] font-bold leading-[130%] tracking-[-2%] text-white flex items-center`}
                 >
                   70+
                 </h3>
@@ -367,7 +343,7 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
           <div className="border border-b-gray-400" />
           <div className="flex items-start justify-between py-4">
             <h2
-              className={`${unbounded.className} text-[70px] font-bold leading-[107%] tracking-[-8%] text-white flex items-center max-w-[700px] uppercase`}
+              className={`unbounded text-[70px] font-bold leading-[107%] tracking-[-8%] text-white flex items-center max-w-[700px] uppercase`}
             >
               Real numbers. REAL IMPACT
             </h2>
@@ -429,7 +405,7 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
           <div className="border border-b-gray-400" />
           <div className="flex justify-between">
             <h2
-              className={`${unbounded.className} text-[50px] font-bold leading-[112%] tracking-[-11%] text-white flex items-center max-w-[700px] uppercase`}
+              className={`unbounded text-[50px] font-bold leading-[112%] tracking-[-11%] text-white flex items-center max-w-[700px] uppercase`}
             >
               Strategic Services for Lasting Impact.
             </h2>

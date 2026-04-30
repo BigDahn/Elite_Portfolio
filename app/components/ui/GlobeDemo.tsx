@@ -1,14 +1,16 @@
-import Headings from "../../headings"
-import SectionContainer from "../../SectionContainer"
-import { Check, Send } from "lucide-react";
-import Image from "next/image";
-import TypewriterText from "../../Typewriter";
-import { Globe, World } from "@/components/ui/globe";
+"use client";
+import React from "react";
+import { motion } from "motion/react";
+import dynamic from "next/dynamic";
 
-const AboutMe = () => {
+const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
+  ssr: false,
+});
+
+export function GlobeDemo() {
   const globeConfig = {
     pointSize: 4,
-    globeColor: "#000000",
+    globeColor: "#062056",
     showAtmosphere: true,
     atmosphereColor: "#FFFFFF",
     atmosphereAltitude: 0.1,
@@ -28,6 +30,7 @@ const AboutMe = () => {
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
+  const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
   const sampleArcs = [
     {
       order: 1,
@@ -36,7 +39,7 @@ const AboutMe = () => {
       endLat: -22.9068,
       endLng: -43.1729,
       arcAlt: 0.1,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 1,
@@ -45,7 +48,7 @@ const AboutMe = () => {
       endLat: 3.139,
       endLng: 101.6869,
       arcAlt: 0.2,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 1,
@@ -54,7 +57,7 @@ const AboutMe = () => {
       endLat: -1.303396,
       endLng: 36.852443,
       arcAlt: 0.5,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 2,
@@ -63,7 +66,7 @@ const AboutMe = () => {
       endLat: 35.6762,
       endLng: 139.6503,
       arcAlt: 0.2,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 2,
@@ -72,7 +75,7 @@ const AboutMe = () => {
       endLat: 3.139,
       endLng: 101.6869,
       arcAlt: 0.3,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 2,
@@ -81,7 +84,7 @@ const AboutMe = () => {
       endLat: 36.162809,
       endLng: -115.119411,
       arcAlt: 0.3,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 3,
@@ -90,7 +93,7 @@ const AboutMe = () => {
       endLat: 22.3193,
       endLng: 114.1694,
       arcAlt: 0.3,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 3,
@@ -99,7 +102,7 @@ const AboutMe = () => {
       endLat: 40.7128,
       endLng: -74.006,
       arcAlt: 0.3,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 3,
@@ -108,7 +111,7 @@ const AboutMe = () => {
       endLat: 51.5072,
       endLng: -0.1276,
       arcAlt: 0.3,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 4,
@@ -117,7 +120,7 @@ const AboutMe = () => {
       endLat: -15.595412,
       endLng: -56.05918,
       arcAlt: 0.5,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 4,
@@ -126,7 +129,7 @@ const AboutMe = () => {
       endLat: 22.3193,
       endLng: 114.1694,
       arcAlt: 0.7,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 4,
@@ -135,7 +138,7 @@ const AboutMe = () => {
       endLat: 48.8566,
       endLng: -2.3522,
       arcAlt: 0.1,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 5,
@@ -144,7 +147,7 @@ const AboutMe = () => {
       endLat: 51.5072,
       endLng: -0.1276,
       arcAlt: 0.3,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 5,
@@ -153,7 +156,7 @@ const AboutMe = () => {
       endLat: -33.8688,
       endLng: 151.2093,
       arcAlt: 0.2,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 5,
@@ -162,7 +165,7 @@ const AboutMe = () => {
       endLat: 48.8566,
       endLng: -2.3522,
       arcAlt: 0.2,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 6,
@@ -171,7 +174,7 @@ const AboutMe = () => {
       endLat: 1.094136,
       endLng: -63.34546,
       arcAlt: 0.7,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 6,
@@ -180,7 +183,7 @@ const AboutMe = () => {
       endLat: 35.6762,
       endLng: 139.6503,
       arcAlt: 0.1,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 6,
@@ -189,7 +192,7 @@ const AboutMe = () => {
       endLat: 51.5072,
       endLng: -0.1276,
       arcAlt: 0.3,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 7,
@@ -198,7 +201,7 @@ const AboutMe = () => {
       endLat: -15.595412,
       endLng: -56.05918,
       arcAlt: 0.1,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 7,
@@ -207,7 +210,7 @@ const AboutMe = () => {
       endLat: 52.52,
       endLng: 13.405,
       arcAlt: 0.1,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 7,
@@ -216,7 +219,7 @@ const AboutMe = () => {
       endLat: 34.0522,
       endLng: -118.2437,
       arcAlt: 0.2,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 8,
@@ -225,7 +228,7 @@ const AboutMe = () => {
       endLat: -33.936138,
       endLng: 18.436529,
       arcAlt: 0.2,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 8,
@@ -234,7 +237,7 @@ const AboutMe = () => {
       endLat: 52.3676,
       endLng: 4.9041,
       arcAlt: 0.2,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 8,
@@ -243,7 +246,7 @@ const AboutMe = () => {
       endLat: 40.7128,
       endLng: -74.006,
       arcAlt: 0.5,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 9,
@@ -252,7 +255,7 @@ const AboutMe = () => {
       endLat: 34.0522,
       endLng: -118.2437,
       arcAlt: 0.2,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 9,
@@ -261,7 +264,7 @@ const AboutMe = () => {
       endLat: -22.9068,
       endLng: -43.1729,
       arcAlt: 0.7,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 9,
@@ -270,7 +273,7 @@ const AboutMe = () => {
       endLat: -34.6037,
       endLng: -58.3816,
       arcAlt: 0.5,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 10,
@@ -279,7 +282,7 @@ const AboutMe = () => {
       endLat: 28.6139,
       endLng: 77.209,
       arcAlt: 0.7,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 10,
@@ -288,7 +291,7 @@ const AboutMe = () => {
       endLat: 31.2304,
       endLng: 121.4737,
       arcAlt: 0.3,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 10,
@@ -297,7 +300,7 @@ const AboutMe = () => {
       endLat: 52.3676,
       endLng: 4.9041,
       arcAlt: 0.3,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 11,
@@ -306,7 +309,7 @@ const AboutMe = () => {
       endLat: 34.0522,
       endLng: -118.2437,
       arcAlt: 0.2,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 11,
@@ -315,7 +318,7 @@ const AboutMe = () => {
       endLat: 31.2304,
       endLng: 121.4737,
       arcAlt: 0.2,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 11,
@@ -324,7 +327,7 @@ const AboutMe = () => {
       endLat: 1.3521,
       endLng: 103.8198,
       arcAlt: 0.2,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 12,
@@ -333,7 +336,7 @@ const AboutMe = () => {
       endLat: 37.7749,
       endLng: -122.4194,
       arcAlt: 0.1,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 12,
@@ -342,7 +345,7 @@ const AboutMe = () => {
       endLat: 22.3193,
       endLng: 114.1694,
       arcAlt: 0.2,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 12,
@@ -351,7 +354,7 @@ const AboutMe = () => {
       endLat: 34.0522,
       endLng: -118.2437,
       arcAlt: 0.3,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 13,
@@ -360,7 +363,7 @@ const AboutMe = () => {
       endLat: 22.3193,
       endLng: 114.1694,
       arcAlt: 0.3,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 13,
@@ -369,7 +372,7 @@ const AboutMe = () => {
       endLat: 35.6762,
       endLng: 139.6503,
       arcAlt: 0.3,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 13,
@@ -378,7 +381,7 @@ const AboutMe = () => {
       endLat: -34.6037,
       endLng: -58.3816,
       arcAlt: 0.1,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
     {
       order: 14,
@@ -387,120 +390,40 @@ const AboutMe = () => {
       endLat: 21.395643,
       endLng: 39.883798,
       arcAlt: 0.3,
-      color: "#808080",
+      color: colors[Math.floor(Math.random() * (colors.length - 1))],
     },
   ];
 
   return (
-    <SectionContainer id="aboutMe" className="bg-black">
-      <div className="py-5 border-b px-10">
-        <div className="h-19">
-          <Headings text="About Me" textClassName="text-[#D9D9D9]" />
-          <div className="border-b-2 border-gray-200/10 h-15  w-[96%] m-auto " />
+    <div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
+      <div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 20,
+          }}
+          animate={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{
+            duration: 1,
+          }}
+          className="div"
+        >
+          <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
+            We sell soap worldwide
+          </h2>
+          <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
+            This globe is interactive and customizable. Have fun with it, and
+            don&apos;t forget to share it. :)
+          </p>
+        </motion.div>
+        <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
+        <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
+          <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
-        <section className="flex flex-col justify-center w-full m-auto ">
-          <div
-            className="grid grid-cols-[613px_1fr] items-center  w-full justify-center"
-            style={{ height: "718px" }}
-          >
-            <World data={sampleArcs} globeConfig={globeConfig} />
-            <div>
-              <h3
-                className="unbounded uppercase text-[50px] font-bold leading-[113%] tracking-[-11%] text-white">
-                Who is <span className="text-[#F8A308]">Elite ayomide?</span>
-              </h3>
-              <div className="h-17.5">
-                <h3
-                  className={`unbounded text-[50px] font-bold leading-[107%] tracking-[-8%] text-white `}
-                >
-                  A <TypewriterText />
-                </h3>
-              </div>
-              <p className="jost text-[25px] leading-[120%] tracking-[-4%] text-gray-500  max-w-200 relative">
-                A Crypto Trader with 6 years of experience, helping traders and
-                investors navigate the trading space profitably with information
-                and education.
-              </p>
-
-              <div className="grid grid-cols-2 py-[2em] text-[16px] gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
-                    <Check />
-                  </div>
-                  <h4
-                    className="jost text-[25px] leading-[120%] tracking-[4%] text-gray-500"
-                  >
-                    Trader + Content Creator
-                  </h4>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
-                    <Check />
-                  </div>
-                  <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
-                  >
-                    Growth Strategist
-                  </h4>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
-                    <Check />
-                  </div>
-                  <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
-                  >
-                    Community Manager
-                  </h4>
-                  75
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
-                    <Check />
-                  </div>
-                  <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
-                  >
-                    Technical Analyst
-                  </h4>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
-                    <Check />
-                  </div>
-                  <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
-                  >
-                    Market Analysis
-                  </h4>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
-                    <Check />
-                  </div>
-                  <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
-                  >
-                    Trading Mentor
-                  </h4>
-                </div>
-              </div>
-
-              <button className="jost bg-white rounded-full py-[1.3em] px-[2.8em] font-semibold flex items-center gap-3 mt-4 max-w-[250px]">
-                <Send
-                  fill="black"
-                  strokeWidth={1}
-                  size={16}
-                  className="rotate-[280deg]"
-                />{" "}
-                <h3>More About Me</h3>
-              </button>
-            </div>
-          </div>
-        </section>
       </div>
-    </SectionContainer >
-  )
+    </div>
+  );
 }
-
-export default AboutMe

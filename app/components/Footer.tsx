@@ -6,14 +6,10 @@ const Footer = () => {
       {/* MAIN FOOTER GRID */}
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-
-          {/* BRAND SECTION */}
           <div className="space-y-4">
             <p className="text-sm text-gray-300 leading-relaxed">
               A crypto trader that makes you money.
             </p>
-
-            {/* Logo placeholder */}
             <div className="w-10 h-10 flex items-center justify-center border border-white/20 rounded-md text-yellow-400 font-bold">
               A
             </div>

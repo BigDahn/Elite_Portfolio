@@ -1,8 +1,9 @@
 "use client"
 
-import { useRouter } from "next/navigation"
 import SectionContainer from "./components/SectionContainer";
 import HomePageHero from "./components/pages/home/Hero";
+import TrackRecord from "./components/pages/home/TrackRecord";
+import TradingHistory from "./components/pages/home/TradingHistory";
 import AboutMe from "./components/pages/home/aboutMe";
 
 export default function Page() {
@@ -11,6 +12,8 @@ export default function Page() {
     <SectionContainer id="hero">
       <HomePageHero />
       <AboutMe />
+      <TrackRecord />
+      <TradingHistory />
     </SectionContainer>
   );
 }

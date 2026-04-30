@@ -34,7 +34,7 @@ const Services = () => {
             { title: "One-on-One Crypto Mentorship", href: "https://cal.com" },
           ]}
         />
-        <div className="flex justify-center z-50">
+        <div className="flex justify-center relative z-10">
           <ExternalLinkButton text="More of my Services" href="/" className="w-67 py-4 gap-3.75!" textClassName="text-base!" />
         </div>
         <RadialBlur blurClassName="bottom-0" className="absolute -bottom-56" />

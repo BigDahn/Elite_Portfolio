@@ -1,18 +1,16 @@
 import Link from "next/link";
+import Image from "next/image"
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black text-white font-jost">
-      {/* MAIN FOOTER GRID */}
+    <footer className="w-full  text-white font-jost" style={{ background: "url(/footer.png)" }}>
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-          <div className="space-y-4">
+          <div className="space-y-5">
             <p className="text-xl leading-[99%] tracking-[-8%] text-white/60 jost">
               A crypto trader that makes you money.
             </p>
-            <div className="w-10 h-10 flex items-center justify-center border border-white/20 rounded-md text-yellow-400 font-bold">
-              A
-            </div>
+            <Image src="/Ayomide Logo 1.png" alt="logo" width={40} height={40} />
           </div>
           <div className="jost leading-[90%] tracking-[-8%] text-[20px]">
             <h3 className="text-[20px] font-medium mb-4 text-white/50 ">
@@ -58,18 +56,18 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* BOTTOM BAR */}
-      <div className="border-t border-white/10">
-        <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+      <div className="border-t border-white/10 py-5 jost">
+        <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[18px] tracking-[-5%] text-gray-400">
 
           <p>
-            © EliteAymide. All Rights Reserved. Built by WebsiteHub
+            © EliteAyomide. All Rights Reserved. Built by WebsiteHub
           </p>
 
           <div className="flex gap-4">
             <span>Privacy policy</span>
+            <span>|</span>
             <span>Terms and condition</span>
+            <span>|</span>
             <span>Copyright</span>
           </div>
 

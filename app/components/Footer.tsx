@@ -1,9 +1,54 @@
+"use client"
+
 import Link from "next/link";
+import { motion } from "motion/react"
 import Image from "next/image"
+import Ellipse from "@/assets/svgs/Ellipse 2990.svg"
+import ExternalLinkButton from "./ExternalLinkButton";
+import { ArrowUp } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full  text-white font-jost" style={{ background: "url(/footer.png)" }}>
+    <footer className="w-screen overflow-hidden  text-white font-jost" style={{ background: "url(/footer.png)" }}>
+      <div className="py-20 overflow-hidden bg-black">
+        <div className="relative overflow-hidden">
+          <Ellipse />
+
+          <div
+            className="
+      absolute
+      left-1/2
+      top-1/2
+      -translate-x-1/2
+      -translate-y-1/2
+      z-50
+      space-y-5
+    "
+          >
+            <Image className="mx-auto" src="/Frame 2121453894.png" width={80} height={80} alt="" />
+            <p className="text-white unbounded text-[50px] text-center capitalize font-extrabold leading-[100%] tracking-[-0.06em]">
+              Lets start your <br /> trading journey
+            </p>
+
+            <p className="jost leading-[130%] tracking-[-0.02em] w-[577px] text-center text-[25px] text-white/60">
+              Start trading with powerful tools, real-time insights,
+              and a secure platform for better profits
+            </p>
+
+            <ExternalLinkButton
+              text="Get Started Now"
+              href="#"
+              className="mx-auto px-8 text-black"
+            />
+          </div>
+          <motion.button
+            className="absolute right-16 top-64 md:right-24 md:top-64 w-14 h-14 rounded-full bg-[#3E1FE8] text-black flex items-center justify-center text-xl shadow-lg hover:scale-105 transition"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            <ArrowUp color="white" />
+          </motion.button>
+        </div>
+      </div>
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="space-y-5">

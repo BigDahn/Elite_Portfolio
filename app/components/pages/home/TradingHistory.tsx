@@ -1,5 +1,10 @@
 import Headings from "../../headings"
 import SectionContainer from "../../SectionContainer"
+import Image from "next/image"
+
+
+const trades = [
+  "/e1.png", "/e12.png", "/e11.png", "/e10.png", "/e9.png"]
 
 const TradingHistory = () => {
   return (
@@ -20,6 +25,9 @@ const TradingHistory = () => {
               <p className="jost font-normal text-[25px] text-[#FAFAFA]/90 leading-[120%] tracking-[-4%]">Video testimonials. Portfolio screenshots. Real numbers. The members who got in early are writing the stories — here&apos;s a sample.</p>
             </div>
           </div>
+        </div>
+        <div className="grid md:grid-cols-3">
+          {trades.map((trade) => <Image alt={trade} src={trade} fill key={trade} />)}
         </div>
       </div>
     </SectionContainer>

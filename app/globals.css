@@ -23,6 +23,7 @@
 }
 
 :root {
+	--title-size: max(5em, 7.5vw);
 	--bg-home: #0d0b1a;
 	--grid-line: rgba(80, 70, 140, 0.35);
 	--grid-glow: rgba(100, 60, 200, 0.15);

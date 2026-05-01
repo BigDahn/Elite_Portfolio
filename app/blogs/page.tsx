@@ -42,6 +42,7 @@ const Page = () => {
               title="Core Web Vitals in 2026: what they mean"
               description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. "
               date=""
+              href="https://medium.com/@0x5hmuel"
               tags={["fitness", "Volume"]}
             />
           );
@@ -72,13 +73,18 @@ interface BlogPosts {
   date: string;
   tags: string[]
   description: string;
+  href: string;
 }
 
-function BlogCard({ isNew, title, date, tags, description }: BlogPosts) {
+function BlogCard({ isNew, title, date, tags, description, href = "https://medium.com" }: BlogPosts) {
   const [isHovered, setIsHovered] = useState(false);
-  const [play] = useSound("/audio/universfield-computer-mouse-click-352734.mp3");
+  const [play] = useSound("/audio/universfield-computer-mouse-click-352734.mp3", {
+    onend: () => {
+      window.open(href);
+    },
+  });
 
-  return <motion.a href="#" onClick={(e) => {
+  return <motion.a href="https://google.com" onClick={(e) => {
     e.preventDefault()
     play()
   }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="min-h-[calc(var(--title-size)*4)] border-y-white/5 border-y h-32.5 hover:bg-blue-800/10 duration-300 transition-all jost z-30 p-5">

@@ -82,6 +82,7 @@ function BlogCard({ isNew, title, date, tags, description, href = "https://mediu
     onend: () => {
       window.open(href);
     },
+    volume: 0.1
   });
 
   return <motion.a href="https://google.com" onClick={(e) => {

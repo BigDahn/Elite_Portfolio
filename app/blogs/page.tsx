@@ -4,11 +4,10 @@ import Hero from "../components/Hero";
 import { motion } from "motion/react"
 import Link from "next/link";
 import MediumIcon from "@/assets/svgs/medium.svg"
-import { ArrowUpIcon } from "lucide-react";
 import { useState } from "react";
 import HoverArrow from "../components/HoverArrow";
 import FooterArc from "../components/FooterArc";
-
+import useSound from "use-sound";
 const Page = () => {
   return <main className="bg-[#07060f] relative text-white overflow-hidden">
     <Grids />
@@ -77,8 +76,12 @@ interface BlogPosts {
 
 function BlogCard({ isNew, title, date, tags, description }: BlogPosts) {
   const [isHovered, setIsHovered] = useState(false);
+  const [play] = useSound("/audio/universfield-computer-mouse-click-352734.mp3");
 
-  return <motion.a href="" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="min-h-[calc(var(--title-size)*4)] border-y-white/5 border-y h-32.5 hover:bg-blue-800/10 duration-300 transition-all jost z-30 p-5">
+  return <motion.a href="#" onClick={(e) => {
+    e.preventDefault()
+    play()
+  }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} className="min-h-[calc(var(--title-size)*4)] border-y-white/5 border-y h-32.5 hover:bg-blue-800/10 duration-300 transition-all jost z-30 p-5">
     <div className="flex-col justify-between flex gap-[1em] items-start h-full">
       {
         isNew && <div className="bg-black rounded-2xl text-white font-medium w-fit border py-1 px-1 h-[1.5em] flex items-center leading-[10%] text-[10px]">New</div>

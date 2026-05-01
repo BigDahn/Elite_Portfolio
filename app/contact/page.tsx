@@ -35,8 +35,6 @@ export default function ContactPage() {
           <p className="jost font-light leading-[120%] tracking-[-4%] text-2xl">Partner, collaborate, or engage to drive meaningful impact and create lasting value across sectors and communities.</p>
         </div>
       </div>
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-136 bg-[radial-gradient(circle_at_top,rgba(91,35,255,0.65),rgba(7,6,15,0.12)_42%,rgba(7,6,15,0)_72%)]" />
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-size-[100%_4rem,4rem_100%] opacity-20" />
       <section className="relative mx-auto flex w-full max-w-7xl flex-col gap-14 px-6 pb-20 pt-36 md:px-0 lg:gap-16 lg:pt-40">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(360px,0.95fr)] lg:items-end">
           <div className="relative space-y-8 border-l-2 border-[#CC9933] h-full" style={{

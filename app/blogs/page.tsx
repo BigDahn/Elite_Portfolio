@@ -7,6 +7,7 @@ import MediumIcon from "@/assets/svgs/medium.svg"
 import { ArrowUpIcon } from "lucide-react";
 import { useState } from "react";
 import HoverArrow from "../components/HoverArrow";
+import FooterArc from "../components/FooterArc";
 
 const Page = () => {
   return <main className="bg-[#07060f] relative text-white overflow-hidden">
@@ -23,7 +24,7 @@ const Page = () => {
           <h2 className="font-bold text-[50px] text-white unbounded leading-[113%] tracking-[-11%]">Inspire</h2>
         </div>
         <div>
-          <p className="text-right text-white/50 jost font-light leading-[130%] tracking-[-6%] text-[25px]">Here you will find practical articles, current trends and tested strategies that help you build high-performance digital experiences and grow your trading experience.</p>
+          <p className="text-right text-white/50 jost font-light leading-[130%] tracking-[-6%] text-[22px]">Here you will find practical articles, current trends and tested strategies that help you build high-performance digital experiences and grow your trading experience.</p>
         </div>
       </div>
       <div className="pointer-events-none absolute inset-x-0 top-0 h-136 bg-[radial-gradient(circle_at_top,rgba(91,35,255,0.65),rgba(7,6,15,0.12)_42%,rgba(7,6,15,0)_72%)]" />
@@ -47,6 +48,7 @@ const Page = () => {
           );
         })}
       </div>
+      <FooterArc />
     </div>
   </main>
 };

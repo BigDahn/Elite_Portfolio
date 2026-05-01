@@ -1,18 +1,20 @@
-import Image from "next/image";
+"use client"
+
 import Contributions from "../components/pages/about-me/Contributions";
 import Hero from "../components/Hero";
-import ArrowIcon from "@/assets/svgs/arrow.svg"
 import { MoveDownIcon } from "lucide-react";
 import SectionContainer from "../components/SectionContainer";
 import ProfileSection from "../components/pages/about-me/Owner";
 import Experiences from "../components/pages/about-me/Experiences";
+import TrustedPlatforms from "../components/pages/about-me/TrustedPlatforms";
+import FooterArc from "../components/FooterArc";
 
 const Page = () => {
   return (
     <SectionContainer id="about" className="min-h-screen bg-black">
       <div className="px-10">
         <Hero className="h-screen inset-0">
-          <div className="min-h-[700px] space-y-20 flex flex-col relative justify-center items-center boprder-b border-gray-400">
+          <div className="min-h-[700px] space-y-20 flex flex-col relative justify-center items-center border-gray-400">
             <div className="flex flex-col max-w-[1002px] gap-4 justify-center items-center px-4 py-3  text-center">
               <h1 className="unbounded text-white font-semibold text-[70px] capitalize max-w-[850px] leading-[93%] tracking-[-8%] text-center">
                 A Crypto Trader with 6 years of experience
@@ -23,7 +25,13 @@ const Page = () => {
                 best results in the crypto space
               </p>
             </div>
-            <div className="from-white flex flex-col justify-center gap-5 py-[34px] px-[11.5px] bg-clip-text to-blue-900 h-64 flex items-center flex-col w-32 rounded-[50%/50%] border border-gray-400 absolute bottom-[0%]">
+            <div onClick={() => {
+              document
+                .getElementById("contributions")
+                ?.scrollIntoView({
+                  behavior: "smooth",
+                })
+            }} className="from-white cursor-pointer flex flex-col justify-center gap-5 py-[34px] px-[11.5px] bg-clip-text to-blue-900 h-64 flex items-center flex-col w-32 rounded-[50%/50%] border border-gray-400 absolute bottom-[0%]">
               <MoveDownIcon size={25} />
               <h6 className="jost font-[400px] text-[20px] leading-[130%] text-white/20 tracking-[-6%] text-center">
                 Scroll Down
@@ -34,6 +42,8 @@ const Page = () => {
         <Contributions />
         <ProfileSection />
         <Experiences />
+        <TrustedPlatforms />
+        <FooterArc />
       </div>
     </SectionContainer>
   );

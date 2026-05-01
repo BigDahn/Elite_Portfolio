@@ -3,7 +3,7 @@ import FlipLink from "../../FlipLink";
 
 function Contributions() {
   return (
-    <section className="flex max-w-full justify-between py-2">
+    <section id="contributions" className="flex max-w-full justify-between py-2">
       <Image
         src="/abstract2g 1.png"
         alt="ring"

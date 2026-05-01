@@ -1,14 +1,23 @@
 import { SquareArrowOutUpRight } from "lucide-react"
+import Link from "next/link"
+import { clsx } from "clsx"
 
 interface ExternalBtnLink {
   text: string;
+  href: string;
+  className?: string;
+  textClassName?: string
 }
 
-const ExternalLinkButton = ({ text }: ExternalBtnLink) => {
+const ExternalLinkButton = ({ href, text, className, textClassName }: ExternalBtnLink) => {
   return (
-    <button className="min-w-97.5 flex items-center justify-center bg-white gap-5 rounded-[63.18px]">
-      <p className="jost font-semibold text-[20px] leading-[130%] tracking-[-2%]">{text}</p>
-      <SquareArrowOutUpRight size={20} />
+    <button className={clsx("max-w-97.5 h-14 flex items-center justify-center bg-white gap-5 rounded-[63.18px]", className)}>
+      <Link href={href} className="flex items-center justify-center gap-5">
+        <p className={clsx("jost font-semibold text-[20px] leading-[130%] tracking-[-2%]", textClassName)}>
+          {text}
+        </p>
+        <SquareArrowOutUpRight size={20} />
+      </Link>
     </button>
   )
 }

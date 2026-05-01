@@ -16,6 +16,21 @@ export const unbounded = localFont({
   preload: true,
 });
 
+export const jakarta = localFont({
+  src: [
+    { path: "../assets/fonts/PlusJakartaSans-ExtraLight.ttf", weight: "200" },
+    { path: "../assets/fonts/PlusJakartaSans-Light.ttf", weight: "300" },
+    { path: "../assets/fonts/PlusJakartaSans-Regular.ttf", weight: "400" },
+    { path: "../assets/fonts/PlusJakartaSans-Medium.ttf", weight: "500" },
+    { path: "../assets/fonts/PlusJakartaSans-SemiBold.ttf", weight: "600" },
+    { path: "../assets/fonts/PlusJakartaSans-Bold.ttf", weight: "700" },
+    { path: "../assets/fonts/PlusJakartaSans-ExtraBold.ttf", weight: "800" },
+  ],
+  variable: "--font-jakarta",
+  display: "swap",
+  preload: true,
+});
+
 export const jost = localFont({
   src: [
     { path: "../assets/fonts/Jost-ExtraLight.ttf", weight: "200" },

@@ -8,9 +8,9 @@ interface Heading {
 
 const Headings = ({ text, className, textClassName }: Heading) => {
   return (
-    <div>
-      <div className={clsx("h-4 bg-yellow-400 w-8 rounded-none", className)} />
-      <p className={clsx("jost uppercase text-[15px] font-medium leading-[170%] tracking-[30%]", textClassName)}>
+    <div className="flex items-center gap-x-4">
+      <div className={clsx("h-1.5 bg-yellow-400 w-19 rounded-none", className)} />
+      <p className={clsx("jost uppercase text-[16px] font-medium leading-[170%] tracking-[30%]", textClassName)}>
         {text}
       </p>
     </div>

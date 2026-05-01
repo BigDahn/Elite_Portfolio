@@ -1,5 +1,6 @@
 import { ArrowRight, Mail, MapPin, PhoneCall } from "lucide-react";
 import Hero from "../components/Hero";
+import FooterArc from "../components/FooterArc";
 
 const contactDetails = [
   {
@@ -104,6 +105,7 @@ export default function ContactPage() {
             </form>
           </div>
         </div>
+        <FooterArc />
       </section>
     </main>
   );

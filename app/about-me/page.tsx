@@ -5,6 +5,7 @@ import ArrowIcon from "@/assets/svgs/arrow.svg"
 import { MoveDownIcon } from "lucide-react";
 import SectionContainer from "../components/SectionContainer";
 import ProfileSection from "../components/pages/about-me/Owner";
+import Experiences from "../components/pages/about-me/Experiences";
 
 const Page = () => {
   return (
@@ -32,6 +33,7 @@ const Page = () => {
         </Hero>
         <Contributions />
         <ProfileSection />
+        <Experiences />
       </div>
     </SectionContainer>
   );

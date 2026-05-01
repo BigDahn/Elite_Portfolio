@@ -24,9 +24,9 @@ const contactDetails = [
 
 export default function ContactPage() {
   return (
-    <main className="relative overflow-hidden bg-[#07060f] text-white">
+    <main className="relative overflow-hidden bg-black text-white">
       <Hero className="h-[70vh]" />
-      <div className="flex px-10 justify-between">
+      <div className="flex px-10 justify-between bg-black">
         <div className="w-full">
           <h2 className="font-bold text-[50px] text-white unbounded leading-[113%] tracking-[-11%]">Let’s Build the</h2>
           <h2 className="font-bold text-[50px] text-white unbounded leading-[113%] tracking-[-11%]">Future Together.</h2>
@@ -35,7 +35,7 @@ export default function ContactPage() {
           <p className="jost font-light leading-[120%] tracking-[-4%] text-2xl">Partner, collaborate, or engage to drive meaningful impact and create lasting value across sectors and communities.</p>
         </div>
       </div>
-      <section className="relative mx-auto flex w-full max-w-7xl flex-col gap-14 px-6 pb-20 pt-36 md:px-0 lg:gap-16 lg:pt-40">
+      <section className="relative mx-auto flex w-full bg-black max-w-7xl flex-col gap-14 px-6 pb-20 pt-36 md:px-0 lg:gap-16 lg:pt-40">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(360px,0.95fr)] lg:items-end">
           <div className="relative space-y-8 border-l-2 border-[#CC9933] h-full" style={{
             background: "url(/star.jpg)",

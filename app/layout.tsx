@@ -33,7 +33,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         geist.variable,
       )}
     >
-      <body className="min-h-full flex flex-col max-w-screen overflow-x-hidden">
+      <body className="min-h-full flex flex-col max-w-screen overflow-x-hidden bg-black">
         <Header />
         {children}
         <Footer />

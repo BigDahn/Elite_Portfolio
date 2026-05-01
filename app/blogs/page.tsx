@@ -16,7 +16,7 @@ const Page = () => {
       <MediumIcon />
       <p className="">Follow me on Medium</p>
     </Link>
-    <div className="space-y-5">
+    <div className="space-y-5 bg-black">
       <div className="flex px-10 justify-between">
         <div className="w-full">
           <h2 className="font-bold text-[50px] text-white unbounded leading-[113%] tracking-[-11%]">Articles that</h2>

@@ -57,7 +57,7 @@ export default function HomePageHero() {
                 ease: "easeIn",
               }}
             />
-            <button className="md:w-[49.9px] w-[30px] h-[30px] md:h-[49.9px] justify-center bg-yellow-500 z-20 rounded-full flex items-center gap-2">
+            <button className="w-[49.9px] h-[49.9px] justify-center bg-yellow-500 z-20 rounded-full flex items-center gap-2">
               <Play size={30} fill="white" />
             </button>
           </div>

@@ -38,25 +38,24 @@ const records = [
 const TrackRecord = () => {
   return (
     <SectionContainer className="bg-black" id="track-record">
-      <div className="px-10 py-5 space-y-32">
-        <div className="h-19 space-y-4">
+      <div className="px-10 py-4 md:py-[3em] flex flex-col gap-[11em] md:gap-0  space-y-20">
+        <div className="h-19 md:space-y-4">
           <Headings
-            className="text-white text-[20px]"
             textClassName="text-white"
             text="Track Record At A Glance"
           />
-          <div className="flex flex-col md:grid md:grid-cols-2 gap-x-8 items-center w-full">
-            <div className="text-white flex items-center justify-between">
+          <div className="flex flex-col md:flex md:flex-row py-3 gap-y-4 gap-x-8 items-start md:items-center w-full md:justify-between">
+            <div className="text-white flex flex-col md:flex-row gap-3 md:gap-0 items-start md:items-center md:gap-[15em]">
               <div className="flex items-center gap-x-3">
-                <h3 className="unbounded leading-[110%] text-[#D9D9D9] tracking-[-11%] text-[50px] font-extrabold">
+                <h3 className="unbounded leading-[113%] text-[#D9D9D9] tracking-[-11%] text-[26px] md:text-[50px] font-extrabold">
                   538+
                 </h3>
-                <small className="satoshi text-base text-[#fafafa]/50">
+                <small className="satoshi text-base text-[#fafafa]/50 w-full  md:max-w-[130px]">
                   Crypto Projects Completed
                 </small>
               </div>
               <div className="flex items-center gap-x-3">
-                <h3 className="unbounded leading-[110%] text-[#D9D9D9] tracking-[-11%] text-[50px] font-extrabold">
+                <h3 className="unbounded leading-[113%] text-[#D9D9D9] tracking-[-11%] text-[26px] md:text-[50px] font-extrabold">
                   6+
                 </h3>
                 <small className="satoshi text-base text-[#fafafa]/50">
@@ -64,16 +63,16 @@ const TrackRecord = () => {
                 </small>
               </div>
             </div>
-            <div className="">
+            <div className="max-w-[629px]">
               <p className="unbounded text-[25px] text-[#FAFAFA]/90 leading-[142%] tracking-[-6%]">
                 Words are futile without evidence. My results are loud, not
                 silent. Scroll to discover the magic.
               </p>
             </div>
           </div>
-          <hr className="border-t h-1.5 border-slate-50/10" />
+          <hr className="md:border-t md:h-1.5 md:border-slate-50/10  " />
         </div>
-        <div className="grid lg:grid-cols-4 items-center justify-between">
+        <div className="grid gap-5 py-2  md:py-[4em] lg:grid-cols-4 items-center justify-between">
           {records.map((record) => (
             <RecordCard key={record.title} {...record} />
           ))}

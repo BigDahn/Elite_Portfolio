@@ -392,12 +392,12 @@ const AboutMe = () => {
 
   return (
     <SectionContainer id="aboutMe" className="bg-black">
-      <div className="py-20 px-10">
-        <div className="h-19">
+      <div className=" py-6 md:py-20 px-10">
+        <div className="md:h-19">
           <Headings text="About Me" textClassName="text-[#D9D9D9]" />
           <div className="border-b-2 border-gray-200/10 h-15  w-[96%] m-auto " />
         </div>
-        <section className="flex flex-col justify-center w-full m-auto ">
+        <section className="flex flex-col justify-center w-full m-auto py-4  ">
           <div className=" flex flex-col md:grid  md:grid-cols-[613px_1fr] items-center  w-full justify-center h-[900px] md:h-[720px] ">
             <World data={sampleArcs} globeConfig={globeConfig} />
             <div className="order-first md:order-last">

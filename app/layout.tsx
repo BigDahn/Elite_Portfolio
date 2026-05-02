@@ -5,7 +5,6 @@ import { jakarta, jost, satoshi, unbounded } from "./fonts";
 import Footer from "./components/Footer";
 import { cn } from "@/lib/utils";
 
-
 export const metadata: Metadata = {
   title: "Elite Ayomide",
   description:
@@ -30,7 +29,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         "font-sans",
       )}
     >
-      <body className="min-h-full flex flex-col max-w-screen overflow-x-hidden bg-black">
+      <body className="min-h-full flex flex-col max-w-[800px] md:max-w-screen overflow-x-hidden bg-black">
         <Header />
         {children}
         <Footer />

@@ -20,7 +20,7 @@ function Header() {
 
   return (
     <header className="absolute top-0 left-0 right-0 z-9999 w-full bg-transparent">
-      <nav className="flex justify-between max-w-450 px-[3em] py-[3em] items-center   mx-auto">
+      <nav className="flex justify-between max-w-450 px-[3em] py-[2em] items-center   mx-auto">
         <Image
           alt="logo"
           src="/Ayomide Logo 1.png"
@@ -29,7 +29,7 @@ function Header() {
           loading="eager"
           style={{ width: "auto", height: "auto" }}
         />
-        <ul className="flex items-center gap-[2em] uppercase border-2 border-black/10 backdrop-blur-3xl text-[11.76px] drop-shadow-2xl jost bg-black/50 px-6 py-[2.4em] rounded-full text-white">
+        <ul className="flex items-center gap-[2em] uppercase border-2 border-black/10 backdrop-blur-3xl text-[11.76px] drop-shadow-2xl jost bg-black/50 px-6 py-[1.4em] rounded-full text-white">
           {navItems.map((item) => {
             const activePaths = [item.href, ...(item.aliases ?? [])];
             const isActive = item.exact

@@ -7,7 +7,8 @@ import MediumIcon from "@/assets/svgs/medium.svg";
 import { useState } from "react";
 import HoverArrow from "../components/HoverArrow";
 import FooterArc from "../components/FooterArc";
-//import useSound from "use-sound";
+import useSound from "use-sound";
+
 
 const Page = () => {
   return (
@@ -70,21 +71,41 @@ const Page = () => {
         </div>
         <FooterArc />
       </div>
-    </main>
-  );
+      <div className="grid grid-cols-4 pt-0">
+        {Array.from({ length: 8 }).map((_, index) => {
+          if (index % 4 === 0) {
+            return <div key={index} className="border-y border-y-white/5 min-h-[calc(var(--title-size)*4)]" />;
+          }
+
+          return (
+            <BlogCard
+              key={index}
+              isNew={true}
+              title="Core Web Vitals in 2026: what they mean"
+              description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. "
+              date=""
+              href="https://medium.com/@0x5hmuel"
+              tags={["fitness", "Volume"]}
+            />
+          );
+        })}
+      </div>
+      <FooterArc />
+    </div>
+  </main>
 };
 
 export default Page;
 
 function Grids() {
-  return (
-    <div className="absolute inset-0 min-h-screen w-screen grid grid-cols-4">
-      <div className="border-x border-white/5" />
-      <div className="border-x border-white/5" />
-      <div className="border-x border-white/5" />
-      <div className="border-x border-white/5" />
-    </div>
-  );
+
+  return <div className="absolute z-30 inset-0 min-h-screen w-screen grid grid-cols-4">
+    <div className="border-x border-white/5" />
+    <div className="border-x border-white/5" />
+    <div className="border-x border-white/5" />
+    <div className="border-x border-white/5" />
+  </div>
+
 }
 
 interface BlogPosts {

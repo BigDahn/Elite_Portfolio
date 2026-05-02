@@ -1,9 +1,8 @@
 import Headings from "../../headings"
 import SectionContainer from "../../SectionContainer"
 import { Check, Send } from "lucide-react";
-import Image from "next/image";
 import TypewriterText from "../../Typewriter";
-import { Globe, World } from "@/components/ui/globe";
+import { World } from "@/components/ui/globe";
 
 const AboutMe = () => {
   const globeConfig = {
@@ -393,7 +392,7 @@ const AboutMe = () => {
 
   return (
     <SectionContainer id="aboutMe" className="bg-black">
-      <div className="py-5 border-b px-10">
+      <div className="py-20 px-10">
         <div className="h-19">
           <Headings text="About Me" textClassName="text-[#D9D9D9]" />
           <div className="border-b-2 border-gray-200/10 h-15  w-[96%] m-auto " />

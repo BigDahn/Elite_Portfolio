@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "motion/react";
 import { cn } from "@/lib/utils";
 
@@ -11,16 +11,13 @@ type RadialBlurProps = {
   animate?: boolean;
 };
 
-const RadialBlur = ({
+const AnimatedRadialBlur = ({
   className,
   blurClassName,
   followCursor = false,
   animate = false,
 }: RadialBlurProps) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  
-  // Initialize values
-  const mouseX = useMotionValue(0);
+  const mouseX = useMotionValue(typeof window !== "undefined" ? window.innerWidth / 2 : 0);
   const mouseY = useMotionValue(0);
 
   const springConfig = { stiffness: 50, damping: 20 };
@@ -28,49 +25,19 @@ const RadialBlur = ({
   const y = useSpring(mouseY, springConfig);
 
   useEffect(() => {
-    const parent = containerRef.current?.parentElement;
-    if (!parent) return;
-
-    const updatePosition = () => {
-      const rect = parent.getBoundingClientRect();
-      if (!followCursor) {
-        mouseX.set(0); // This won't be used since we toggle styles
-        mouseY.set(0);
-        return;
-      }
-      // Initial position: top center of parent
-      mouseX.set(rect.width / 2);
-      mouseY.set(0);
-    };
-
-    updatePosition();
-    
     if (!followCursor) return;
 
-    const handleMouseMove = (e: MouseEvent) => {
-      const rect = parent.getBoundingClientRect();
-      
-      // We only update if mouse is within parent bounds
-      // to fulfill "only follow the cursor in it's own container"
-      const isInside = 
-        e.clientX >= rect.left && 
-        e.clientX <= rect.right && 
-        e.clientY >= rect.top && 
-        e.clientY <= rect.bottom;
+    // Set initial position to top center immediately on mount/enable
+    mouseX.set(window.innerWidth / 2);
+    mouseY.set(0);
 
-      if (isInside) {
-        mouseX.set(e.clientX - rect.left);
-        mouseY.set(e.clientY - rect.top);
-      }
+    const handleMouseMove = (e: MouseEvent) => {
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
     };
 
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
-    window.addEventListener("resize", updatePosition);
-    
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("resize", updatePosition);
-    };
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [followCursor, mouseX, mouseY]);
 
   const animationProps = animate
@@ -90,12 +57,11 @@ const RadialBlur = ({
 
   return (
     <motion.div
-      ref={containerRef}
       {...animationProps}
       style={
         followCursor
           ? {
-            position: "absolute",
+            position: "fixed",
             top: 0,
             left: 0,
             x: x,
@@ -109,13 +75,13 @@ const RadialBlur = ({
       className={cn(
         "pointer-events-none",
         !followCursor && "absolute -top-[150px] left-1/2 -translate-x-1/2",
-        "h-[350px] w-[700px] rounded-full opacity-90 blur-[120px]",
+        "h-[1000px] w-[900px] rounded-full opacity-90 blur-[1px]",
         className
       )}
     >
       <div
         className={cn(
-          "absolute left-1/2 h-[350px] w-[700px] -translate-x-1/2 rounded-full opacity-90 blur-[120px]",
+          "absolute left-1/2 h-[500px] w-[700px] -translate-x-1/2 rounded-full opacity-90 blur-[120px]",
           blurClassName
         )}
         style={{
@@ -132,4 +98,4 @@ const RadialBlur = ({
   );
 };
 
-export default RadialBlur;
+export default AnimatedRadialBlur;

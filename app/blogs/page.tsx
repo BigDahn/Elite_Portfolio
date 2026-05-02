@@ -14,7 +14,7 @@ const Page = () => {
   return (
     <main className="bg-black relative text-white overflow-hidden">
       <Grids />
-      <Hero className="h-[70vh] " />
+      <Hero followCursor={true} animate={true} className="h-[70vh] " />
       <Link
         href="https://medium.com/@0x5hmuel"
         target="_blank"

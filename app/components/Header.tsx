@@ -20,7 +20,7 @@ function Header() {
 
   return (
     <header className="absolute top-0 left-0 right-0 z-9999 w-full bg-transparent">
-      <nav className="flex justify-between max-w-450 px-[3em] py-[2em] items-center   mx-auto">
+      <nav className="flex justify-between max-w-450 px-[3em] py-[3em] items-center   mx-auto">
         <Image
           alt="logo"
           src="/Ayomide Logo 1.png"

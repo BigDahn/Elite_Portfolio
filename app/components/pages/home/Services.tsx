@@ -3,11 +3,15 @@ import Headings from "../../headings"
 import RadialBlur from "../../RadialBlur"
 import SectionContainer from "../../SectionContainer"
 import ServiceList from "./ServicesList"
+import Looper from "@/assets/svgs/Looper-3.svg"
 
 const Services = () => {
   return (
     <SectionContainer id="my-services" className="bg-black">
       <div className="h-full px-10 py-14 overflow-hidden space-y-14 relative">
+        <div className="absolute right-0 -top-10">
+          <Looper />
+        </div>
         <div className="pb-12">
           <Headings className="bg-white" text="Services" textClassName="text-white" />
         </div>

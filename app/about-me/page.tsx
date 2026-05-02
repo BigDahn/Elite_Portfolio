@@ -1,5 +1,7 @@
-import Image from "next/image";
+"use client"
+
 import Contributions from "../components/pages/about-me/Contributions";
+import { motion } from "motion/react"
 import Hero from "../components/Hero";
 import { MoveDownIcon } from "lucide-react";
 import SectionContainer from "../components/SectionContainer";
@@ -11,7 +13,7 @@ const Page = () => {
     <SectionContainer id="about" className="min-h-screen bg-black">
       <div className="px-10">
         <Hero className="h-screen">
-          <div className="min-h-[700px] space-y-20 flex flex-col relative justify-center items-center border-b border-gray-400">
+          <div className="min-h-[700px] space-y-20 flex flex-col relative justify-center items-center">
             <div className="flex flex-col max-w-[1002px] gap-4 justify-center items-center px-4 py-3  text-center">
               <h1 className="unbounded text-white font-semibold text-[70px] capitalize max-w-[850px] leading-[93%] tracking-[-8%] text-center">
                 A Crypto Trader with 6 years of experience
@@ -22,12 +24,22 @@ const Page = () => {
                 achieve the best results in the crypto space
               </p>
             </div>
-            <div className="from-white flex flex-col justify-center gap-5 py-[34px] px-[11.5px] bg-clip-text to-blue-900 h-64 flex items-center flex-col w-32 rounded-[50%/50%] border border-gray-400 absolute bottom-[0%]">
-              <MoveDownIcon size={25} />
-              <h6 className="jost font-[400px] text-[20px] leading-[130%] text-white/20 tracking-[-6%] text-center">
+            <motion.div
+              className="flex flex-col justify-center gap-5 py-[34px] px-[11.5px] h-64 items-center w-32 rounded-[50%/50%] border border-gray-400 absolute bottom-[0%]"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              <motion.div
+                animate={{ y: [0, 6, 0] }}
+                transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <MoveDownIcon size={25} />
+              </motion.div>
+              <h6 className="jost font-normal text-[20px] leading-[130%] text-white/20 tracking-[-0.06em] text-center">
                 Scroll Down
               </h6>
-            </div>
+            </motion.div>
           </div>
         </Hero>
         <Contributions />

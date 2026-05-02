@@ -13,7 +13,7 @@ import AboutMe from "./components/pages/home/aboutMe";
 export default function Page() {
   return (
     <SectionContainer id="hero">
-      <Hero className="min-h-screen flex items-center flex-col justify-center">
+      <Hero animate={true} followCursor={false} className="overflow-hidden min-h-screen flex items-center flex-col justify-center relative">
         <HomePageHero />
       </Hero>
       <div className="min-w-screen z-50">

@@ -27,7 +27,7 @@ export default function ContactPage() {
   return (
     <main className="relative overflow-hidden bg-black text-white">
       <Hero className="h-[70vh]" />
-      <div className="flex px-10 justify-between bg-black">
+      <div className="flex px-10 justify-between bg-transparent">
         <div className="w-full">
           <h2 className="font-bold text-[50px] text-white unbounded leading-[113%] tracking-[-11%]">Let’s Build the</h2>
           <h2 className="font-bold text-[50px] text-white unbounded leading-[113%] tracking-[-11%]">Future Together.</h2>

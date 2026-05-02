@@ -1,5 +1,5 @@
-import Headings from "../../headings"
-import SectionContainer from "../../SectionContainer"
+import Headings from "../../headings";
+import SectionContainer from "../../SectionContainer";
 import { Check, Send } from "lucide-react";
 import TypewriterText from "../../Typewriter";
 import { World } from "@/components/ui/globe";
@@ -398,37 +398,31 @@ const AboutMe = () => {
           <div className="border-b-2 border-gray-200/10 h-15  w-[96%] m-auto " />
         </div>
         <section className="flex flex-col justify-center w-full m-auto ">
-          <div
-            className="grid grid-cols-[613px_1fr] items-center  w-full justify-center"
-            style={{ height: "718px" }}
-          >
+          <div className="grid grid-rows-[617px_1fr] md:grid-cols-[613px_1fr] items-center  w-full justify-center h-[900px] md:h-[720px] ">
             <World data={sampleArcs} globeConfig={globeConfig} />
-            <div>
-              <h3
-                className="unbounded uppercase text-[50px] font-bold leading-[113%] tracking-[-11%] text-white">
+            <div className="order-first md:order-last">
+              <h3 className="unbounded uppercase text-[30px] md:text-[50px] font-bold leading-[113%] tracking-[-11%] text-white">
                 Who is <span className="text-[#F8A308]">Elite ayomide?</span>
               </h3>
               <div className="h-17.5">
                 <h3
-                  className={`unbounded text-[50px] font-bold leading-[107%] tracking-[-8%] text-white `}
+                  className={`unbounded text-[30px] md:text-[50px] font-bold leading-[107%] tracking-[-8%] text-white `}
                 >
                   A <TypewriterText />
                 </h3>
               </div>
-              <p className="jost text-[25px] leading-[120%] tracking-[-4%] text-gray-500  max-w-200 relative">
+              <p className="jost text-[16px] md:text-[25px] leading-[120%] tracking-[-4%] text-gray-500  max-w-200 relative">
                 A Crypto Trader with 6 years of experience, helping traders and
                 investors navigate the trading space profitably with information
                 and education.
               </p>
 
-              <div className="grid grid-cols-2 py-[2em] text-[16px] gap-3">
+              <div className="grid md:grid-cols-2 py-[2em] text-[10px] md:text-[16px] gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
+                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
                     <Check />
                   </div>
-                  <h4
-                    className="jost text-[25px] leading-[120%] tracking-[4%] text-gray-500"
-                  >
+                  <h4 className="jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500">
                     Trader + Content Creator
                   </h4>
                 </div>
@@ -498,8 +492,8 @@ const AboutMe = () => {
           </div>
         </section>
       </div>
-    </SectionContainer >
-  )
-}
+    </SectionContainer>
+  );
+};
 
-export default AboutMe
+export default AboutMe;

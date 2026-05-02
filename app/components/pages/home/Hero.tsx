@@ -16,7 +16,7 @@ export default function HomePageHero() {
           <h1 className="unbounded text-[30px] md:text-[70px] font-bold leading-[107%] tracking-[-8%] text-white relative">
             A crypto trader that makes you money.
           </h1>
-          <div className="z-50 absolute right-24">
+          <div className="z-50 absolute right-10 md:right-24">
             <AnimatedLine
               duration={2}
               strokeWidth={1.5}
@@ -25,15 +25,15 @@ export default function HomePageHero() {
             />
           </div>
         </div>
-        <h4 className="text-center jost max-w-175 text-[30px] font-[400px] leading-[130%] tracking-[-4%] text-gray-500 mt-5">
+        <h4 className="text-center jost max-w-[298px] md:max-w-175 text-[15px] md:text-[30px] font-[400px] leading-[130%] tracking-[-4%] text-gray-500 mt-5">
           Helping traders and investors navigate the trading space profitably
           with information and education.
         </h4>
       </div>
-      <div className="flex items-center gap-7 z-20">
+      <div className="flex flex-col md:flex-row items-center gap-7 z-20">
         <button
           onClick={() => router.push("/about-me#professional-experiences")}
-          className="py-[1em] bg-white text-[15px] w-65.5 flex items-center text-center rounded-full px-[2em] font-semibold gap-2 h-16.25"
+          className=" py-[0.5em] md:py-[1em] order-last md:order-first bg-white text-[15px] w-[356px] md:w-65.5 flex items-center text-center rounded-full px-[2em] font-semibold gap-2 h-16.25"
         >
           <div className="flex items-center justify-center w-full gap-x-3.75">
             <Send fill="black" className="rotate-290 size-4" />{" "}
@@ -57,7 +57,7 @@ export default function HomePageHero() {
                 ease: "easeIn",
               }}
             />
-            <button className="w-[49.9px] h-[49.9px] justify-center bg-yellow-500 z-20 rounded-full flex items-center gap-2">
+            <button className="md:w-[49.9px] w-[30px] h-[30px] md:h-[49.9px] justify-center bg-yellow-500 z-20 rounded-full flex items-center gap-2">
               <Play size={30} fill="white" />
             </button>
           </div>

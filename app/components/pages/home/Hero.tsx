@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 import { Play, Send } from "lucide-react";
 import Image from "next/image";
 import { motion } from "motion/react";
-import GridBackground from "../../GridBackground";
 import AnimatedLine from "../../AnimatedBrush";
 
 export default function HomePageHero() {

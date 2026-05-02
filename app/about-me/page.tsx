@@ -1,11 +1,10 @@
 import Image from "next/image";
 import Contributions from "../components/pages/about-me/Contributions";
 import Hero from "../components/Hero";
-import ArrowIcon from "@/assets/svgs/arrow.svg";
 import { MoveDownIcon } from "lucide-react";
 import SectionContainer from "../components/SectionContainer";
 import ProfileSection from "../components/pages/about-me/Owner";
-import Experience from "../components/pages/about-me/Experience";
+import Experiences from "../components/pages/about-me/Experiences";
 
 const Page = () => {
   return (
@@ -33,7 +32,7 @@ const Page = () => {
         </Hero>
         <Contributions />
         <ProfileSection />
-        <Experience />
+        <Experiences />
       </div>
     </SectionContainer>
   );

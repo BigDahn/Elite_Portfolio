@@ -12,7 +12,7 @@ import useSound from "use-sound";
 
 const Page = () => {
   return (
-    <main className="bg-[#07060f] relative text-white overflow-hidden">
+    <main className="bg-black relative text-white overflow-hidden">
       <Grids />
       <Hero className="h-[70vh] " />
       <Link
@@ -42,9 +42,6 @@ const Page = () => {
             </p>
           </div>
         </div>
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-136 bg-[radial-gradient(circle_at_top,rgba(91,35,255,0.65),rgba(7,6,15,0.12)_42%,rgba(7,6,15,0)_72%)]" />
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_bottom,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-size-[100%_4rem,4rem_100%] opacity-20" />
-
         <div className="grid grid-cols-4 pt-0">
           {Array.from({ length: 8 }).map((_, index) => {
             if (index % 4 === 0) {
@@ -66,34 +63,14 @@ const Page = () => {
                 href="https://medium.com/@0x5hmuel"
                 tags={["fitness", "Volume"]}
               />
-            );
+            )
           })}
         </div>
         <FooterArc />
       </div>
-      <div className="grid grid-cols-4 pt-0">
-        {Array.from({ length: 8 }).map((_, index) => {
-          if (index % 4 === 0) {
-            return <div key={index} className="border-y border-y-white/5 min-h-[calc(var(--title-size)*4)]" />;
-          }
-
-          return (
-            <BlogCard
-              key={index}
-              isNew={true}
-              title="Core Web Vitals in 2026: what they mean"
-              description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. "
-              date=""
-              href="https://medium.com/@0x5hmuel"
-              tags={["fitness", "Volume"]}
-            />
-          );
-        })}
-      </div>
-      <FooterArc />
-    </div>
-  </main>
-};
+    </main>
+  )
+}
 
 export default Page;
 

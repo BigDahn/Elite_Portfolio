@@ -8,7 +8,7 @@ import Image from "next/image"
 
 const FooterArc = () => {
   return (
-    <div className="relative overflow-hidden pt-20">
+    <div className="relative overflow-hidden pt-20 z-40">
       <Ellipse className="w-full" />
 
       <div

@@ -398,7 +398,7 @@ const AboutMe = () => {
           <div className="border-b-2 border-gray-200/10 h-15  w-[96%] m-auto " />
         </div>
         <section className="flex flex-col justify-center w-full m-auto ">
-          <div className="grid grid-rows-[617px_1fr] md:grid-cols-[613px_1fr] items-center  w-full justify-center h-[900px] md:h-[720px] ">
+          <div className=" flex flex-col md:grid  md:grid-cols-[613px_1fr] items-center  w-full justify-center h-[900px] md:h-[720px] ">
             <World data={sampleArcs} globeConfig={globeConfig} />
             <div className="order-first md:order-last">
               <h3 className="unbounded uppercase text-[30px] md:text-[50px] font-bold leading-[113%] tracking-[-11%] text-white">
@@ -427,59 +427,59 @@ const AboutMe = () => {
                   </h4>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
+                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
                     <Check />
                   </div>
                   <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
+                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
                   >
                     Growth Strategist
                   </h4>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
+                  <div className="bg-[#F8A308]  h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
                     <Check />
                   </div>
                   <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
+                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
                   >
                     Community Manager
                   </h4>
                   75
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
+                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
                     <Check />
                   </div>
                   <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
+                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
                   >
                     Technical Analyst
                   </h4>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
+                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
                     <Check />
                   </div>
                   <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
+                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
                   >
                     Market Analysis
                   </h4>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
+                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
                     <Check />
                   </div>
                   <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
+                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
                   >
                     Trading Mentor
                   </h4>
                 </div>
               </div>
 
-              <button className="jost bg-white rounded-full py-[1.3em] px-[2.8em] font-semibold flex items-center gap-3 mt-4 max-w-[250px]">
+              <button className="jost bg-white rounded-full py-[1.3em] flex items-center justify-center px-[2.8em] font-semibold flex items-center gap-3 mt-4 w-full md:max-w-[250px]">
                 <Send
                   fill="black"
                   strokeWidth={1}

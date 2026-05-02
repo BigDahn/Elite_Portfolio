@@ -83,7 +83,7 @@ const RadialBlur = ({
       transition: {
         duration: 8,
         repeat: Infinity,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     }
     : {};

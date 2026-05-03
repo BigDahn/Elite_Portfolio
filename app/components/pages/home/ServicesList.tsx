@@ -65,7 +65,7 @@ const ServiceRow = ({
 
   return (
     <div
-      className={`h-50 group flex flex-col md:flex-row items-center gap-4 md:gap-3 justify-between px-6 py-5 border-b border-white/10 cursor-default transition-colors duration-300 ${
+      className={`h-50 group flex flex-col w-[100%] md:flex-row  items-center md:items-start  gap-4 md:gap-3 justify-between px-6 py-5 border-b border-white/10 cursor-default transition-colors duration-300 ${
         active ? "bg-white/5" : "bg-transparent"
       }`}
       onMouseEnter={() => {
@@ -74,8 +74,8 @@ const ServiceRow = ({
       }}
       onMouseLeave={() => setActive(false)}
     >
-      <div className="flex items-start  w-full gap-3 md:gap-5">
-        <span className="text-white/30 font-extrabold w-[20px] capitalize jakarta  mt-1 select-none">
+      <div className="flex items-start w-full gap-3  md:gap-5">
+        <span className="text-white/30 font-extrabold w-[20px]  capitalize jakarta  mt-1 select-none">
           {String(index).padStart(2, "0")}
         </span>
         <div className="flex flex-col gap-3  md:gap-1">
@@ -91,7 +91,7 @@ const ServiceRow = ({
       </div>
       {href && (
         <div
-          className={`transition-opacity duration-300 w-full ${
+          className={`transition-opacity duration-300  justify-end flex w-full ${
             active ? "opacity-100" : "opacity-0"
           }`}
         >

@@ -5,7 +5,6 @@ import { motion } from "motion/react";
 import ProfileImage from "@/assets/images/profile_image.png";
 import Image from "next/image";
 
-
 const tabs = ["THE START", "THE GRIND", "THE WORK", "THE PROOF"] as const;
 type Tab = (typeof tabs)[number];
 
@@ -46,29 +45,28 @@ export default function ProfileSection() {
   });
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-between overflow-hidden px-4 py-12">
-      <div className="relative z-10 w-full h-[670px] flex p-17.5 flex-col md:flex-row items-stretch gap-10 md:gap-16">
+    <section className="relative max-w-[1440px] min-h-[811px]  mx-auto flex flex-col md:flex-row items-center justify-center  md:justify-between overflow-hidden md:px-4 py-12">
+      <div className="relative z-10 w-full h-[670px] flex md:p-17.5 flex-col md:flex-row items-stretch gap-10 md:gap-16 justify-between">
         <div className="flex-shrink-0 w-full md:h-[610px] md:w-[340px] relative">
-          <div className="relative w-full rounded-[24px] overflow-hidden">
+          <div className="relative w-[355px] md:w-[509px] mx-auto rounded-[24px] overflow-hidden">
             <Image
               src={ProfileImage}
               alt="Elite Ayomide"
-              width={509}
-              height={671}
-              className="object-contain h-full w-full"
+              className="object-contain h-full w-full "
             />
           </div>
         </div>
         <div className="flex-1 flex flex-col max-w-[660px]">
-          <nav className="flex items-center gap-6 border-b border-white/10 mb-8 justify-evenly w-fit">
+          <nav className="flex flex-col md:flex-row items-center gap-6 border-b border-white/10 mb-8 justify-evenly w-fit">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`unbounded leading-[139%] tracking-[-1%] relative pb-3 text-[18px] p-3 font-semibold transition-colors duration-200 whitespace-nowrap ${activeTab === tab
-                  ? "text-white bg-[#CC9933]/5"
-                  : "text-white/35 hover:text-white/60"
-                  }`}
+                className={`unbounded leading-[139%] tracking-[-1%] relative pb-3 text-[18px] p-3 font-semibold transition-colors duration-200 whitespace-nowrap ${
+                  activeTab === tab
+                    ? "text-white bg-[#CC9933]/5"
+                    : "text-white/35 hover:text-white/60"
+                }`}
               >
                 {tab}
                 {activeTab === tab && (
@@ -82,7 +80,10 @@ export default function ProfileSection() {
             ))}
           </nav>
           <div className="flex flex-col gap-5 w-full">
-            <p ref={ref} className="text-white/70 jost text-xl whitespace-pre-line leading-[139%] tracking-[-8%]" />
+            <p
+              ref={ref}
+              className="text-white/70 jost text-xl whitespace-pre-line leading-[139%] tracking-[-8%]"
+            />
           </div>
         </div>
       </div>

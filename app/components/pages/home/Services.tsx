@@ -8,7 +8,7 @@ import Looper from "@/assets/svgs/Looper-3.svg";
 const Services = () => {
   return (
     <SectionContainer id="my-services" className="bg-black">
-      <div className="h-full px-10 md:py-14 py-7 overflow-hidden space-y-14 relative ">
+      <div className="h-full px-10 md:py-14 w-full py-7 overflow-hidden space-y-14 relative ">
         <div className="absolute right-0 -top-10">
           <Looper />
         </div>
@@ -19,7 +19,7 @@ const Services = () => {
             textClassName="text-white"
           />
         </div>
-        <div>
+        <div className="w-full ">
           <div className="text-white w-full grid md:grid-cols-2 gap-x-12 gap-2 items-center z-[99999] justify-between ">
             <div>
               <h3 className="unbounded uppercase leading-[113%] text-[#D9D9D9] tracking-[-11%] text-[30px] md:text-[50px] font-extrabold">

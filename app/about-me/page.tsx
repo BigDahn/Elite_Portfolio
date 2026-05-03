@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
 import Contributions from "../components/pages/about-me/Contributions";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 import Hero from "../components/Hero";
 import { MoveDownIcon } from "lucide-react";
 import SectionContainer from "../components/SectionContainer";
@@ -10,15 +10,15 @@ import Experiences from "../components/pages/about-me/Experiences";
 
 const Page = () => {
   return (
-    <SectionContainer id="about" className="min-h-screen bg-black">
-      <div className="px-10">
+    <SectionContainer id="about" className="min-h-screen  bg-black">
+      <div className="md:px-10">
         <Hero className="h-screen">
-          <div className="min-h-[700px] space-y-20 flex flex-col relative justify-center items-center">
+          <div className="min-h-[700px] space-y-20 flex flex-col gap-[10em] relative justify-center items-center">
             <div className="flex flex-col max-w-[1002px] gap-4 justify-center items-center px-4 py-3  text-center">
-              <h1 className="unbounded text-white font-semibold text-[70px] capitalize max-w-[850px] leading-[93%] tracking-[-8%] text-center">
+              <h1 className="unbounded text-white font-semibold text-[30px] md:text-[70px] capitalize max-w-[346px] md:max-w-[850px] leading-[93%] tracking-[-8%] text-center">
                 A Crypto Trader with 6 years of experience
               </h1>
-              <p className="jost text-[30px] text-gray-400 font-[400px] leading-[130%] tracking-[-4%]">
+              <p className="jost text-[15px] md:text-[30px] text-gray-400 font-[400px] leading-[130%] tracking-[-4%]">
                 I am a crypto trader with deep knowledge about the market. I
                 have partnered with several crypto brands and helped traders
                 achieve the best results in the crypto space
@@ -32,7 +32,11 @@ const Page = () => {
             >
               <motion.div
                 animate={{ y: [0, 6, 0] }}
-                transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 1.4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               >
                 <MoveDownIcon size={25} />
               </motion.div>

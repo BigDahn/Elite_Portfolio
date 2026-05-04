@@ -46,7 +46,9 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
     </p>
     <StarRating rating={testimonial.rating} />
   </div>
-); // Vertical marquee column
+);
+
+
 const MarqueeColumn = ({
   items,
   reverse = false,
@@ -60,9 +62,7 @@ const MarqueeColumn = ({
   return (
     <div className="relative overflow-hidden h-[600px]">
       <div className="pointer-events-none absolute top-0 left-0 right-0 h-20 z-10 bg-gradient-to-b from-white to-transparent" />
-      {/* ↑ was from-black */}
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 z-10 bg-gradient-to-t from-white to-transparent" />
-      {/* ↑ was from-black */}
       <div
         className="flex flex-col gap-4"
         style={{
@@ -76,16 +76,19 @@ const MarqueeColumn = ({
     </div>
   );
 };
-// Mobile horizontal carousel
+
+
 const MobileCarousel = ({ items }: { items: Testimonial[] }) => {
   const ref = useRef<HTMLDivElement>(null);
 
   return (
     <div
       ref={ref}
-      className="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide"
+      className="flex flex-col gap-4 items-center overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide"
       style={{ scrollbarWidth: "none" }}
     >
+      <div className="pointer-events-none absolute top-0 left-0 right-0 h-20 z-10 bg-gradient-to-b from-white to-transparent" />
+      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 z-10 bg-gradient-to-t from-white to-transparent" />
       {items.map((t, i) => (
         <div key={i} className="snap-center shrink-0 w-[80vw] max-w-[320px]">
           <TestimonialCard testimonial={t} />

@@ -77,7 +77,7 @@ const TrackRecord = () => {
             </div>
           </div>
         </div>
-        <div className="grid gap-6 lg:px-0 px-10 py-2 md:py-[4em] md:grid-cols-2 lg:grid-cols-4 lg:items-center lg:justify-between">
+        <div className="grid gap-6 lg:px-0 py-2 md:py-[4em] grid-cols-2 lg:grid-cols-4 lg:items-center lg:justify-between">
           {records.map((record) => (
             <RecordCard key={record.title} {...record} />
           ))}
@@ -147,7 +147,9 @@ function RecordCard({ isFull, showIcons, useBlur, title, value, image }: ReportP
         <div className="bg-[#1C1B20] rounded-[30px] h-full z-30" />
       )}
       <div className="z-[9999999%] absolute top-3 text-white p-3">
-        <CountUp end={value} className="unbounded leading-[130%] z-9999 font-extrabold tracking-[-2%] text-[50px]" />
+        <div className="flex items-center text-[30px] unbounded gap-x-1">
+          <CountUp start={0} end={value} className="unbounded leading-[130%] z-9999 font-extrabold tracking-[-2%] text-[50px]" />+
+        </div>
         <p className="jost text-white/60 leading-[130%] z-50  tracking-[-2%] text-[30px]">
           {title}
         </p>

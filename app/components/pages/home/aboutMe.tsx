@@ -403,7 +403,7 @@ const AboutMe = () => {
           <div className="border-b-2 border-gray-200/10 h-15  w-[96%] m-auto " />
         </div>
         <section className="flex flex-col justify-center w-full m-auto py-4  ">
-          <div className=" flex flex-col md:grid  md:grid-cols-[613px_1fr] items-center  w-full justify-center h-[900px] md:h-[720px] ">
+          <div className=" flex flex-col-reverse lg:grid lg:grid-cols-[613px_1fr] items-center  w-full justify-center h-[900px] md:h-[720px] ">
             <World data={sampleArcs} globeConfig={globeConfig} />
             <div className="order-first md:order-last">
               <h3 className="unbounded uppercase text-[30px] md:text-[50px] font-bold leading-[113%] tracking-[-11%] text-white">

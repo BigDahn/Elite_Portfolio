@@ -1,4 +1,5 @@
 import { StaticImageData } from "next/image";
+import CountUp from 'react-countup';
 import Headings from "../../headings";
 import SectionContainer from "../../SectionContainer";
 import Image from "next/image";
@@ -12,6 +13,7 @@ const records = [
     useBlur: false,
     image: "/Vector 7729.png",
     showIcons: true,
+    isFull: true
   },
   {
     value: 50,
@@ -40,7 +42,7 @@ const TrackRecord = () => {
   return (
     <SectionContainer className="bg-black" id="track-record">
       <div className="ml-auto block">
-        <CoinIcon className="ml-auto animate-bounce [animation-duration:3s]" />
+        <CoinIcon className="ml-auto lg:block hidden animate-bounce [animation-duration:3s]" />
       </div>
       <div className="relative px-10 py-4 md:py-[3em] flex flex-col gap-[1em] md:gap-0  space-y-0">
         <div className="min-h-19 md:space-y-4 space-y-10">
@@ -75,7 +77,7 @@ const TrackRecord = () => {
             </div>
           </div>
         </div>
-        <div className="grid gap-6 py-2 md:py-[4em] md:grid-cols-2 lg:grid-cols-4 lg:items-center lg:justify-between">
+        <div className="grid gap-6 lg:px-0 px-10 py-2 md:py-[4em] md:grid-cols-2 lg:grid-cols-4 lg:items-center lg:justify-between">
           {records.map((record) => (
             <RecordCard key={record.title} {...record} />
           ))}
@@ -93,9 +95,10 @@ interface ReportProps {
   image: StaticImageData | string;
   useBlur: boolean;
   showIcons: boolean;
+  isFull?: boolean
 }
 
-function RecordCard({ showIcons, useBlur, title, value, image }: ReportProps) {
+function RecordCard({ isFull, showIcons, useBlur, title, value, image }: ReportProps) {
   const brands = [
     {
       id: 1,
@@ -130,10 +133,10 @@ function RecordCard({ showIcons, useBlur, title, value, image }: ReportProps) {
   ];
 
   return (
-    <div className="rounded-[30px] overflow-hidden border-2 border-slate-50/20 relative w-full  h-[326.75px] space-y-12">
+    <div className="rounded-[30px] overflow-hidden border-2 border-slate-50/20 relative w-full h-[326.75px] space-y-12">
       <Image
         src={image}
-        className="rounded-b-[30px] h-full absolute object-cover"
+        className={`${isFull ? "object-contain top-40" : " h-full object-cover"} rounded-b-[30px] w-full absolute`}
         width={308.08}
         height={200}
         alt={title}
@@ -141,13 +144,11 @@ function RecordCard({ showIcons, useBlur, title, value, image }: ReportProps) {
       {useBlur ? (
         <div className="inset-0 absolute bg-black h-full rounded-[30px] opacity-90" />
       ) : (
-        <div className="bg-[#1C1B20]" />
+        <div className="bg-[#1C1B20] rounded-[30px] h-full z-30" />
       )}
-      <div className="z-50 relative text-white p-3">
-        <h4 className="unbounded leading-[130%] font-extrabold tracking-[-2%] text-[50px]">
-          {value}+
-        </h4>
-        <p className="jost text-white/60 leading-[130%]  tracking-[-2%] text-[30px]">
+      <div className="z-[9999999%] absolute top-3 text-white p-3">
+        <CountUp end={value} className="unbounded leading-[130%] z-9999 font-extrabold tracking-[-2%] text-[50px]" />
+        <p className="jost text-white/60 leading-[130%] z-50  tracking-[-2%] text-[30px]">
           {title}
         </p>
       </div>

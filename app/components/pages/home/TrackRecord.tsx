@@ -126,7 +126,7 @@ function RecordCard({ showIcons, useBlur, title, value, image }: ReportProps) {
   ];
 
   return (
-    <div className="rounded-[30px] overflow-hidden border-2 border-slate-50/20 relative w-full lg:w-[308.08px] h-[326.75px] space-y-12">
+    <div className="rounded-[30px] overflow-hidden border-2 border-slate-50/20 relative w-full  h-[326.75px] space-y-12">
       <Image
         src={image}
         className="rounded-b-[30px] h-full absolute object-cover"

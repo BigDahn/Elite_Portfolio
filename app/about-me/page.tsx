@@ -44,9 +44,9 @@ const Page = () => {
                   ease: "easeInOut",
                 }}
               >
-                <MoveDownIcon size={25} />
+                <MoveDownIcon size={25} className="bg-linear-to-r from-white to-blue-800 bg-clip-text stroke-white" />
               </motion.div>
-              <h6 className="jost font-normal text-[20px] leading-[130%] text-white/20 tracking-[-0.06em] text-center">
+              <h6 className="jost bg-clip-text bg-linear-to-r from-white to-blue-800 font-normal text-[20px] leading-[130%] text-white/20 tracking-[-0.06em] text-center">
                 Scroll Down
               </h6>
             </motion.div>

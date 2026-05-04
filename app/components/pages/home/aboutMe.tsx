@@ -1,9 +1,13 @@
-import Headings from "../../headings"
-import SectionContainer from "../../SectionContainer"
+import Headings from "../../headings";
+import Link from "next/link"
+import SectionContainer from "../../SectionContainer";
 import { Check, Send } from "lucide-react";
-import Image from "next/image";
 import TypewriterText from "../../Typewriter";
-import { Globe, World } from "@/components/ui/globe";
+import dynamic from "next/dynamic";
+
+const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
+  ssr: false,
+});
 
 const AboutMe = () => {
   const globeConfig = {
@@ -393,100 +397,94 @@ const AboutMe = () => {
 
   return (
     <SectionContainer id="aboutMe" className="bg-black">
-      <div className="py-5 border-b px-10">
-        <div className="h-19">
+      <div className=" py-6 md:py-20 px-10">
+        <div className="md:h-19">
           <Headings text="About Me" textClassName="text-[#D9D9D9]" />
           <div className="border-b-2 border-gray-200/10 h-15  w-[96%] m-auto " />
         </div>
-        <section className="flex flex-col justify-center w-full m-auto ">
-          <div
-            className="grid grid-cols-[613px_1fr] items-center  w-full justify-center"
-            style={{ height: "718px" }}
-          >
+        <section className="flex flex-col justify-center w-full m-auto py-4  ">
+          <div className=" flex flex-col md:grid  md:grid-cols-[613px_1fr] items-center  w-full justify-center h-[900px] md:h-[720px] ">
             <World data={sampleArcs} globeConfig={globeConfig} />
-            <div>
-              <h3
-                className="unbounded uppercase text-[50px] font-bold leading-[113%] tracking-[-11%] text-white">
+            <div className="order-first md:order-last">
+              <h3 className="unbounded uppercase text-[30px] md:text-[50px] font-bold leading-[113%] tracking-[-11%] text-white">
                 Who is <span className="text-[#F8A308]">Elite ayomide?</span>
               </h3>
               <div className="h-17.5">
                 <h3
-                  className={`unbounded text-[50px] font-bold leading-[107%] tracking-[-8%] text-white `}
+                  className={`unbounded text-[30px] md:text-[50px] font-bold leading-[107%] tracking-[-8%] text-white `}
                 >
                   A <TypewriterText />
                 </h3>
               </div>
-              <p className="jost text-[25px] leading-[120%] tracking-[-4%] text-gray-500  max-w-200 relative">
+              <p className="jost text-[16px] md:text-[25px] leading-[120%] tracking-[-4%] text-gray-500  max-w-200 relative">
                 A Crypto Trader with 6 years of experience, helping traders and
                 investors navigate the trading space profitably with information
                 and education.
               </p>
 
-              <div className="grid grid-cols-2 py-[2em] text-[16px] gap-3">
+              <div className="grid md:grid-cols-2 py-[2em] text-[10px] md:text-[16px] gap-3">
                 <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
+                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
                     <Check />
                   </div>
-                  <h4
-                    className="jost text-[25px] leading-[120%] tracking-[4%] text-gray-500"
-                  >
+                  <h4 className="jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500">
                     Trader + Content Creator
                   </h4>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
+                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
                     <Check />
                   </div>
                   <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
+                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
                   >
                     Growth Strategist
                   </h4>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
+                  <div className="bg-[#F8A308]  h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
                     <Check />
                   </div>
                   <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
+                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
                   >
                     Community Manager
                   </h4>
                   75
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
+                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
                     <Check />
                   </div>
                   <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
+                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
                   >
                     Technical Analyst
                   </h4>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
+                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
                     <Check />
                   </div>
                   <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
+                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
                   >
                     Market Analysis
                   </h4>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[27px] flex items-center w-[27px] justify-center rounded-full">
+                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
                     <Check />
                   </div>
                   <h4
-                    className={`jost text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
+                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
                   >
                     Trading Mentor
                   </h4>
                 </div>
               </div>
 
-              <button className="jost bg-white rounded-full py-[1.3em] px-[2.8em] font-semibold flex items-center gap-3 mt-4 max-w-[250px]">
+              <Link href="/about-me" className="jost bg-white rounded-full py-[1.3em] flex items-center justify-center px-[2.8em] font-semibold flex items-center gap-3 mt-4 w-full md:max-w-[250px]">
                 <Send
                   fill="black"
                   strokeWidth={1}
@@ -494,13 +492,13 @@ const AboutMe = () => {
                   className="rotate-[280deg]"
                 />{" "}
                 <h3>More About Me</h3>
-              </button>
+              </Link>
             </div>
           </div>
         </section>
       </div>
-    </SectionContainer >
-  )
-}
+    </SectionContainer>
+  );
+};
 
-export default AboutMe
+export default AboutMe;

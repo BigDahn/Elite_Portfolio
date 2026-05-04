@@ -1,4 +1,12 @@
 const nextConfig = {
+  turbopack: {
+    rules: {
+      "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js",
+      },
+    },
+  },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find((rule: any) =>
       rule.test?.test?.(".svg"),
@@ -28,6 +36,7 @@ const nextConfig = {
     }
     return config;
   },
+  allowedDevOrigins: [" http://172.20.10.3:3000"],
 };
 
 export default nextConfig;

@@ -18,7 +18,11 @@ interface TestimonialsProps {
 const StarRating = ({ rating = 5 }: { rating?: number }) => (
   <div className="flex gap-0.5">
     {Array.from({ length: 5 }).map((_, i) => (
-      <svg key={i} width="14" height="14" viewBox="0 0 24 24"
+      <svg
+        key={i}
+        width="14"
+        height="14"
+        viewBox="0 0 24 24"
         fill={i < rating ? "#F8A308" : "none"}
         stroke={i < rating ? "#F8A308" : "#00000020"} // ← was #ffffff30
         strokeWidth="2"
@@ -32,15 +36,22 @@ const StarRating = ({ rating = 5 }: { rating?: number }) => (
 const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
   <div className="bg-black/5 rounded-[20px] p-5 space-y-4 shrink-0 w-full md:max-h-113 min-h-80 flex flex-col justify-center">
     {/* ↑ was bg-white/5 border-white/10 */}
-    <div className="flex items-center gap-3">
-    </div>
-    <p className="jost text-black/60 text-[25px] leading-[120%] tracking-[-4%] font-light">{testimonial.content}</p>
+    <div className="flex items-center gap-3"></div>
+    <p className="jost text-black/60 text-[25px] leading-[120%] tracking-[-4%] font-light">
+      {testimonial.content}
+    </p>
     {/* ↑ was text-white/60 */}
-    <p className="jakarta font-bold text-black text-[25px] leading-tight">{testimonial.name}</p>
+    <p className="jakarta font-bold text-black text-[25px] leading-tight">
+      {testimonial.name}
+    </p>
     <StarRating rating={testimonial.rating} />
   </div>
-);// Vertical marquee column
-const MarqueeColumn = ({ items, reverse = false, duration = "30s" }: {
+); // Vertical marquee column
+const MarqueeColumn = ({
+  items,
+  reverse = false,
+  duration = "30s",
+}: {
   items: Testimonial[];
   reverse?: boolean;
   duration?: string;
@@ -54,7 +65,9 @@ const MarqueeColumn = ({ items, reverse = false, duration = "30s" }: {
       {/* ↑ was from-black */}
       <div
         className="flex flex-col gap-4"
-        style={{ animation: `${reverse ? "marqueeUp" : "marqueeDown"} ${duration} linear infinite` }}
+        style={{
+          animation: `${reverse ? "marqueeUp" : "marqueeDown"} ${duration} linear infinite`,
+        }}
       >
         {doubled.map((t, i) => (
           <TestimonialCard key={i} testimonial={t} />
@@ -103,10 +116,11 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
       `}</style>
 
       <div className="px-6 md:px-10 py-14 space-y-10">
-        <div className="space-y-5 text-center flex items-center flex-col">
+        <div className="space-y-5 text-center flex  items-center flex-col">
           <Headings
             text="Trusted and experienced power elite CUSTOMERS"
             textClassName="text-base! leading-[170%]!"
+            headerClassName="flex flex-col gap-2 items-center md:flex md:flex-row md:items-center md:gap-3"
           />
           <h3 className="font-bold uppercase text-center jakarta text-[36px] md:text-[50px] leading-[113%] tracking-[-0.11em] text-black">
             57,500+ Trusted Customers

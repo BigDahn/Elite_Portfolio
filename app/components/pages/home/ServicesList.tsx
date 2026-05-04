@@ -20,7 +20,7 @@ function useScramble(originalText: string) {
             if (i < Math.floor(iteration / 3)) return originalText[i];
             return CHARS[Math.floor(Math.random() * CHARS.length)];
           })
-          .join("")
+          .join(""),
       );
 
       iteration++;
@@ -65,33 +65,42 @@ const ServiceRow = ({
 
   return (
     <div
-      className={`h-50 group flex items-center justify-between px-6 py-5 border-b border-white/10 cursor-default transition-colors duration-300 ${active ? "bg-white/5" : "bg-transparent"
-        }`}
+      className={`h-50 group flex flex-col w-[100%] md:flex-row  items-center md:items-start  gap-4 md:gap-3 justify-between px-6 py-5 border-b border-white/10 cursor-default transition-colors duration-300 ${
+        active ? "bg-white/5" : "bg-transparent"
+      }`}
       onMouseEnter={() => {
         setActive(true);
         scramble();
       }}
       onMouseLeave={() => setActive(false)}
     >
-      <div className="flex items-start gap-5">
-        <span className="text-white/30 font-extrabold capitalize jakarta mt-1 select-none">
+      <div className="flex items-start w-full gap-3  md:gap-5">
+        <span className="text-white/30 font-extrabold w-[20px]  capitalize jakarta  mt-1 select-none">
           {String(index).padStart(2, "0")}
         </span>
-        <div className="flex flex-col gap-1">
-          <span className="text-white/70 jakarta font-extrabold text-2xl md:text-3xl tracking-[-6%] leading-[113%] transition-all duration-150">
+        <div className="flex flex-col gap-3  md:gap-1">
+          <span className="text-white/70 jakarta font-extrabold text-[17px] md:text-3xl tracking-[-6%] leading-[113%] transition-all duration-150">
             {text}
           </span>
           {description && (
-            <span className="text-white/70 md:text-[25px] font-normal jost tracking-[-4%] leading-[120%]">{description}</span>
+            <span className="text-white/70 text-[16px] md:text-[25px] font-normal jost tracking-[-4%] leading-[120%]">
+              {description}
+            </span>
           )}
         </div>
       </div>
       {href && (
         <div
-          className={`transition-opacity duration-300 ${active ? "opacity-100" : "opacity-0"
-            }`}
+          className={`transition-opacity duration-300  justify-end flex w-full ${
+            active ? "opacity-100" : "opacity-0"
+          }`}
         >
-          <ExternalLinkButton href={href} text={ctaLabel} className="w-54" textClassName="text-base!" />
+          <ExternalLinkButton
+            href={href}
+            text={ctaLabel}
+            className="md:w-54 w-full"
+            textClassName="text-base!"
+          />
         </div>
       )}
     </div>

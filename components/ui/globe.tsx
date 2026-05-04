@@ -65,7 +65,9 @@ let numbersOfRings = [0];
 
 export function Globe({ globeConfig, data }: WorldProps) {
   const globeRef = useRef<ThreeGlobe | null>(null);
-  const groupRef = useRef();
+  const groupRef = useRef<{
+    add: (obj: ThreeGlobe) => void;
+  } | null>(null);
   const [isInitialized, setIsInitialized] = useState(false);
 
   const defaultProps = {

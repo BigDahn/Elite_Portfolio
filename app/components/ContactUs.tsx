@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useId } from "react";
 import Arrow from "@/assets/svgs/arrow.svg";
@@ -9,7 +9,10 @@ const ContactUsBtn = () => {
   const router = useRouter();
 
   return (
-    <button onClick={() => router.push("/contact")} className="group relative grid h-[90px] w-[90px] place-content-center rounded-full overflow-hidden">
+    <button
+      onClick={() => router.push("/contact")}
+      className="group relative hidden md:grid h-[90px] w-[90px] place-content-center rounded-full overflow-hidden"
+    >
       {/* MAIN ICON */}
       <Arrow className="pointer-events-none relative z-10 rotate-45 text-black" />
 
@@ -29,7 +32,11 @@ const ContactUsBtn = () => {
           className="fill-white jost font-normal uppercase"
           style={{ fontSize: "15px", letterSpacing: "1em" }}
         >
-          <textPath href={`#${circlePathId}`} startOffset="50%" textAnchor="middle">
+          <textPath
+            href={`#${circlePathId}`}
+            startOffset="50%"
+            textAnchor="middle"
+          >
             CONTACT ME
           </textPath>
         </text>

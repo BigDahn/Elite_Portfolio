@@ -1,5 +1,7 @@
-"use client"
+"use client";
 
+import FooterArc from "./components/FooterArc";
+import Hero from "./components/Hero";
 import SectionContainer from "./components/SectionContainer";
 import FAQ from "./components/pages/home/Faq";
 import HomePageHero from "./components/pages/home/Hero";
@@ -10,10 +12,16 @@ import TradingHistory from "./components/pages/home/TradingHistory";
 import AboutMe from "./components/pages/home/aboutMe";
 
 export default function Page() {
-
   return (
     <SectionContainer id="hero">
-      <HomePageHero />
+      <Hero
+        animate={true}
+        followCursor={false}
+        className="overflow-hidden h-screen lg:min-h-screen flex items-center lg:flex-col lg:justify-center relative"
+      >
+        <HomePageHero />
+      </Hero>
+
       <AboutMe />
       <TrackRecord />
       <TradingHistory />
@@ -24,37 +32,43 @@ export default function Page() {
             name: "James Okafor",
             handle: "@jamesokafor",
             rating: 5,
-            content: "Elite Ayomide's crypto consulting completely changed how I approach trading. Up 3x in 6 months.",
+            content:
+              "Elite Ayomide's crypto consulting completely changed how I approach trading. Up 3x in 6 months.",
           },
           {
             name: "Fatima Bello",
             handle: "@fatimab",
             rating: 5,
-            content: "The one-on-one mentorship was worth every penny. Clear, actionable, and results-driven.",
+            content:
+              "The one-on-one mentorship was worth every penny. Clear, actionable, and results-driven.",
           },
           {
             name: "Chidi Nwosu",
             handle: "@chidinwosu",
             rating: 4,
-            content: "Best crypto mentor I've worked with. Simplified DeFi concepts I'd struggled with for years.",
+            content:
+              "Best crypto mentor I've worked with. Simplified DeFi concepts I'd struggled with for years.",
           },
           {
             name: "Amaka Eze",
             handle: "@amakaeze",
             rating: 5,
-            content: "I went from losing trades to consistent profits within 90 days. Highly recommend.",
+            content:
+              "I went from losing trades to consistent profits within 90 days. Highly recommend.",
           },
           {
             name: "Tunde Adesanya",
             handle: "@tundea",
             rating: 5,
-            content: "The group mentorship community alone is worth it. Everyone is helpful and the signals are sharp.",
+            content:
+              "The group mentorship community alone is worth it. Everyone is helpful and the signals are sharp.",
           },
           {
             name: "Ngozi Williams",
             handle: "@ngoziwill",
             rating: 5,
-            content: "Exceptional service. The strategy sessions helped me build a portfolio I'm actually proud of.",
+            content:
+              "Exceptional service. The strategy sessions helped me build a portfolio I'm actually proud of.",
           },
         ]}
       />
@@ -82,6 +96,7 @@ export default function Page() {
           },
         ]}
       />
+      <FooterArc />
     </SectionContainer>
   );
 }

@@ -84,7 +84,7 @@ const MobileCarousel = ({ items }: { items: Testimonial[] }) => {
   return (
     <div
       ref={ref}
-      className="flex flex-col gap-4 items-center overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide"
+      className="flex relative flex-col gap-4 items-center overflow-x-auto snap-x snap-mandatory pb-4 scrollbar-hide"
       style={{ scrollbarWidth: "none" }}
     >
       <div className="pointer-events-none absolute top-0 left-0 right-0 h-20 z-10 bg-gradient-to-b from-white to-transparent" />

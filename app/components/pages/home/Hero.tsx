@@ -12,18 +12,21 @@ export default function HomePageHero() {
   return (
     <div className="flex pt-0 lg:pt-80 flex-col gap-[2em] items-center justify-center space-y-5  max-w-230 max-h-88.75 h-full w-full ">
       <div className="flex flex-col items-center gap-3 justify-center text-center w-full">
-        <div className="relative">
-          <h1 className="unbounded text-[30px] md:text-[70px] font-bold leading-[107%] tracking-[-8%] text-white relative">
-            A crypto trader that makes you money.
+        <div className="relative max-w-[350px] md:max-w-[872px]">
+          <h1 className="unbounded text-[30px] md:text-[70px] font-bold leading-[107%] tracking-[-0.08em] text-white">
+            A crypto trader that makes{" "}
+            <span className="relative inline-block">
+              you money.
+              <span className="absolute left-0 -bottom-5 overflow-hidden w-full">
+                <AnimatedLine
+                  duration={2}
+                  strokeWidth={1.5}
+                  color="#3C1EDE"
+                  delay={0.3}
+                />
+              </span>
+            </span>
           </h1>
-          <div className="z-50 absolute right-10 md:right-24">
-            <AnimatedLine
-              duration={2}
-              strokeWidth={1.5}
-              color="#3C1EDE"
-              delay={0.3}
-            />
-          </div>
         </div>
         <h4 className="text-center jost max-w-[298px] md:max-w-175 text-[15px] md:text-[30px] font-[400px] leading-[130%] tracking-[-4%] text-gray-500 mt-5">
           Helping traders and investors navigate the trading space profitably
@@ -42,7 +45,6 @@ export default function HomePageHero() {
             </h3>
           </Link>
         </button>
-
         <div className="flex items-center relative gap-4 text-[14px] text-white font-semibold">
           <div className="flex items-center relative">
             <motion.div

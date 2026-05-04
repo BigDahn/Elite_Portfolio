@@ -41,7 +41,7 @@ const FAQ = ({ items }: FAQProps) => {
 
               >
                 <AccordionTrigger className="jost text-white font-medium text-[15px] hover:no-underline hover:text-white/80 transition-colors [&>svg]:hidden flex justify-between items-start  gap-4 group">
-                  <span className="unbounded text-[12px] md:text-[20px] leading-[130%] tracking-[-2%] text-left">
+                  <span className="unbounded max-w-[170px] md:max-w-lg text-[15px] md:text-[20px] leading-[130%] tracking-[-2%] text-left">
                     {item.question}
                   </span>
                 </AccordionTrigger>

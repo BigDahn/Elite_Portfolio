@@ -50,8 +50,8 @@ const TrackRecord = () => {
             textClassName="text-white"
             text="Track Record At A Glance"
           />
-          <div className="flex flex-col space-y-5 md:flex md:flex-row py-3 gap-y-4 gap-x-8 items-start border-b border-slate-50/10 md:items-center w-full md:justify-between">
-            <div className="space-y-5 text-white flex flex-col md:flex-row gap-3 md:gap-0 items-start md:items-center md:gap-[15em]">
+          <div className="flex flex-col space-y-5 md:flex lg:flex-row py-3 gap-y-4 gap-x-8 items-start border-b border-slate-50/10 md:items-center w-full md:justify-between">
+            <div className="space-y-5 w-full text-white  flex flex-col lg:flex-row gap-3 md:gap-0 lg:items-start lg:items-center items-start lg:gap-[0em] justify-start lg:justify-between">
               <div className="flex items-center gap-x-3">
                 <h3 className="unbounded leading-[113%] text-[#D9D9D9] tracking-[-11%] text-[26px] md:text-[50px] font-extrabold">
                   538+
@@ -69,7 +69,7 @@ const TrackRecord = () => {
                 </small>
               </div>
             </div>
-            <div className="max-w-[629px]">
+            <div className="max-w-[629px] mr-auto">
               <p className="unbounded text-[25px] text-[#FAFAFA]/90 leading-[142%] tracking-[-6%]">
                 Words are futile without evidence. My results are loud, not
                 silent. Scroll to discover the magic.
@@ -77,7 +77,7 @@ const TrackRecord = () => {
             </div>
           </div>
         </div>
-        <div className="grid gap-6 lg:px-0 py-2 md:py-[4em] grid-cols-2 lg:grid-cols-4 lg:items-center lg:justify-between">
+        <div className="grid gap-6 lg:px-0 px-3 py-2 md:py-[4em] md:grid-cols-2 lg:grid-cols-4 lg:items-center lg:justify-between">
           {records.map((record) => (
             <RecordCard key={record.title} {...record} />
           ))}

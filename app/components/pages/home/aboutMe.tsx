@@ -3,7 +3,11 @@ import Link from "next/link"
 import SectionContainer from "../../SectionContainer";
 import { Check, Send } from "lucide-react";
 import TypewriterText from "../../Typewriter";
-import { World } from "@/components/ui/globe";
+import dynamic from "next/dynamic";
+
+const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
+  ssr: false,
+});
 
 const AboutMe = () => {
   const globeConfig = {

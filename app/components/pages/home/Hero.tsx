@@ -1,6 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import Link from "next/link"
 import { Play, Send } from "lucide-react";
 import { motion } from "motion/react";
 import AnimatedLine from "../../AnimatedBrush";
@@ -34,12 +35,12 @@ export default function HomePageHero() {
           onClick={() => router.push("/about-me#professional-experiences")}
           className=" py-[0.5em] md:py-[1em] order-last md:order-first bg-white text-[15px] w-[356px] md:w-65.5 flex items-center text-center rounded-full px-[2em] font-semibold gap-2 h-16.25"
         >
-          <div className="flex items-center justify-center w-full gap-x-3.75">
+          <Link href="/about-me#professional-experience" className="flex items-center justify-center w-full gap-x-3.75">
             <Send fill="black" className="rotate-290 size-4" />{" "}
             <h3 className="capitalize jost leading-[130%] tracking-[-2%] text-[15px]">
               view my portfolio
             </h3>
-          </div>
+          </Link>
         </button>
 
         <div className="flex items-center relative gap-4 text-[14px] text-white font-semibold">

@@ -1,5 +1,6 @@
 "use client";
 
+import FooterArc from "./components/FooterArc";
 import Hero from "./components/Hero";
 import SectionContainer from "./components/SectionContainer";
 import FAQ from "./components/pages/home/Faq";
@@ -102,6 +103,7 @@ export default function Page() {
           },
         ]}
       />
+      <FooterArc />
     </SectionContainer>
   );
 }

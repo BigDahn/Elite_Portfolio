@@ -8,15 +8,17 @@ import Image from "next/image";
 
 const FooterArc = () => {
   return (
-    <div className="relative overflow-hidden left-0 right-0 pt-20  mx-auto z-40">
+    <div className="min-h-[700px] pt-20 bottom-0 bg-black relative overflow-hidden left-0 right-0 pt-20  mx-auto z-40">
       {" "}
       <div
+        className="absolute -bottom-10"
         style={{
+          bottom: "0",
           filter:
             "drop-shadow(0 0 40px #3E1FE8) drop-shadow(0 0 80px #3E1FE8aa)",
         }}
       >
-        <Ellipse className="w-screen mx-auto" />
+        <Ellipse className="w-screen mx-auto absolute -bottom-10" />
       </div>
       <div
         className="

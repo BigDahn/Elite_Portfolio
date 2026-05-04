@@ -2,7 +2,6 @@
 
 import { useRouter } from "next/navigation";
 import { Play, Send } from "lucide-react";
-import Image from "next/image";
 import { motion } from "motion/react";
 import AnimatedLine from "../../AnimatedBrush";
 
@@ -10,7 +9,7 @@ export default function HomePageHero() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col gap-[2em] items-center justify-center space-y-5  max-w-218 max-h-88.75 h-full w-full ">
+    <div className="flex flex-col gap-[2em] items-center justify-center space-y-5  max-w-230 max-h-88.75 h-full w-full ">
       <div className="flex flex-col items-center gap-3 justify-center text-center w-full">
         <div className="relative">
           <h1 className="unbounded text-[30px] md:text-[70px] font-bold leading-[107%] tracking-[-8%] text-white relative">

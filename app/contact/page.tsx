@@ -65,7 +65,6 @@ export default function ContactPage() {
               })}
             </div>
           </div>
-
           <div
             id="contact-form"
             className="p-4 shadow-2xl shadow-black/30 backdrop-blur-xl md:p-6 lg:p-0"
@@ -82,7 +81,6 @@ export default function ContactPage() {
               </div>
               <div className="relative">
                 <input
-
                   type="email"
                   name="email"
                   placeholder="you@example.com"

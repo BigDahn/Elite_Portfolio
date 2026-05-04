@@ -14,18 +14,8 @@ interface FooterArcProps {
 
 const FooterArc = ({ className }: FooterArcProps) => {
   return (
-    <div className={clsx("h-[281px] lg:min-h-[700px] pt-20 bottom-0 bg-black relative overflow-hidden left-0 right-0 pt-20  mx-auto z-40", className)}>
-      {" "}
-      <div
-        className="absolute -bottom-10"
-        style={{
-          bottom: "0",
-          filter:
-            "drop-shadow(6px 20px 8px #3E1FE8aa) drop-shadow(40px 60px 60px #3E1FE8aa)",
-        }}
-      >
-        <Ellipse className="w-screen mx-auto absolute lg:-bottom-10" />
-      </div>
+    <div className={clsx("h-[500px]  w-screen lg:min-h-175 bottom-0 bg-white relative overflow-hidden left-0 right-0 pt-20  mx-auto z-40", className)}>
+      <div className="bg-black rounded-full h-[5000px] w-[5000px] absolute bottom-0" />
       <div
         className="
       absolute
@@ -40,8 +30,8 @@ const FooterArc = ({ className }: FooterArcProps) => {
         <Image
           className="mx-auto"
           src="/Frame 2121453894.png"
-          width={80}
-          height={80}
+          width={50}
+          height={50}
           alt=""
         />
         <p className="text-transparent unbounded bg-clip-text bg-linear-to-b from-white to-blue-800 text-[15px] lg:text-[50px] text-center capitalize font-extrabold leading-[100%] tracking-[-0.06em]">
@@ -59,12 +49,6 @@ const FooterArc = ({ className }: FooterArcProps) => {
           className="mx-auto px-8 text-black"
         />
       </div>
-      <motion.button
-        className="absolute right-16 top-64 md:right-24 md:top-64 w-14 h-14 rounded-full bg-[#3E1FE8] text-black flex items-center justify-center text-xl shadow-lg hover:scale-105 transition"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      >
-        <ArrowUp color="white" />
-      </motion.button>
     </div>
   );
 };

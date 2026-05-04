@@ -20,8 +20,8 @@ const Services = () => {
           />
         </div>
         <div className="w-full ">
-          <div className="text-white w-full grid md:grid-cols-2 gap-x-12 gap-2 items-center z-[99999] justify-between ">
-            <div>
+          <div className="text-white w-full relative grid md:grid-cols-2 gap-x-12 gap-2 items-center z-[99999] justify-between ">
+            <div className="relative z-30">
               <h3 className="unbounded uppercase leading-[113%] text-[#D9D9D9] tracking-[-11%] text-[30px] md:text-[50px] font-extrabold">
                 Strategic Services.
               </h3>
@@ -54,7 +54,7 @@ const Services = () => {
         <div className="flex justify-center relative z-10">
           <ExternalLinkButton
             text="More of my Services"
-            href="/"
+            href="/services"
             className="md:w-67 w-full py-4 gap-3.75!"
             textClassName="text-base!"
           />

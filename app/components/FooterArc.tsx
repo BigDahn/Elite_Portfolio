@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const FooterArc = () => {
   return (
-    <div className="min-h-[700px] pt-20 bottom-0 bg-black relative overflow-hidden left-0 right-0 pt-20  mx-auto z-40">
+    <div className="h-[281px] lg:min-h-[700px] pt-20 bottom-0 bg-black relative overflow-hidden left-0 right-0 pt-20  mx-auto z-40">
       {" "}
       <div
         className="absolute -bottom-10"
@@ -18,7 +18,7 @@ const FooterArc = () => {
             "drop-shadow(0 0 40px #3E1FE8) drop-shadow(0 0 80px #3E1FE8aa)",
         }}
       >
-        <Ellipse className="w-screen mx-auto absolute -bottom-10" />
+        <Ellipse className="w-screen mx-auto absolute lg:-bottom-10" />
       </div>
       <div
         className="
@@ -38,18 +38,18 @@ const FooterArc = () => {
           height={80}
           alt=""
         />
-        <p className="text-transparent unbounded bg-clip-text bg-linear-to-b from-white to-blue-800 text-[50px] text-center capitalize font-extrabold leading-[100%] tracking-[-0.06em]">
+        <p className="text-transparent unbounded bg-clip-text bg-linear-to-b from-white to-blue-800 text-[15px] lg:text-[50px] text-center capitalize font-extrabold leading-[100%] tracking-[-0.06em]">
           Lets start your <br /> trading journey
         </p>
 
-        <p className="jost leading-[130%] tracking-[-0.02em] w-[577px] text-center text-[25px] text-white/60">
+        <p className="jost leading-[130%] tracking-[-0.02em] w-[577px] text-center text-[10px] lg:text-[25px] text-white/60">
           Start trading with powerful tools, real-time insights, and a secure
           platform for better profits
         </p>
 
         <ExternalLinkButton
           text="Get Started Now"
-          href="#"
+          href="/contact"
           className="mx-auto px-8 text-black"
         />
       </div>

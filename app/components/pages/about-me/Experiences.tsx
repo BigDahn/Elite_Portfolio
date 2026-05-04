@@ -1,5 +1,5 @@
 import Headings from "../../headings"
-import { Check, Send } from "lucide-react";
+import { Check } from "lucide-react";
 
 const ExperiencesArray: IProfessionalExperience[] = [{
   date: "2026 - PRESENT",
@@ -37,8 +37,10 @@ const ExperiencesArray: IProfessionalExperience[] = [{
 const Experiences = () => {
   return (
     <div className="py-10 space-y-12" id="professional-experiences">
-      <Headings text="Professional Experiences" textClassName="text-white" />
-      <div>
+      <div className="px-10">
+        <Headings text="Professional Experiences" textClassName="text-white" />
+      </div>
+      <div className="px-2">
         {ExperiencesArray.map((experience) => (
           <ProfessionalExperience {...experience} key={experience.title} />
         ))}
@@ -58,18 +60,18 @@ interface IProfessionalExperience {
 
 function ProfessionalExperience({ date, title, achievements }: IProfessionalExperience) {
 
-  return <div className="border-y border-y-white/5 min-h-75 grid relative grid-cols-[minmax(293px,350px)_1fr] text-white/70">
-    <div className="relative jost font-medium leading-[170%] tracking-[-10%] text-xl p-10">
+  return <div className="border-y border-y-white/5 min-h-75 grid relative grid-cols-[minmax(100px,150px)_1fr] lg:grid-cols-[minmax(293px,350px)_1fr] text-white/70">
+    <div className="relative jost font-medium leading-[170%] tracking-[-10%] text-sm md:text-lg lg:text-xl p-10">
       <p>
         {date}
       </p>
       <div className="absolute h-4 w-4 bg-[#CC9933] -right-2 top-12" style={{ backgroundColor: "gold" }} />
     </div>
     <div className="border-l border-l-white/5 flex flex-col space-y-3 p-10 px-15">
-      <h3 className="unbounded font-medium text-2xl leading-[170%] tracking-[-6%] text-white">{title}</h3>
+      <h3 className="unbounded font-medium text-base md:text-2xl lg:text-2xl leading-[170%] tracking-[-6%] text-white">{title}</h3>
       <ul className="space-y-4">
         {
-          achievements.map((achievement, index: number) => <li key={index} className="satoshi font-light flex items-start gap-x-3 text-white/50 text-lg"><div className="h-6 w-6  rounded-full" style={{ backgroundColor: "gold" }}>                    <Check color="black" /></div>
+          achievements.map((achievement, index: number) => <li key={index} className="satoshi font-light flex items-start gap-x-3 text-white/50 text-xs md:text-base lg:text-lg"><div className="h-6 w-6  rounded-full" style={{ backgroundColor: "gold" }}>                    <Check color="black" /></div>
             {achievement}</li>)}
       </ul>
     </div>

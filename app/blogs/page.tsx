@@ -14,18 +14,18 @@ const Page = () => {
   return (
     <main className="bg-black relative text-white overflow-hidden">
       <Grids />
-      <Hero followCursor={true} animate={true} className="h-[70vh] " />
+      <Hero followCursor={true} animate={true} className="h-[50vh] lg:h-[70vh] " />
       <Link
         href="https://medium.com/@0x5hmuel"
         target="_blank"
         referrerPolicy="no-referrer"
-        className="flex items-center gap-x-1 text-white/80 absolute right-10 top-64 jost text-2xl<D-Space>leading-[130%] tracking-[-6%]"
+        className="flex items-center gap-x-1 text-white/80 absolute right-10 top-64 jost text-2xl leading-[130%] tracking-[-6%]"
       >
         <MediumIcon />
         <p className="">Follow me on Medium</p>
       </Link>
-      <div className="space-y-5">
-        <div className="flex px-10 justify-between">
+      <div className="space-y-5 -pt-24">
+        <div className="flex md:flex-row flex-col space-y-10 px-10 justify-between">
           <div className="w-full">
             <h2 className="font-bold text-[50px] text-white unbounded leading-[113%] tracking-[-11%]">
               Articles that
@@ -42,13 +42,13 @@ const Page = () => {
             </p>
           </div>
         </div>
-        <div className="grid grid-cols-4 pt-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 pt-0 sm:grid-cols-2">
           {Array.from({ length: 8 }).map((_, index) => {
             if (index % 4 === 0) {
               return (
                 <div
                   key={index}
-                  className="border-y border-y-white/5 min-h-[calc(var(--title-size)*4)]"
+                  className="border-y lg:block hidden border-y-white/5 min-h-[calc(var(--title-size)*4)]"
                 />
               );
             }
@@ -76,7 +76,7 @@ export default Page;
 
 function Grids() {
 
-  return <div className="absolute z-30 inset-0 min-h-screen w-screen grid grid-cols-4">
+  return <div className="absolute z-30 inset-0 min-h-screen w-screen grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
     <div className="border-x border-white/5" />
     <div className="border-x border-white/5" />
     <div className="border-x border-white/5" />

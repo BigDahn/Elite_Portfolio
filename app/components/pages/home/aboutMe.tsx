@@ -1,4 +1,5 @@
 import Headings from "../../headings";
+import Link from "next/link"
 import SectionContainer from "../../SectionContainer";
 import { Check, Send } from "lucide-react";
 import TypewriterText from "../../Typewriter";
@@ -479,7 +480,7 @@ const AboutMe = () => {
                 </div>
               </div>
 
-              <button className="jost bg-white rounded-full py-[1.3em] flex items-center justify-center px-[2.8em] font-semibold flex items-center gap-3 mt-4 w-full md:max-w-[250px]">
+              <Link href="/about-me" className="jost bg-white rounded-full py-[1.3em] flex items-center justify-center px-[2.8em] font-semibold flex items-center gap-3 mt-4 w-full md:max-w-[250px]">
                 <Send
                   fill="black"
                   strokeWidth={1}
@@ -487,7 +488,7 @@ const AboutMe = () => {
                   className="rotate-[280deg]"
                 />{" "}
                 <h3>More About Me</h3>
-              </button>
+              </Link>
             </div>
           </div>
         </section>

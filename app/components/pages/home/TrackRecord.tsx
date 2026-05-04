@@ -38,14 +38,14 @@ const records = [
 const TrackRecord = () => {
   return (
     <SectionContainer className="bg-black" id="track-record">
-      <div className="px-10 py-4 md:py-[3em] flex flex-col gap-[11em] md:gap-0  space-y-20">
-        <div className="h-19 md:space-y-4">
+      <div className="relative px-10 py-4 md:py-[3em] flex flex-col gap-[1em] md:gap-0  space-y-0">
+        <div className="min-h-19 md:space-y-4 space-y-10">
           <Headings
             textClassName="text-white"
             text="Track Record At A Glance"
           />
-          <div className="flex flex-col md:flex md:flex-row py-3 gap-y-4 gap-x-8 items-start md:items-center w-full md:justify-between">
-            <div className="text-white flex flex-col md:flex-row gap-3 md:gap-0 items-start md:items-center md:gap-[15em]">
+          <div className="flex flex-col space-y-5 md:flex md:flex-row py-3 gap-y-4 gap-x-8 items-start border-b border-slate-50/10 md:items-center w-full md:justify-between">
+            <div className="space-y-5 text-white flex flex-col md:flex-row gap-3 md:gap-0 items-start md:items-center md:gap-[15em]">
               <div className="flex items-center gap-x-3">
                 <h3 className="unbounded leading-[113%] text-[#D9D9D9] tracking-[-11%] text-[26px] md:text-[50px] font-extrabold">
                   538+
@@ -70,9 +70,8 @@ const TrackRecord = () => {
               </p>
             </div>
           </div>
-          <hr className="md:border-t md:h-1.5 md:border-slate-50/10  " />
         </div>
-        <div className="grid gap-5 py-2  md:py-[4em] lg:grid-cols-4 items-center justify-between">
+        <div className="grid gap-5 py-2  md:py-[4em] lg:grid-cols-4 lg:items-center lg:justify-between">
           {records.map((record) => (
             <RecordCard key={record.title} {...record} />
           ))}
@@ -127,7 +126,7 @@ function RecordCard({ showIcons, useBlur, title, value, image }: ReportProps) {
   ];
 
   return (
-    <div className="rounded-[30px] overflow-hidden border-2 border-slate-50/20 relative w-[308.08px] h-[326.75px] space-y-12">
+    <div className="rounded-[30px] overflow-hidden border-2 border-slate-50/20 relative w-full lg:w-[308.08px] h-[326.75px] space-y-12">
       <Image
         src={image}
         className="rounded-b-[30px] h-full absolute object-cover"

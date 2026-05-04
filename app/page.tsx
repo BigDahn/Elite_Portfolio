@@ -17,18 +17,11 @@ export default function Page() {
       <Hero
         animate={true}
         followCursor={false}
-        className="overflow-hidden min-h-screen flex items-center flex-col justify-center relative"
+        className="overflow-hidden h-screen lg:min-h-screen flex items-center lg:flex-col lg:justify-center relative"
       >
         <HomePageHero />
       </Hero>
-      <div className="w-full z-50 bg-black">
-        <video
-          src="/47f6d05d-a120-471f-b8e4-55016c8548ea.mp4"
-          className="w-full"
-          autoPlay
-          loop
-        />
-      </div>
+
       <AboutMe />
       <TrackRecord />
       <TradingHistory />

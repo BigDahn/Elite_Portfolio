@@ -10,7 +10,7 @@ interface SectionProps {
 
 const SectionContainer = ({ children, className, id }: SectionProps) => {
   return (
-    <section id={id} className={clsx(className, "md:min-h-190")}>
+    <section id={id} className={clsx(className, "lg:min-h-190")}>
       {children}
     </section>
   )

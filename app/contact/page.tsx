@@ -26,17 +26,17 @@ const contactDetails = [
 export default function ContactPage() {
   return (
     <main className="relative overflow-hidden bg-black text-white">
-      <Hero className="h-[70vh]" />
-      <div className="flex px-10 justify-between bg-transparent">
+      <Hero className="h-[45vh] md:h-[55vh] lg:h-[70vh]" />
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-6 bg-transparent px-6 md:px-8 lg:flex-row lg:justify-between lg:px-10">
         <div className="w-full">
-          <h2 className="font-bold text-[50px] text-white unbounded leading-[113%] tracking-[-11%]">Let’s Build the</h2>
-          <h2 className="font-bold text-[50px] text-white unbounded leading-[113%] tracking-[-11%]">Future Together.</h2>
+          <h2 className="unbounded text-3xl font-bold leading-[113%] tracking-[-4%] text-white md:text-4xl lg:text-[50px] lg:tracking-[-11%]">Let’s Build the</h2>
+          <h2 className="unbounded text-3xl font-bold leading-[113%] tracking-[-4%] text-white md:text-4xl lg:text-[50px] lg:tracking-[-11%]">Future Together.</h2>
         </div>
-        <div>
-          <p className="jost font-light leading-[120%] tracking-[-4%] text-2xl">Partner, collaborate, or engage to drive meaningful impact and create lasting value across sectors and communities.</p>
+        <div className="max-w-2xl lg:max-w-xl">
+          <p className="jost text-base font-light leading-[140%] tracking-normal md:text-xl md:tracking-[-2%] lg:text-2xl lg:leading-[120%] lg:tracking-[-4%]">Partner, collaborate, or engage to drive meaningful impact and create lasting value across sectors and communities.</p>
         </div>
       </div>
-      <section className="relative mx-auto flex w-full bg-black max-w-7xl flex-col gap-14 px-6 pb-20 pt-36 md:px-0 lg:gap-16 lg:pt-40">
+      <section className="relative mx-auto flex w-full max-w-7xl flex-col gap-10 bg-black px-6 pb-20 pt-16 md:gap-12 md:px-8 md:pt-24 lg:gap-16 lg:px-0 lg:pt-40">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(360px,0.95fr)] lg:items-end">
           <div className="relative space-y-8 border-l-2 border-[#CC9933] h-full" style={{
             background: "url(/star.jpg)",
@@ -48,19 +48,15 @@ export default function ContactPage() {
                 const Icon = item.icon;
 
                 return (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    className="flex items-center gap-x-3"
-                  >
+                  <a key={item.label} href={item.href} className="flex items-center gap-x-3">
                     <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-[#F8A308] text-white transition-transform duration-200 group-hover:scale-105">
                       <Icon className="h-5 w-5" />
                     </span>
                     <span className="space-y-1">
-                      <span className="block text-[25px] capitalize tracking-[-8%] leading-[115.5%] text-white jakarta">
+                      <span className="jakarta block text-xl capitalize leading-[115.5%] tracking-[-4%] text-white md:text-2xl lg:text-[25px] lg:tracking-[-8%]">
                         {item.label}
                       </span>
-                      <span className="block text-[15px] leading-[73%] tracking-[-4%] text-white/40 jakarta">
+                      <span className="jakarta block text-sm leading-[120%] tracking-normal text-white/40 md:text-[15px] md:tracking-[-2%] lg:leading-[73%] lg:tracking-[-4%]">
                         {item.value}
                       </span>
                     </span>
@@ -72,7 +68,7 @@ export default function ContactPage() {
 
           <div
             id="contact-form"
-            className=" p-6 shadow-2xl shadow-black/30 backdrop-blur-xl md:p-0"
+            className="p-4 shadow-2xl shadow-black/30 backdrop-blur-xl md:p-6 lg:p-0"
           >
             <form className="space-y-4">
               <input

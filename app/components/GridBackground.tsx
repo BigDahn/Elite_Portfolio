@@ -14,10 +14,10 @@ export default function HeroBackground({ children }: HeroBackgroundProps) {
           {children}
         </div>
       </div>
-      <div className="min-w-screen z-50">
+      <div className="w-screen z-50">
         <video
           src="/47f6d05d-a120-471f-b8e4-55016c8548ea.mp4"
-          className=""
+          className="w-screen"
           autoPlay
           loop
         />

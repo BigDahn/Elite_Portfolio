@@ -5,17 +5,23 @@ import ExternalLinkButton from "./ExternalLinkButton";
 import { ArrowUp } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
+import clsx from "clsx"
 
-const FooterArc = () => {
+
+interface FooterArcProps {
+  className?: string;
+}
+
+const FooterArc = ({ className }: FooterArcProps) => {
   return (
-    <div className="h-[281px] lg:min-h-[700px] pt-20 bottom-0 bg-black relative overflow-hidden left-0 right-0 pt-20  mx-auto z-40">
+    <div className={clsx("h-[281px] lg:min-h-[700px] pt-20 bottom-0 bg-black relative overflow-hidden left-0 right-0 pt-20  mx-auto z-40", className)}>
       {" "}
       <div
         className="absolute -bottom-10"
         style={{
           bottom: "0",
           filter:
-            "drop-shadow(0 0 40px #3E1FE8) drop-shadow(0 0 80px #3E1FE8aa)",
+            "drop-shadow(6px 20px 8px #3E1FE8aa) drop-shadow(40px 60px 60px #3E1FE8aa)",
         }}
       >
         <Ellipse className="w-screen mx-auto absolute lg:-bottom-10" />

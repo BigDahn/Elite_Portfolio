@@ -3,6 +3,7 @@ import Headings from "../../headings";
 import SectionContainer from "../../SectionContainer";
 import Image from "next/image";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
+import CoinIcon from "@/assets/svgs/Img7.svg"
 
 const records = [
   {
@@ -38,6 +39,9 @@ const records = [
 const TrackRecord = () => {
   return (
     <SectionContainer className="bg-black" id="track-record">
+      <div className="ml-auto block">
+        <CoinIcon className="ml-auto animate-bounce [animation-duration:3s]" />
+      </div>
       <div className="relative px-10 py-4 md:py-[3em] flex flex-col gap-[1em] md:gap-0  space-y-0">
         <div className="min-h-19 md:space-y-4 space-y-10">
           <Headings
@@ -126,7 +130,7 @@ function RecordCard({ showIcons, useBlur, title, value, image }: ReportProps) {
   ];
 
   return (
-    <div className="rounded-[30px] overflow-hidden border-2 border-slate-50/20 relative w-full lg:w-[308.08px] h-[326.75px] space-y-12">
+    <div className="rounded-[30px] overflow-hidden border-2 border-slate-50/20 relative w-full  h-[326.75px] space-y-12">
       <Image
         src={image}
         className="rounded-b-[30px] h-full absolute object-cover"

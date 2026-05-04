@@ -6,7 +6,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer
-      className="w-screen overflow-hidden  text-white font-jost"
+      className="w-screen z-9999999999 overflow-hidden  text-white font-jost"
       style={{ background: "url(/footer.png)" }}
     >
       <div className="overflow-hidden"></div>

@@ -37,7 +37,7 @@ const FAQ = ({ items }: FAQProps) => {
               <AccordionItem
                 key={i}
                 value={`item-${i}`}
-                className="hover:bg-black/20 rounded-lg py-2 h-48.75 flex flex-col justify-center"
+                className="hover:bg-slate-100/5 duration-500 px-5 rounded-lg py-2 h-48.75 flex flex-col justify-center"
               >
                 <AccordionTrigger className="jost text-white font-medium text-[15px] hover:no-underline hover:text-white/80 transition-colors [&>svg]:hidden flex justify-between items-start  gap-4 group">
                   <span className="unbounded text-[12px] md:text-[20px] leading-[130%] tracking-[-2%] text-left">
@@ -51,7 +51,6 @@ const FAQ = ({ items }: FAQProps) => {
             ))}
           </Accordion>
         </div>
-
         <RadialBlur className="absolute -top-32" />
       </div>
     </SectionContainer>

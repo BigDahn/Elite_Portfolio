@@ -71,7 +71,7 @@ const TrackRecord = () => {
             </div>
           </div>
         </div>
-        <div className="grid gap-5 py-2  md:py-[4em] lg:grid-cols-4 lg:items-center lg:justify-between">
+        <div className="grid gap-6 py-2 md:py-[4em] lg:grid-cols-4 lg:items-center lg:justify-between">
           {records.map((record) => (
             <RecordCard key={record.title} {...record} />
           ))}

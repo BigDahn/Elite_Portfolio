@@ -48,21 +48,22 @@ export default function ProfileSection() {
     <section className="relative py-28 max-w-[1440px] min-h-[811px]  mx-auto flex flex-col md:flex-row items-center justify-center  md:justify-between overflow-x-hidden md:px-4">
       <div className="relative z-10 w-full min-h-[670px] flex md:p-8.5 flex-col md:flex-row items-stretch gap-10 md:gap-16 justify-between">
         <div className="flex-shrink-0 w-full md:h-[610px] md:w-[340px] relative">
-          <div className="relative min-w-[355px] md:w-[509px] mx-auto rounded-[24px] overflow-hidden">
+          <div className="relative w-full max-w-[509px] mx-auto rounded-[24px] overflow-hidden">
             <Image
               src={ProfileImage}
               alt="Elite Ayomide"
-              className="object-contain h-full w-full "
+              className="w-full h-auto object-cover"
+              priority
             />
           </div>
         </div>
         <div className="flex-1 flex flex-col p-5 w-screen lg:max-w-[660px]">
-          <nav className="flex flex-row items-center gap-2 lg:gap-6 border-b border-white/10 mb-8 justify-evenly w-fit md:w-full">
+          <nav className="flex flex-row items-center gap-2 lg:gap-6 border-b border-white/10 mb-8 justify-evenly w-full md:w-full">
             {tabs.map((tab) => (
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`unbounded leading-[139%] tracking-[-1%] w-fit relative pb-3 text-[0.7rem] sm:text-sm lg:text-[12px] lg:p-3 font-semibold transition-colors duration-200 whitespace-nowrap ${activeTab === tab
+                className={`unbounded leading-[139%] tracking-[-1%] w-full relative pb-3 text-[0.7rem] sm:text-sm lg:text-[12px] lg:p-3 font-semibold transition-colors duration-200 whitespace-nowrap ${activeTab === tab
                   ? "text-white bg-[#CC9933]/5"
                   : "text-white/35 hover:text-white/60"
                   }`}

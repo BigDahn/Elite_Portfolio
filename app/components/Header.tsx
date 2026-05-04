@@ -5,7 +5,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ContactUsBtn from "./ContactUs";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 import { motion } from "motion/react";
+import MobileNav from "./Navbar";
+import Sidebar from "./Sidebar";
 
 const navItems = [
   { label: "Home", href: "/", exact: true },
@@ -16,11 +19,12 @@ const navItems = [
 ];
 
 function Header() {
+  const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   return (
     <header className="absolute top-0 left-0 right-0 z-9999 w-full bg-transparent">
-      <nav className="flex justify-between max-w-450 px-[3em] py-[1em] items-center   mx-auto">
+      <nav className="flex justify-between max-w-450 px-[2em] md:px-[3em] py-[1em] items-center   mx-auto">
         <Image
           alt="logo"
           src="/Ayomide Logo 1.png"
@@ -29,16 +33,18 @@ function Header() {
           loading="eager"
           style={{ width: "auto", height: "auto" }}
         />
+        <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
         <ul className="hidden md:flex md:items-center gap-[2em] uppercase border-2 border-black/10 backdrop-blur-3xl text-[11.76px] drop-shadow-2xl jost bg-black/50 px-6 py-[1.4em] rounded-full text-white">
           {navItems.map((item) => {
             const activePaths = [item.href, ...(item.aliases ?? [])];
             const isActive = item.exact
               ? activePaths.includes(pathname)
               : activePaths.some(
-                (activePath) =>
-                  pathname === activePath ||
-                  pathname.startsWith(`${activePath}/`),
-              );
+                  (activePath) =>
+                    pathname === activePath ||
+                    pathname.startsWith(`${activePath}/`),
+                );
 
             return (
               <motion.li key={item.label} layout className="relative">

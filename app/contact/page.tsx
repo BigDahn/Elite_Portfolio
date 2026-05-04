@@ -1,4 +1,4 @@
-import { ArrowRight, Mail, MapPin, PhoneCall } from "lucide-react";
+import { ArrowRight, Mail, MailOpenIcon, MapPin, MessageSquareMore, MessagesSquareIcon, PhoneCall, UserIcon } from "lucide-react";
 import Hero from "../components/Hero";
 import FooterArc from "../components/FooterArc";
 
@@ -71,26 +71,34 @@ export default function ContactPage() {
             className="p-4 shadow-2xl shadow-black/30 backdrop-blur-xl md:p-6 lg:p-0"
           >
             <form className="space-y-4">
-              <input
-                type="text"
-                name="name"
-                placeholder="Your name"
-                className="h-12 w-full rounded-none placeholder-jost border border-white/10 bg-black/30 px-4 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-[#F8A308]/70 focus:ring-2 focus:ring-[#F8A308]/20"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="you@example.com"
-                className="h-12 w-full rounded-none border border-white/10 bg-black/30 px-4 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-[#F8A308]/70 focus:ring-2 focus:ring-[#F8A308]/20"
-              />
-              <label className="space-y-2 block">
+              <div className="relative">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your name"
+                  className="h-12 w-full rounded-none placeholder-jost border border-white/10 bg-black/30 px-4 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-[#F8A308]/70 focus:ring-2 focus:ring-[#F8A308]/20"
+                />
+                <UserIcon className="absolute right-2 top-3 stroke-white/40" />
+              </div>
+              <div className="relative">
+                <input
+
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  className="h-12 w-full rounded-none border border-white/10 bg-black/30 px-4 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-[#F8A308]/70 focus:ring-2 focus:ring-[#F8A308]/20"
+                />
+                <MailOpenIcon className="absolute right-2 top-3 stroke-white/40" />
+              </div>
+              <div className="space-y-2 block relative">
                 <textarea
                   name="message"
                   rows={6}
                   placeholder="Your message"
-                  className="w-full rounded-none border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-[#F8A308]/70 focus:ring-2 focus:ring-[#F8A308]/20"
+                  className="resize-none w-full rounded-none border border-white/10 bg-black/30 px-4 py-3 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-[#F8A308]/70 focus:ring-2 focus:ring-[#F8A308]/20"
                 />
-              </label>
+                <MessageSquareMore className="absolute right-2 top-3 stroke-white/40" />
+              </div>
               <button
                 type="submit"
                 className="group inline-flex h-14 w-full items-center justify-center gap-3 rounded-full bg-[#F8A308] px-6 text-sm font-semibold text-white jost transition-transform duration-200 hover:-translate-y-0.5"
@@ -101,8 +109,8 @@ export default function ContactPage() {
             </form>
           </div>
         </div>
-        <FooterArc />
       </section>
+      <FooterArc className="bg-transparent!" />
     </main>
   );
 }

@@ -66,7 +66,7 @@ const Page = () => {
             )
           })}
         </div>
-        <FooterArc />
+        <FooterArc className="bg-transparent" />
       </div>
     </main>
   )

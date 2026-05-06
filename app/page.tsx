@@ -74,25 +74,38 @@ export default function Page() {
       />
       <FAQ
         items={[
+
           {
-            question: "How does Elite Ayomide work?",
-            answer:
-              "Ayomide AI-driven bots to automate trading, security, and monitoring, ensuring fast and efficient blockchain transactions.",
+            question: "What services do you offer?",
+            answer: [
+              "Crypto consulting",
+              "Crypto mentorship",
+              "One-on-one crypto mentorship",
+              "Private trading investment",
+              "Video content creation",
+              "Community growth strategy",
+            ],
           },
           {
-            question: "Is my data secure with Ayomide?",
-            answer:
-              "Yes, we use industry-standard encryption and security protocols to keep your data safe at all times.",
+            question: "Who do you work with?",
+            answer: [
+              "Individuals looking for a profitable trading strategy through our crypto classes and mentorship.",
+              "High-net-worth individuals in Africa or the diaspora seeking steady investment growth with strict risk management.",
+              "Crypto brands looking to expand their reach through video content creation, marketing, and community management.",
+            ],
           },
           {
-            question: "What are the earning options available?",
-            answer:
-              "You can earn through staking, trading signals, mentorship programs, and one-on-one consulting sessions.",
+            question: "How can clients get started?",
+            answer: [
+              "Send us an email: EliteAyomide@gmail.com",
+              "Book a one-on-one session via the contact page.",
+              "Send us a direct Telegram DM on @realeliteayomide.",
+              "Send us a WhatsApp DM on +2347042161165 or +2347065000143.",
+            ],
           },
           {
-            question: "What are the earning options available?",
-            answer:
-              "We offer flexible earning models tailored to both beginners and experienced crypto traders.",
+            question: "What are your rates or engagement models?",
+            answer: ["Lifetime Mentorship: $100(One time fee)", "Community Strategy & Management: $500 per month", "Branding/Promotion: $15p per month"]
           },
         ]}
       />

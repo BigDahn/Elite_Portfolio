@@ -52,7 +52,10 @@ const Footer = () => {
             <div className="space-y-4  text-white/50">
               <div className="space-y-2">
                 <p className="text-white/50">Reach me directly?</p>
-                <p className="text-white font-medium">(123) 567 8901</p>
+                <div className="space-y-3">
+                  <p className="text-white font-medium">+2347042161165</p>
+                  <p className="text-white font-medium">+2348168130747</p>
+                </div>
               </div>
               <div className="space-y-2">
                 <p className="text-white/50">Need support?</p>

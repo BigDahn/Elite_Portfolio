@@ -131,7 +131,7 @@ export default function PageTransitionOverlay() {
   return (
     <div
       aria-hidden
-      className={`page-transition-overlay page-transition-overlay--${phase} bg-blue-800/40`}
+      className={`page-transition-overlay page-transition-overlay--${phase}`}
     />
   );
 }

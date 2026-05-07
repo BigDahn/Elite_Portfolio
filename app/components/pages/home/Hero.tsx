@@ -10,7 +10,7 @@ export default function HomePageHero() {
   const router = useRouter();
 
   return (
-    <div className="flex pt-10 md:pt-30 lg:pt-80 flex-col gap-[2em] items-center justify-center space-y-5  max-w-230 max-h-88.75 h-full w-full ">
+    <div className="flex pt-10 md:pt-30 lg:pt-80 flex-col gap-[2em] items-center justify-center space-y-5  max-w-230 max-h-88.75 min-h-svh h-full w-full">
       <div className="flex flex-col items-center gap-3 justify-center text-center w-full">
         <div className="relative max-w-[350px] md:max-w-[872px]">
           <h1 className="unbounded text-[30px] md:text-[50px] lg:text-[70px] font-bold leading-[107%] tracking-[-0.08em] text-white">
@@ -69,10 +69,11 @@ export default function HomePageHero() {
           <h2>More Results</h2>
         </div>
       </div>
-      <div className="w-screen z-50 bg-black">
+      <div className="w-screen -bottom-24 z-50 bg-black">
         <video
           src="/47f6d05d-a120-471f-b8e4-55016c8548ea.mp4"
           className="w-full"
+          controls={false}
           autoPlay
           loop
         />

@@ -12,7 +12,7 @@ import FooterArc from "../components/FooterArc";
 const Page = () => {
   return (
     <SectionContainer id="about" className="min-h-screen  bg-black">
-      <div className="md:px-10">
+      <div className="md:px-5 lg:px-10">
         <Hero className="min-h-screen pt-12">
           <div className="min-h-[700px] space-y-20 flex flex-col gap-[10em] relative justify-center items-center">
             <div className="flex flex-col max-w-[1002px] gap-4 justify-center items-center px-4 py-3 max-w-[346px] md:max-w-[1002px] text-center">
@@ -44,7 +44,10 @@ const Page = () => {
                   ease: "easeInOut",
                 }}
               >
-                <MoveDownIcon size={25} className="bg-linear-to-r from-white to-blue-800 bg-clip-text stroke-white" />
+                <MoveDownIcon
+                  size={25}
+                  className="bg-linear-to-r from-white to-blue-800 bg-clip-text stroke-white"
+                />
               </motion.div>
               <h6 className="jost bg-clip-text bg-linear-to-r from-white to-blue-800 font-normal text-[20px] leading-[130%] text-white/20 tracking-[-0.06em] text-center">
                 Scroll Down

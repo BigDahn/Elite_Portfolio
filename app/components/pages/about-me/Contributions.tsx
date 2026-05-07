@@ -14,7 +14,7 @@ function Contributions() {
     unbounded
     w-fit
     text-[30px]
-    md:text-[50px]
+    lg:text-[50px]
     font-normal
     uppercase
     leading-[123%]
@@ -38,7 +38,7 @@ function Contributions() {
     py-2
     absolute
     text-[30px]
-    md:text-[50px]
+    lg:text-[50px]
     font-normal
     uppercase
     leading-[123%]
@@ -54,7 +54,7 @@ function Contributions() {
           className="
     unbounded
     text-[30px]
-    md:text-[50px]
+    lg:text-[50px]
     font-normal
     py-2
     w-fit

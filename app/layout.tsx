@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import { jakarta, jost, satoshi, unbounded } from "./fonts";
 import Footer from "./components/Footer";
 import { cn } from "@/lib/utils";
+import PageTransitionOverlay from "./components/PageTransitionOverlay";
 
 export const metadata: Metadata = {
   title: "Elite Ayomide",
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       )}
     >
       <body className="min-h-full flex flex-col max-w-[800px] md:max-w-screen overflow-x-hidden bg-black">
+        <PageTransitionOverlay />
         <Header />
         {children}
         <Footer />

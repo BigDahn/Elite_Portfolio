@@ -13,14 +13,14 @@ const FooterArc = ({ className }: FooterArcProps) => {
   return (
     <div
       className={clsx(
-        "min-h-200 md:min-h-300 w-screen lg:min-h-[800px]  bottom-0 bg-black relative  overflow-hidden",
+        "min-h-200  bottom-0 bg-black relative  overflow-hidden",
         className,
       )}
     >
-      <div className="absolute flex max-h-[60%] pt-2 left-0 w-full  justify-center bottom-0">
-        <div className="pointer-events-none  absolute left-1/2 top-1/2 h-[400px]  w-[1200px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-90 blur-[99999999999999px] bg-[radial-gradient(circle,rgba(109,59,255,0.95)_0%,rgba(91,46,255,0.75)_25%,rgba(70,30,200,0.45)_50%,rgba(0,0,0,0)_75%)]" />
-        <div className="relative bottom-[-9.3rem] sm:bottom-[-3.4rem] md:bottom-[-10.3rem] lg:bottom-0 ">
-          <Ellipse className="w-full h-full " />
+      <div className="absolute flex max-h-[90%] pt-2 left-0 w-full  justify-center bottom-0">
+        <div className="pointer-events-none  absolute left-1/2 top-1/2 h-[400px] bottom-10  w-[1200px] -translate-x-1/2 -translate-y-1/2 border rounded-full opacity-90 blur-[99999999999999px] bg-[radial-gradient(circle,rgba(109,59,255,0.95)_0%,rgba(91,46,255,0.75)_25%,rgba(70,30,200,0.45)_50%,rgba(0,0,0,0)_75%)]" />
+        <div className="relative w-screen md:bottom-[-10.3rem] bg-transparent lg:bottom-0 h-full">
+          <Ellipse className="w-screen h-full" />
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2  -translate-y-1/2 z-50 space-y-5">
             <Image
               className="mx-auto"

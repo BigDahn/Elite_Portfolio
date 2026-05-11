@@ -42,7 +42,7 @@ const TrackRecord = () => {
   return (
     <SectionContainer className="bg-black" id="track-record">
       <div className="ml-auto block">
-        <CoinIcon className="ml-auto lg:block hidden animate-bounce [animation-duration:3s]" />
+        <CoinIcon className="ml-auto lg:block h-32 w-32 hidden animate-bounce [animation-duration:3s]" />
       </div>
       <div className="relative px-10 py-4 md:py-[3em] flex flex-col gap-[1em] md:gap-0  space-y-0">
         <div className="min-h-19 md:space-y-4 space-y-10">
@@ -53,7 +53,7 @@ const TrackRecord = () => {
           <div className="flex flex-col space-y-5 md:flex lg:flex-row py-3 gap-y-4 gap-x-8 items-start border-b border-slate-50/10 md:items-center w-full md:justify-between">
             <div className="space-y-5 w-full text-white  flex flex-col lg:flex-row gap-3 md:gap-0 lg:items-start lg:items-center items-start lg:gap-[0em] justify-start lg:justify-between">
               <div className="flex items-center gap-x-3">
-                <h3 className="unbounded leading-[113%] text-[#D9D9D9] tracking-[-11%] text-[26px] md:text-[50px] font-extrabold">
+                <h3 className="unbounded leading-[113%] text-[#D9D9D9] tracking-[-11%] text-[20px] sm:text-[26px] md:text-[50px] font-extrabold">
                   538+
                 </h3>
                 <small className="satoshi text-base text-[#fafafa]/50 w-full  md:max-w-[130px]">
@@ -147,10 +147,10 @@ function RecordCard({ isFull, showIcons, useBlur, title, value, image }: ReportP
         <div className="bg-[#1C1B20] rounded-[30px] h-full z-30" />
       )}
       <div className="z-[9999999%] absolute top-3 text-white p-3">
-        <div className="flex items-center text-[30px] unbounded gap-x-1">
-          <CountUp start={0} end={value} className="unbounded leading-[130%] z-9999 font-extrabold tracking-[-2%] text-[50px]" />+
+        <div className="flex items-center text-[26px] sm:text-[26px] lg:text-[50px] unbounded gap-x-1">
+          <CountUp start={0} end={value} className="unbounded leading-[130%] z-9999 font-extrabold tracking-[-2%] text-[35px] lg:text-[40px]" />+
         </div>
-        <p className="jost text-white/60 leading-[130%] z-50  tracking-[-2%] text-[30px]">
+        <p className="jost text-white/60 leading-[130%] z-50  tracking-[-2%] text-[25px] lg:text-[25px]">
           {title}
         </p>
       </div>

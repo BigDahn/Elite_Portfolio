@@ -21,7 +21,7 @@ const Page = () => {
         referrerPolicy="no-referrer"
         className="flex items-center gap-x-1 text-white/80 absolute right-10 top-64 jost text-2xl leading-[130%] tracking-[-6%]"
       >
-        <MediumIcon />
+        <MediumIcon className="w-12 h-12" />
         <p className="">Follow me on Medium</p>
       </Link>
       <div className="space-y-5 -pt-24">

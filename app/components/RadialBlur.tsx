@@ -109,21 +109,21 @@ const RadialBlur = ({
       className={cn(
         "pointer-events-none",
         !followCursor && "absolute -top-[150px] left-1/2 -translate-x-1/2",
-        "h-[350px] w-[700px] rounded-full opacity-90 blur-[120px]",
+        "h-[350px] w-[700px] rounded-full opacity-40 md:opacity-90 blur-[120px]",
         className
       )}
     >
       <div
         className={cn(
-          "absolute left-1/2 h-[350px] w-[700px] -translate-x-1/2 rounded-full opacity-90 blur-[120px]",
+          "absolute left-1/2 h-[350px] w-[700px] -translate-x-1/2 rounded-full opacity-40 md:opacity-90 blur-[120px]",
           blurClassName
         )}
         style={{
           background: `radial-gradient(
             circle,
-            rgba(109,59,255,0.95) 0%,
-            rgba(91,46,255,0.75) 25%,
-            rgba(70,30,200,0.45) 50%,
+            rgba(109,59,255,0.85) 0%,
+            rgba(91,46,255,0.65) 25%,
+            rgba(70,30,200,0.35) 50%,
             rgba(0,0,0,0) 75%
           )`,
         }}

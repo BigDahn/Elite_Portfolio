@@ -140,6 +140,8 @@ function RecordCard({ isFull, showIcons, useBlur, title, value, image }: ReportP
         width={308.08}
         height={200}
         alt={title}
+        preload
+        loading="eager"
       />
       {useBlur ? (
         <div className="inset-0 absolute bg-black h-full rounded-[30px] opacity-90" />

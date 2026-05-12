@@ -10,7 +10,7 @@ export default function HomePageHero() {
   const router = useRouter();
 
   return (
-    <div className="flex pt-10 md:pt-30 lg:pt-80 flex-col gap-[2em] items-center justify-center space-y-5  max-w-230 max-h-88.75 min-h-svh h-full w-full">
+    <div className="flex pt-10 md:pt-30 lg:pt-60 flex-col gap-[2em] items-center justify-center space-y-5  max-w-230 min-h-lvh h-full w-full">
       <div className="flex flex-col items-center gap-3 justify-center text-center w-full">
         <div className="relative max-w-[350px] md:max-w-[872px]">
           <h1 className="unbounded text-[30px] md:text-[50px] lg:text-[70px] font-bold leading-[107%] tracking-[-0.08em] text-white">

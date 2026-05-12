@@ -1,7 +1,4 @@
-"use client";
-
-import FooterArc from "./components/FooterArc";
-import Hero from "./components/Hero";
+"use client"; import FooterArc from "./components/FooterArc"; import Hero from "./components/Hero";
 import SectionContainer from "./components/SectionContainer";
 import FAQ from "./components/pages/home/Faq";
 import HomePageHero from "./components/pages/home/Hero";
@@ -17,7 +14,7 @@ export default function Page() {
       <Hero
         animate={true}
         followCursor={false}
-        className="overflow-hidden h-screen lg:min-h-screen flex items-center lg:flex-col lg:justify-center relative"
+        className="min-h-screen lg:min-h-screen flex items-center lg:flex-col lg:justify-center relative"
       >
         <HomePageHero />
       </Hero>

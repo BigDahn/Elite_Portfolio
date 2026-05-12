@@ -37,11 +37,11 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => (
   <div className="bg-black/5 rounded-[20px] p-5 space-y-4 shrink-0 w-full md:max-h-113 min-h-80 flex flex-col justify-center">
     {/* ↑ was bg-white/5 border-white/10 */}
     <div className="flex items-center gap-3"></div>
-    <p className="jost text-black/60 text-[25px] leading-[120%] tracking-[-4%] font-light">
+    <p className="jost text-black/60 text-[23px] leading-[120%] tracking-[-4%] font-light">
       {testimonial.content}
     </p>
     {/* ↑ was text-white/60 */}
-    <p className="jakarta font-bold text-black text-[25px] leading-tight">
+    <p className="jakarta font-bold text-black text-[22px] leading-tight">
       {testimonial.name}
     </p>
     <StarRating rating={testimonial.rating} />

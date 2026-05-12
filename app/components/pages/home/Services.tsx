@@ -20,12 +20,12 @@ const Services = () => {
           />
         </div>
         <div className="w-full ">
-          <div className="text-white w-full relative grid md:grid-cols-2 gap-x-12 gap-2 items-center z-[99999] justify-between ">
+          <div className="text-white w-full relative grid space-y-5 lg:space-y-0 lg:grid-cols-2 gap-x-12 gap-2 items-center z-[99999] justify-between ">
             <div className="relative z-30">
-              <h3 className="unbounded uppercase leading-[113%] text-[#D9D9D9] tracking-[-11%] text-[30px] md:text-[50px] font-extrabold">
+              <h3 className="unbounded uppercase leading-[113%] text-[#D9D9D9] tracking-[-11%] text-[30px] lg:text-[45px] font-extrabold">
                 Strategic Services.
               </h3>
-              <h3 className="unbounded leading-[110%] text-[#D9D9D9] tracking-[-11%] text-[30px] md:text-[50px] font-extrabold uppercase">
+              <h3 className="unbounded leading-[110%] text-[#D9D9D9] tracking-[-11%] text-[30px] lg:text-[45px] font-extrabold uppercase">
                 For Lasting Impact
               </h3>
             </div>

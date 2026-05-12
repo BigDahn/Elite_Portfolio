@@ -1,7 +1,8 @@
 import Headings from "../../headings";
 import Link from "next/link"
 import SectionContainer from "../../SectionContainer";
-import { Check, Send } from "lucide-react";
+import { Send } from "lucide-react";
+import Check from "@/assets/svgs/check.svg"
 import TypewriterText from "../../Typewriter";
 import dynamic from "next/dynamic";
 
@@ -394,6 +395,14 @@ const AboutMe = () => {
       color: "#808080",
     },
   ];
+  const aboutHighlights = [
+    "Trader + Content Creator",
+    "Growth Strategist",
+    "Community Manager",
+    "Technical Analyst",
+    "Market Analysis",
+    "Trading Mentor",
+  ];
 
   return (
     <SectionContainer id="aboutMe" className="bg-black">
@@ -403,15 +412,15 @@ const AboutMe = () => {
           <div className="border-b-2 border-gray-200/10 h-15  w-[96%] m-auto " />
         </div>
         <section className="flex flex-col justify-center w-full m-auto py-4  ">
-          <div className=" flex flex-col-reverse lg:grid lg:grid-cols-[613px_1fr] items-center  w-full justify-center h-[900px] md:h-[720px] ">
+          <div className=" flex flex-col-reverse lg:grid gap-3 lg:grid-cols-[450px_1fr] xl:grid-cols-[613px_1fr] items-center  w-full justify-center h-[900px] md:h-[720px] ">
             <World data={sampleArcs} globeConfig={globeConfig} />
             <div className="order-first md:order-last">
-              <h3 className="unbounded uppercase text-[30px] md:text-[50px] font-bold leading-[113%] tracking-[-11%] text-white">
+              <h3 className="unbounded uppercase text-[30px] md:text-[40px] xl:text-[45px] font-bold leading-[113%] tracking-[-11%] text-white">
                 Who is <span className="text-[#F8A308]">Elite ayomide?</span>
               </h3>
               <div className="h-17.5">
                 <h3
-                  className={`unbounded text-[30px] md:text-[50px] font-bold leading-[107%] tracking-[-8%] text-white `}
+                  className={`unbounded text-[30px] md:text-[40px] xl:text-[45px] font-bold leading-[107%] tracking-[-8%] text-white `}
                 >
                   A <TypewriterText />
                 </h3>
@@ -423,65 +432,16 @@ const AboutMe = () => {
               </p>
 
               <div className="grid md:grid-cols-2 py-[2em] text-[10px] md:text-[16px] gap-3">
-                <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
-                    <Check />
+                {aboutHighlights.map((highlight) => (
+                  <div key={highlight} className="flex items-center gap-3">
+                    <div className="bg-[#F8A308] h-[18px] md:h-[23px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
+                      <Check />
+                    </div>
+                    <h4 className="jost text-[14px] md:text-[20px] leading-[120%] tracking-[4%] text-gray-500">
+                      {highlight}
+                    </h4>
                   </div>
-                  <h4 className="jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500">
-                    Trader + Content Creator
-                  </h4>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
-                    <Check />
-                  </div>
-                  <h4
-                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
-                  >
-                    Growth Strategist
-                  </h4>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308]  h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
-                    <Check />
-                  </div>
-                  <h4
-                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
-                  >
-                    Community Manager
-                  </h4>
-                  75
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
-                    <Check />
-                  </div>
-                  <h4
-                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
-                  >
-                    Technical Analyst
-                  </h4>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
-                    <Check />
-                  </div>
-                  <h4
-                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
-                  >
-                    Market Analysis
-                  </h4>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="bg-[#F8A308] h-[18px] md:h-[27px] flex items-center w-[18px] md:w-[27px] justify-center rounded-full">
-                    <Check />
-                  </div>
-                  <h4
-                    className={`jost text-[20px] md:text-[25px] leading-[120%] tracking-[4%] text-gray-500`}
-                  >
-                    Trading Mentor
-                  </h4>
-                </div>
+                ))}
               </div>
 
               <Link href="/about-me" className="jost bg-white rounded-full py-[1.3em] flex items-center justify-center px-[2.8em] font-semibold flex items-center gap-3 mt-4 w-full md:max-w-[250px]">

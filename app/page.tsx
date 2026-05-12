@@ -14,7 +14,7 @@ export default function Page() {
       <Hero
         animate={true}
         followCursor={false}
-        className="min-h-screen lg:min-h-screen flex items-center lg:flex-col lg:justify-center relative"
+        className="min-h-screen overflow-hidden lg:min-h-screen flex items-center lg:flex-col lg:justify-center relative"
       >
         <HomePageHero />
       </Hero>

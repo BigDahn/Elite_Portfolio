@@ -39,7 +39,7 @@ const FAQ = ({ items }: FAQProps) => {
                   key={i}
                   value={`item-${i}`}
                   asChild
-                  className="hover:bg-slate-100/5 duration-500 px-5 rounded-lg py-2 h-48.75 flex flex-col justify-center"
+                  className="hover:bg-slate-100/5 duration-500 px-5 rounded-lg py-2 min-h-32 flex flex-col justify-center"
                 >
                   <li>
                     <AccordionTrigger className="jost text-white font-medium text-[15px] hover:no-underline hover:text-white/80 transition-colors [&>svg]:hidden flex justify-between items-start  gap-4 group">
@@ -47,17 +47,17 @@ const FAQ = ({ items }: FAQProps) => {
                         {item.question}
                       </span>
                     </AccordionTrigger>
-                <AccordionContent className="jost max-w-6xl text-white/50 font-normal text-[13px] md:text-[16px] leading-[160%] pt-1 pb-4">
-                  {Array.isArray(item.answer) ? (
-                    <ul className="list-disc space-y-2 pl-5">
-                      {item.answer.map((point, pointIndex) => (
-                        <li key={pointIndex}>{point}</li>
-                      ))}
-                    </ul>
-                  ) : (
-                    item.answer
-                  )}
-                </AccordionContent>
+                    <AccordionContent className="jost max-w-6xl text-white/50 font-normal text-[13px] md:text-[16px] leading-[160%] pt-1 pb-4">
+                      {Array.isArray(item.answer) ? (
+                        <ul className="list-disc space-y-2 pl-5">
+                          {item.answer.map((point, pointIndex) => (
+                            <li key={pointIndex}>{point}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        item.answer
+                      )}
+                    </AccordionContent>
                   </li>
                 </AccordionItem>
               ))}

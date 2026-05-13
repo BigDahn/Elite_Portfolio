@@ -13,7 +13,7 @@ const FooterArc = ({ className }: FooterArcProps) => {
   return (
     <div
       className={clsx(
-        "min-h-[400px] lg:min-h-200  bottom-0 bg-black relative  overflow-hidden",
+        "min-h-[400px] lg:min-h-132  bottom-0 bg-black relative  overflow-hidden",
         className,
       )}
     >

@@ -30,7 +30,7 @@ const Services = () => {
               </h3>
             </div>
             <div>
-              <p className="jost font-light text-[20px] md:text-[25px] text-[#FAFAFA]/90 leading-[120%] tracking-[-4%]">
+              <p className="jost font-normal text-[20px] md:text-[25px] text-[#FAFAFA]/90 leading-[120%] tracking-[-4%]">
                 A suite of high-value services designed to support
                 organizations, institutions, and leaders—delivering expert
                 guidance, strategic insight, and actionable solutions that drive

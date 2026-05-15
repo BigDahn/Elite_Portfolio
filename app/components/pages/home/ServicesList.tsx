@@ -38,7 +38,6 @@ function useScramble(originalText: string) {
   return { text, scramble };
 }
 
-// ─── Types ───────────────────────────────────────────────────────────────────
 
 export interface ServiceItem {
   title: string;
@@ -65,9 +64,8 @@ const ServiceRow = ({
 
   return (
     <div
-      className={`h-50 group flex flex-col w-[100%] md:flex-row  items-center md:items-start  gap-4 md:gap-3 justify-between px-6 py-5 border-b border-white/10 cursor-default transition-colors duration-300 ${
-        active ? "bg-white/5" : "bg-transparent"
-      }`}
+      className={`h-50 group flex flex-col w-[100%] md:flex-row items-center md:items-center gap-4 md:gap-3 justify-center px-6 py-5 border-b border-white/10 cursor-default transition-colors duration-300 ${active ? "bg-white/5" : "bg-transparent"
+        }`}
       onMouseEnter={() => {
         setActive(true);
         scramble();
@@ -91,9 +89,8 @@ const ServiceRow = ({
       </div>
       {href && (
         <div
-          className={`transition-opacity duration-300  justify-end flex w-full ${
-            active ? "opacity-100" : "opacity-0"
-          }`}
+          className={`transition-opacity duration-300  justify-end flex w-full ${active ? "opacity-100" : "opacity-0"
+            }`}
         >
           <ExternalLinkButton
             href={href}

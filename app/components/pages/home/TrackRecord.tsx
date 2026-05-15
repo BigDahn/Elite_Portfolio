@@ -41,7 +41,7 @@ const records = [
 const TrackRecord = () => {
   return (
     <SectionContainer className="bg-black" id="track-record">
-      <div className="ml-auto block">
+      <div className="ml-auto block absolute right-0">
         <CoinIcon className="ml-auto lg:block h-32 w-32 hidden animate-bounce [animation-duration:3s]" />
       </div>
       <div className="relative px-10 py-4 md:py-[3em] flex flex-col gap-[1em] md:gap-0  space-y-0">

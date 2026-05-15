@@ -13,7 +13,7 @@ const FooterArc = ({ className }: FooterArcProps) => {
   return (
     <div
       className={clsx(
-        "min-h-[400px] lg:min-h-150  bottom-0 bg-black relative  overflow-hidden",
+        "min-h-[400px] lg:min-h-170  bottom-0 bg-black relative  overflow-hidden",
         className,
       )}
     >
@@ -21,7 +21,7 @@ const FooterArc = ({ className }: FooterArcProps) => {
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-[400px] w-[1200px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-40 md:opacity-90 blur-[120px] bg-[radial-gradient(circle,rgba(109,59,255,0.85)_0%,rgba(91,46,255,0.65)_25%,rgba(70,30,200,0.35)_50%,rgba(0,0,0,0)_75%)]" />
         <div className="relative w-screen md:bottom-[-10.3rem] bg-transparent lg:bottom-0 h-full">
           <Ellipse className="w-screen h-full" />
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2  -translate-y-1/2 z-50 space-y-5">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2  -translate-y-1/2  z-50 space-y-5">
             <Image
               className="mx-auto"
               src="/Frame 2121453894.png"
@@ -30,7 +30,7 @@ const FooterArc = ({ className }: FooterArcProps) => {
               alt=""
             />
             <p className="text-transparent unbounded bg-clip-text bg-gradient-to-b from-white to-blue-800 text-[12px] md:text-[15px] lg:text-[50px] text-center capitalize font-extrabold leading-[100%] tracking-[-0.06em]">
-              Lets start your <br /> Trading Journey
+              Let&apos;s start your <br /> Trading Journey
             </p>
             <p className="jost leading-[130%] tracking-[-0.02em] w-[220px] md:w-[508px] text-center text-[12px] md:text-[18px] lg:text-[25px] text-white/60 ">
               Start trading with powerful tools, real-time insights, and a
@@ -42,7 +42,9 @@ const FooterArc = ({ className }: FooterArcProps) => {
               className="mx-auto jakarta px-3 md:px-8 text-black py-1 md:py-2"
               textClassName="text-[15px]!"
             />
-            <div className="relative bottom-[254px] left-[230px] sm:left-[260px] md:bottom-[310px] md:left-[500px] lg:left-[725px]">
+            <div className="relative bottom-[254px] left-[230px] sm:left-[260px] md:bottom-[310px] md:left-[500px] lg:left-[725px]" onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" })
+            }}>
               <div className="bg-[#3E1FE8] flex justify-center h-[50px] w-[50px] items-center  rounded-full">
                 <ArrowUp color="white" />
               </div>

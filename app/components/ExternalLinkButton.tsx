@@ -25,13 +25,13 @@ const ExternalLinkButton = ({
       <Link href={href} className="flex items-center justify-center gap-5">
         <p
           className={clsx(
-            "jakarta font-semibold text-[10px] sm:text-[12px] md:text-[14px] lg:text-[20px] leading-[130%] tracking-[-2%]",
+            "jakarta font-semibold text-[8px] sm:text-[9px] md:text-[14px] lg:text-[20px] leading-[130%] tracking-[-2%]",
             textClassName,
           )}
         >
           {text}
         </p>
-        <SquareArrowOutUpRight size={20} />
+        <SquareArrowOutUpRight className="size-4 lg:size-5" />
       </Link>
     </button>
   );

@@ -43,7 +43,7 @@ export default function ContactPage() {
             backgroundPosition: "center center"
           }}>
             <div className="bg-black h-full opacity-85 inset-0 absolute" />
-            <div className=" h-full z-40 relative flex justify-center space-y-5 flex-col pl-4">
+            <div className=" h-full z-40 relative flex justify-center py-4 space-y-5 flex-col pl-4">
               {contactDetails.map((item) => {
                 const Icon = item.icon;
 
@@ -53,7 +53,7 @@ export default function ContactPage() {
                       <Icon className="h-5 w-5" />
                     </span>
                     <span className="space-y-1">
-                      <span className="jakarta block text-xl capitalize leading-[115.5%] tracking-[-4%] text-white md:text-2xl lg:text-[25px] lg:tracking-[-8%]">
+                      <span className="jakarta block text-lg sm:text-xl capitalize leading-[115.5%] tracking-[-4%] text-white md:text-2xl lg:text-[25px] lg:tracking-[-8%]">
                         {item.label}
                       </span>
                       <span className="jakarta block text-sm leading-[120%] tracking-normal text-white/40 md:text-[15px] md:tracking-[-2%] lg:leading-[73%] lg:tracking-[-4%]">

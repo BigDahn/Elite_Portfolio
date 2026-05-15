@@ -8,6 +8,7 @@ import {
 import Headings from "../../headings";
 import RadialBlur from "../../RadialBlur";
 import SectionContainer from "../../SectionContainer";
+import SectionContent from "../../SectionContent";
 
 export interface FAQItem {
   question: string;
@@ -21,7 +22,7 @@ interface FAQProps {
 const FAQ = ({ items }: FAQProps) => {
   return (
     <SectionContainer id="faq" className="bg-black">
-      <div className="h-full px-10 py-14 overflow-hidden space-y-12 relative">
+      <SectionContent className="h-full overflow-hidden space-y-12 relative">
         <div className="mx-auto flex flex-col items-center relative z-50 text-center gap-4 max-w-221.5">
           <h2 className="unbounded text-white font-extrabold text-[25px] md:text-[46px] leading-tight">
             Frequently Asked Question
@@ -65,7 +66,7 @@ const FAQ = ({ items }: FAQProps) => {
           </Accordion>
         </div>
         <RadialBlur className="absolute -top-32" />
-      </div>
+      </SectionContent>
     </SectionContainer>
   );
 };

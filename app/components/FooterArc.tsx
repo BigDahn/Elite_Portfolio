@@ -13,7 +13,7 @@ const FooterArc = ({ className }: FooterArcProps) => {
   return (
     <div
       className={clsx(
-        "min-h-[400px] lg:min-h-132  bottom-0 bg-black relative  overflow-hidden",
+        "min-h-[400px] lg:min-h-150  bottom-0 bg-black relative  overflow-hidden",
         className,
       )}
     >
@@ -39,7 +39,8 @@ const FooterArc = ({ className }: FooterArcProps) => {
             <ExternalLinkButton
               text="Get Started Now"
               href="/contact"
-              className="mx-auto px-3 md:px-8 text-black py-1 md:py-2"
+              className="mx-auto jakarta px-3 md:px-8 text-black py-1 md:py-2"
+              textClassName="text-[15px]!"
             />
             <div className="relative bottom-[254px] left-[230px] sm:left-[260px] md:bottom-[310px] md:left-[500px] lg:left-[725px]">
               <div className="bg-[#3E1FE8] flex justify-center h-[50px] w-[50px] items-center  rounded-full">

@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import Headings from "../../headings";
 import SectionContainer from "../../SectionContainer";
+import SectionContent from "../../SectionContent";
 
 export interface Testimonial {
   name: string;
@@ -118,7 +119,7 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
         }
       `}</style>
 
-      <div className="px-6 md:px-10 py-14 space-y-10">
+      <SectionContent className="space-y-10">
         <div className="space-y-5 text-center flex  items-center flex-col">
           <Headings
             text="Trusted and experienced power elite CUSTOMERS"
@@ -141,7 +142,7 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
         <div className="md:hidden">
           <MobileCarousel items={testimonials} />
         </div>
-      </div>
+      </SectionContent>
     </SectionContainer>
   );
 };

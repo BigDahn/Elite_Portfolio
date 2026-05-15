@@ -2,13 +2,14 @@ import ExternalLinkButton from "../../ExternalLinkButton";
 import Headings from "../../headings";
 import SectionContainer from "../../SectionContainer";
 import Image from "next/image";
+import SectionContent from "../../SectionContent";
 
 const trades = ["/e1.png", "/e11.png", "/e10.png"];
 
 const TradingHistory = () => {
   return (
     <SectionContainer id="trading-history" className="bg-black">
-      <div className="px-10 py-4 md:py-[4em] space-y-10">
+      <SectionContent className="space-y-10">
         <div className="space-y-5">
           <div className="space-y-10">
             <Headings
@@ -63,7 +64,7 @@ const TradingHistory = () => {
             textClassName="text-base!"
           />
         </div>
-      </div>
+      </SectionContent>
     </SectionContainer>
   );
 };

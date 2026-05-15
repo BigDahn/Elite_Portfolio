@@ -5,6 +5,7 @@ import { Send } from "lucide-react";
 import Check from "@/assets/svgs/check.svg"
 import TypewriterText from "../../Typewriter";
 import dynamic from "next/dynamic";
+import SectionContent from "../../SectionContent";
 
 const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
   ssr: false,
@@ -406,7 +407,7 @@ const AboutMe = () => {
 
   return (
     <SectionContainer id="aboutMe" className="bg-black">
-      <div className=" py-6 md:py-20 px-10">
+      <SectionContent>
         <div className="md:h-19">
           <Headings text="About Me" textClassName="text-[#D9D9D9]" />
           <div className="border-b-2 border-gray-200/10 h-15  w-[96%] m-auto " />
@@ -456,7 +457,7 @@ const AboutMe = () => {
             </div>
           </div>
         </section>
-      </div>
+      </SectionContent>
     </SectionContainer>
   );
 };

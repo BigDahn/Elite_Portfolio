@@ -4,11 +4,12 @@ import RadialBlur from "../../RadialBlur";
 import SectionContainer from "../../SectionContainer";
 import ServiceList from "./ServicesList";
 import Looper from "@/assets/svgs/Looper-3.svg";
+import SectionContent from "../../SectionContent";
 
 const Services = () => {
   return (
     <SectionContainer id="my-services" className="bg-black">
-      <div className="h-full px-10 md:py-14 w-full py-7 overflow-hidden space-y-14 relative ">
+      <SectionContent className="h-full overflow-hidden space-y-14 relative">
         <div className="absolute right-0 -top-10">
           <Looper />
         </div>
@@ -60,7 +61,7 @@ const Services = () => {
           />
         </div>
         <RadialBlur blurClassName="bottom-0" className="absolute -bottom-56" />
-      </div>
+      </SectionContent>
     </SectionContainer>
   );
 };

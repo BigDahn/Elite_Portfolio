@@ -5,6 +5,7 @@ import SectionContainer from "../../SectionContainer";
 import Image from "next/image";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import CoinIcon from "@/assets/svgs/Img7.svg"
+import SectionContent from "../../SectionContent";
 
 const records = [
   {
@@ -44,7 +45,7 @@ const TrackRecord = () => {
       <div className="ml-auto block absolute right-0">
         <CoinIcon className="ml-auto lg:block h-32 w-32 hidden animate-bounce [animation-duration:3s]" />
       </div>
-      <div className="relative px-10 py-4 md:py-[3em] flex flex-col gap-[1em] md:gap-0  space-y-0">
+      <SectionContent className="relative flex flex-col gap-[1em] md:gap-0 space-y-0">
         <div className="min-h-19 md:space-y-4 space-y-10">
           <Headings
             textClassName="text-white"
@@ -82,7 +83,7 @@ const TrackRecord = () => {
             <RecordCard key={record.title} {...record} />
           ))}
         </div>
-      </div>
+      </SectionContent>
     </SectionContainer>
   );
 };

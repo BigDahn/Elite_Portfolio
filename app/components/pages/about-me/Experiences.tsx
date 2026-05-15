@@ -112,7 +112,7 @@ function ProfessionalExperience({
                 style={{ backgroundColor: "gold" }}
               >
                 {" "}
-                <Check color="black" />
+                <Check color="black" className="p-1 stroke-4 rotate-12" />
               </div>
               {achievement}
             </li>

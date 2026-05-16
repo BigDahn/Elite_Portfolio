@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ContactUsBtn from "./ContactUs";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "motion/react";
 import MobileNav from "./Navbar";
 import Sidebar from "./Sidebar";
@@ -20,10 +20,62 @@ const navItems = [
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobileNavVisible, setIsMobileNavVisible] = useState(true);
+  const lastScrollY = useRef(0);
   const pathname = usePathname();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isMobileViewport = window.innerWidth < 780;
+
+      if (!isMobileViewport) {
+        setIsMobileNavVisible(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      if (currentScrollY <= 0) {
+        setIsMobileNavVisible(true);
+        lastScrollY.current = 0;
+        return;
+      }
+
+      const delta = currentScrollY - lastScrollY.current;
+      if (Math.abs(delta) < 8) return;
+
+      if (delta > 0 && currentScrollY > 64) {
+        setIsMobileNavVisible(false);
+      } else {
+        setIsMobileNavVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    lastScrollY.current = window.scrollY;
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      setIsMobileNavVisible(true);
+    }
+  }, [isOpen]);
+
   return (
-    <header className="absolute top-0 left-0 right-0 z-9999 w-full bg-transparent">
+    <header
+      className={cn(
+        "fixed top-0 left-0 right-0 z-9999 w-full bg-transparent transition-transform duration-300 md:translate-y-0",
+        isMobileNavVisible ? "translate-y-0" : "-translate-y-full",
+      )}
+    >
       <nav className="flex justify-between max-w-450 px-4 md:px-[3em] py-[2em] lg:py-[1em] items-center  mx-auto">
         <Link href="/">
           <Image

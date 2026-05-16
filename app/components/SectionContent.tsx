@@ -8,7 +8,7 @@ interface SectionContentProps {
 
 const SectionContent = ({ children, className }: SectionContentProps) => {
   return (
-    <div className={clsx("mx-auto w-full max-w-7xl px-0 md:px-0 py-14", className)}>
+    <div className={clsx("mx-auto w-full max-w-7xl px-3 md:px-0 py-14", className)}>
       {children}
     </div>
   );

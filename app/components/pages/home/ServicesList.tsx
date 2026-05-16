@@ -89,13 +89,13 @@ const ServiceRow = ({
       </div>
       {href && (
         <div
-          className={`transition-opacity duration-300  justify-end flex w-full ${active ? "opacity-100" : "opacity-0"
+          className={`transition-opacity duration-300 mx-auto justify-center md:justify-end flex w-full ${active ? "opacity-100" : "opacity-0"
             }`}
         >
           <ExternalLinkButton
             href={href}
             text={ctaLabel}
-            className="md:w-54 w-full"
+            className="md:w-54 w-full gap-3.75!"
             textClassName="text-base!"
           />
         </div>

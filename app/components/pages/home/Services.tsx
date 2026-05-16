@@ -56,7 +56,7 @@ const Services = () => {
           <ExternalLinkButton
             text="More of my Services"
             href="/services"
-            className="md:w-67 w-full py-4 gap-3.75!"
+            className="md:w-67 w-fit px-5 py-4 gap-3.75!"
             textClassName="text-base!"
           />
         </div>

@@ -19,23 +19,23 @@ const Page = () => {
         href="https://medium.com/@0x5hmuel"
         target="_blank"
         referrerPolicy="no-referrer"
-        className="flex items-center gap-x-1 text-white/80 absolute right-10 top-64 jost text-2xl leading-[130%] tracking-[-6%]"
+        className="flex items-center gap-x-1 text-white/80 absolute right-10 tn:top-52 xs:top-64 sm:top-64 jost text-2xl leading-[130%] tracking-[-6%]"
       >
-        <MediumIcon className="w-12 h-12" />
-        <p className="">Follow me on Medium</p>
+        <MediumIcon className=" w-8 h-8 sm:w-12 sm:h-12" />
+        <p className="text-sm tn:text-base xxs:text-xl md:text-base">Follow me on Medium</p>
       </Link>
       <div className="space-y-5 -pt-24">
         <div className="flex md:flex-row flex-col space-y-10 px-10 justify-between">
           <div className="w-full">
-            <h2 className="font-bold text-[50px] text-white unbounded leading-[113%] tracking-[-11%]">
+            <h2 className="font-bold text-[30px] sm:text-[45px] md:text-[30px] lg:text-[50px] text-white unbounded leading-[113%] tracking-[-11%]">
               Articles that
             </h2>
-            <h2 className="font-bold text-[50px] text-white unbounded leading-[113%] tracking-[-11%]">
+            <h2 className="font-bold text-[30px] sm:text-[45px] md:text-[30px] lg:text-[50px] text-white unbounded leading-[113%] tracking-[-11%]">
               Inspire
             </h2>
           </div>
           <div>
-            <p className="text-right text-white/50 jost font-light leading-[130%] tracking-[-6%] text-[22px]">
+            <p className="text-right text-white/50 jost font-light leading-[130%] tracking-[-6%] md:text-[18px] lg:text-[22px] sm:text-[16px]">
               Here you will find practical articles, current trends and tested
               strategies that help you build high-performance digital
               experiences and grow your trading experience.

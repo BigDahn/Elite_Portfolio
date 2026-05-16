@@ -29,10 +29,10 @@ const FooterArc = ({ className }: FooterArcProps) => {
               height={50}
               alt=""
             />
-            <p className="text-transparent unbounded bg-clip-text bg-gradient-to-b from-white to-blue-800 text-[12px] md:text-[15px] lg:text-[50px] text-center capitalize font-extrabold leading-[100%] tracking-[-0.06em]">
+            <p className="text-transparent unbounded bg-clip-text bg-gradient-to-b from-white to-blue-800 text-[14px] md:text-[15px] lg:text-[50px] text-center capitalize font-extrabold leading-[100%] tracking-[-0.06em]">
               Let&apos;s start your <br /> Trading Journey
             </p>
-            <p className="jost leading-[130%] tracking-[-0.02em] w-[220px] md:w-[508px] text-center text-[12px] md:text-[18px] lg:text-[25px] text-white/60 ">
+            <p className="jost leading-[130%] tracking-[-0.02em] w-[220px] md:w-[508px] text-center text-[14px] md:text-[18px] lg:text-[25px] text-white/60 ">
               Start trading with powerful tools, real-time insights, and a
               secure platform for better profits
             </p>

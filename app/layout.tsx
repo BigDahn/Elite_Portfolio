@@ -30,7 +30,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         "font-sans",
       )}
     >
-      <body className="min-h-full flex flex-col max-w-[800px] md:max-w-screen overflow-x-hidden bg-black">
+      <body className="min-h-full flex flex-col max-w-7xl md:max-w-screen overflow-x-hidden bg-black">
         <PageTransitionOverlay />
         <Header />
         {children}

@@ -10,7 +10,7 @@ import AboutMe from "./components/pages/home/aboutMe";
 
 export default function Page() {
   return (
-    <SectionContainer id="hero">
+    <SectionContainer id="hero" className="">
       <Hero
         animate={true}
         followCursor={false}

@@ -126,7 +126,7 @@ const Testimonials = ({ testimonials }: TestimonialsProps) => {
             textClassName="text-base! leading-[170%]!"
             headerClassName="flex flex-col gap-2 items-center md:flex md:flex-row md:items-center md:gap-3"
           />
-          <h3 className="font-bold uppercase text-center jakarta text-[36px] md:text-[50px] leading-[113%] tracking-[-0.11em] text-black">
+          <h3 className="font-bold uppercase text-center jakarta text-[36px] md:text-[45px] leading-[113%] tracking-[-0.11em] text-black">
             57,500+ Trusted Customers
           </h3>
         </div>

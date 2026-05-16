@@ -60,7 +60,7 @@ const TradingHistory = () => {
           <ExternalLinkButton
             text="See More"
             href="/"
-            className="md:w-54 w-full"
+            className="md:w-54 w-fit px-5 py-4 gap-3.75!"
             textClassName="text-base!"
           />
         </div>

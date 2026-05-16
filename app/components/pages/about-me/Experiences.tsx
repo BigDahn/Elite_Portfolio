@@ -89,23 +89,23 @@ function ProfessionalExperience({
   achievements,
 }: IProfessionalExperience) {
   return (
-    <div className="border-y border-y-white/5 min-h-75 grid relative grid-cols-[minmax(97px,100px)_1fr] md:grid-cols-[minmax(100px,150px)_1fr] lg:grid-cols-[minmax(293px,350px)_1fr] text-white/70">
-      <div className="relative jost font-medium leading-[170%] tracking-[-10%] text-[8px] md:text-lg lg:text-xl p-10">
+    <div className="border-y border-y-white/5 min-h-75 grid relative grid-cols-1 md:grid-cols-[minmax(100px,150px)_1fr] lg:grid-cols-[minmax(293px,350px)_1fr] text-white/70">
+      <div className="relative jost font-medium leading-[170%] tracking-[-10%] text-[14px] md:text-lg lg:text-xl p-10">
         <p>{date}</p>
         <div
-          className="absolute h-4 w-4 bg-[#CC9933] -right-2 top-12"
+          className="absolute h-4 w-4 bg-[#CC9933] left-2 md:-right-2 top-12"
           style={{ backgroundColor: "gold" }}
         />
       </div>
       <div className="border-l border-l-white/5 flex flex-col space-y-3 p-10 px-15">
-        <h3 className="unbounded font-medium text-[10px] md:text-2xl lg:text-2xl leading-[170%] tracking-[-6%] text-white">
+        <h3 className="unbounded font-medium text-[15px] md:text-2xl lg:text-2xl leading-[170%] tracking-[-6%] text-white">
           {title}
         </h3>
         <ul className="space-y-4">
           {achievements.map((achievement, index: number) => (
             <li
               key={index}
-              className="satoshi font-light flex items-start gap-x-3 text-white/50 text-xs md:text-base lg:text-lg"
+              className="satoshi font-light flex items-start gap-x-3 text-white/50 text-sm md:text-base lg:text-lg"
             >
               <div
                 className="md:h-6 md:w-6 h-3 w-3 items-center justify-center  rounded-full"

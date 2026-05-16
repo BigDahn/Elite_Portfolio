@@ -20,7 +20,7 @@ const Headings = ({
       />
       <p
         className={clsx(
-          "jost uppercase text-[10px] md:text-[16px] font-medium leading-[170%] tracking-[30%]",
+          "jost uppercase text-[15px] sm:text-[14px] md:text-[16px] font-medium leading-[170%] tracking-[30%]",
           textClassName,
         )}
       >

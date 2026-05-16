@@ -21,17 +21,25 @@ const navItems = [
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(true);
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
   const lastScrollY = useRef(0);
   const pathname = usePathname();
 
   useEffect(() => {
+    const handleResize = () => {
+      const isMobile = window.innerWidth < 780;
+      setIsMobileViewport(isMobile);
+
+      if (!isMobile) {
+        setIsMobileNavVisible(true);
+        lastScrollY.current = window.scrollY;
+      }
+    };
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-      const isMobileViewport = window.innerWidth < 780;
 
       if (!isMobileViewport) {
-        setIsMobileNavVisible(true);
-        lastScrollY.current = currentScrollY;
         return;
       }
 
@@ -41,27 +49,28 @@ function Header() {
         return;
       }
 
-      const delta = currentScrollY - lastScrollY.current;
-      if (Math.abs(delta) < 8) return;
+      const isScrollingDown = currentScrollY > lastScrollY.current + 4;
+      const isScrollingUp = currentScrollY < lastScrollY.current - 4;
 
-      if (delta > 0 && currentScrollY > 64) {
+      if (isScrollingDown && currentScrollY > 64) {
         setIsMobileNavVisible(false);
-      } else {
+      } else if (isScrollingUp) {
         setIsMobileNavVisible(true);
       }
 
       lastScrollY.current = currentScrollY;
     };
 
+    handleResize();
     lastScrollY.current = window.scrollY;
     window.addEventListener("scroll", handleScroll, { passive: true });
-    window.addEventListener("resize", handleScroll);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleScroll);
+      window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [isMobileViewport]);
 
   useEffect(() => {
     if (isOpen) {
@@ -70,10 +79,13 @@ function Header() {
   }, [isOpen]);
 
   return (
-    <header
+    <motion.header
+      animate={{
+        y: isMobileViewport && !isMobileNavVisible ? "-110%" : "0%",
+      }}
+      transition={{ duration: 0.25, ease: "easeOut" }}
       className={cn(
-        "fixed top-0 left-0 right-0 z-9999 w-full bg-transparent transition-transform duration-300 md:translate-y-0",
-        isMobileNavVisible ? "translate-y-0" : "-translate-y-full",
+        "fixed top-0 left-0 right-0 z-9999 w-full bg-transparent",
       )}
     >
       <nav className="flex justify-between max-w-450 px-4 md:px-[3em] py-[2em] lg:py-[1em] items-center  mx-auto">
@@ -125,7 +137,7 @@ function Header() {
         </ul>
         <ContactUsBtn />
       </nav>
-    </header>
+    </motion.header>
   );
 }
 

@@ -397,11 +397,11 @@ const AboutMe = () => {
     },
   ];
   const aboutHighlights = [
-    "Trader + Content Creator",
+    "Trader + Crypto Trader",
     "Growth Strategist",
     "Community Manager",
     "Technical Analyst",
-    "Market Analysis",
+    "Video Content Creator",
     "Trading Mentor",
   ];
 

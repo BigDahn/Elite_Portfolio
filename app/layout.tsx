@@ -9,7 +9,7 @@ import PageTransitionOverlay from "./components/PageTransitionOverlay";
 export const metadata: Metadata = {
   title: "Elite Ayomide",
   description:
-    "A Crypto Trader with 6 years of experience, helping traders and investors navigate the trading space profitably with information and education.",
+    "The Crypto Trader with 6 years of experience, helping traders and investors navigate the trading space profitably with information and education.",
 };
 
 type RootLayoutProps = Readonly<{

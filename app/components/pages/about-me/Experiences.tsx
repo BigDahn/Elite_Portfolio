@@ -20,7 +20,7 @@ const ExperiencesArray: IProfessionalExperience[] = [
     ],
   },
   {
-    date: "2025 - PRESENT",
+    date: "2025 - 2026",
     title: "Blueberry Funded — Brand Partner & Video Creator",
     achievements: [
       "Produced and edited short-form content showcasing trading benefits, driving a 35% follower growth on the brand’s TikTok handle within 3 months.",

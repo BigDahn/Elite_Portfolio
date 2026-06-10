@@ -17,21 +17,21 @@ const records = [
     isFull: true
   },
   {
-    value: 50,
+    value: 70,
     title: "Win Rate",
     image: "/win.jpg",
     useBlur: true,
     showIcons: false,
   },
   {
-    value: 4000,
+    value: 20000,
     useBlur: true,
-    title: "Academy Students",
+    title: "crypto community ",
     image: "/student.jpg",
     showIcons: true,
   },
   {
-    value: 70,
+    value: 15,
     useBlur: true,
     title: "Brands Partnered",
     image: "/star.jpg",
@@ -55,7 +55,7 @@ const TrackRecord = () => {
             <div className="space-y-5 w-full text-white  flex flex-col lg:flex-row gap-3 md:gap-0 lg:items-start lg:items-center items-start lg:gap-[0em] justify-start lg:justify-between">
               <div className="flex items-center gap-x-3">
                 <h3 className="unbounded leading-[113%] text-[#D9D9D9] tracking-[-11%] text-[20px] sm:text-[26px] md:text-[50px] font-extrabold">
-                  538+
+                  938+
                 </h3>
                 <small className="satoshi text-base text-[#fafafa]/50 w-full  md:max-w-[130px]">
                   Crypto Projects Completed

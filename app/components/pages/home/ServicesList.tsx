@@ -1,7 +1,6 @@
 "use client";
-import { useRef, useState, useCallback } from "react";
+import { useState } from "react";
 import ExternalLinkButton from "../../ExternalLinkButton";
-const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&";
 
 
 export interface ServiceItem {

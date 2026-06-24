@@ -3,41 +3,6 @@ import { useRef, useState, useCallback } from "react";
 import ExternalLinkButton from "../../ExternalLinkButton";
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&";
 
-function useScramble(originalText: string) {
-  const [text, setText] = useState(originalText);
-  const frameRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const scramble = useCallback(() => {
-    let iteration = 0;
-    const totalFrames = originalText.length * 3;
-
-    const tick = () => {
-      setText(
-        originalText
-          .split("")
-          .map((char, i) => {
-            if (char === " ") return " ";
-            if (i < Math.floor(iteration / 3)) return originalText[i];
-            return CHARS[Math.floor(Math.random() * CHARS.length)];
-          })
-          .join(""),
-      );
-
-      iteration++;
-      if (iteration <= totalFrames) {
-        frameRef.current = setTimeout(tick, 30);
-      } else {
-        setText(originalText);
-      }
-    };
-
-    if (frameRef.current) clearTimeout(frameRef.current);
-    tick();
-  }, [originalText]);
-
-  return { text, scramble };
-}
-
 
 export interface ServiceItem {
   title: string;
@@ -59,7 +24,6 @@ const ServiceRow = ({
   href,
   ctaLabel = "Book Me Now",
 }: ServiceRowProps) => {
-  const { text, scramble } = useScramble(title);
   const [active, setActive] = useState(false);
 
   return (
@@ -68,7 +32,6 @@ const ServiceRow = ({
         }`}
       onMouseEnter={() => {
         setActive(true);
-        scramble();
       }}
       onMouseLeave={() => setActive(false)}
     >
@@ -78,7 +41,7 @@ const ServiceRow = ({
         </span>
         <div className="flex flex-col gap-3  md:gap-1">
           <span className="text-white/70 jakarta font-extrabold text-[17px] md:text-3xl tracking-[-6%] leading-[113%] transition-all duration-150">
-            {text}
+            {title}
           </span>
           {description && (
             <span className="text-white/70 text-[16px] md:text-[25px] font-normal jost tracking-[-4%] leading-[120%]">

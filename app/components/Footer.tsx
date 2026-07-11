@@ -59,7 +59,7 @@ const Footer = () => {
               </div>
               <div className="space-y-2">
                 <p className="text-white/50">Need support?</p>
-                <p className="text-white">help@emmanuelagida.com</p>
+                <p className="text-white">eliteayomide1@gmail.com</p>
               </div>
             </div>
           </div>

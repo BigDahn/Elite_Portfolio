@@ -13,7 +13,7 @@ type NavbarProps = {
 function MobileNav({ isOpen, setIsOpen }: NavbarProps) {
   return (
     <div
-      className="flex items-center w-[114px] h-[66px] justify-center rounded-md gap-3 outline
+      className="flex z-50 items-center w-[114px] h-[66px] justify-center rounded-md gap-3 outline
     outline-gray-100/20 bg-[#222B59] md:hidden"
     >
       <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>

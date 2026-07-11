@@ -1,10 +1,10 @@
 import { StaticImageData } from "next/image";
-import CountUp from 'react-countup';
+import CountUp from "react-countup";
 import Headings from "../../headings";
 import SectionContainer from "../../SectionContainer";
 import Image from "next/image";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
-import CoinIcon from "@/assets/svgs/Img7.svg"
+import CoinIcon from "@/assets/svgs/Img7.svg";
 import SectionContent from "../../SectionContent";
 
 const records = [
@@ -14,7 +14,7 @@ const records = [
     useBlur: false,
     image: "/Vector 7729.png",
     showIcons: true,
-    isFull: true
+    isFull: true,
   },
   {
     value: 70,
@@ -96,10 +96,17 @@ interface ReportProps {
   image: StaticImageData | string;
   useBlur: boolean;
   showIcons: boolean;
-  isFull?: boolean
+  isFull?: boolean;
 }
 
-function RecordCard({ isFull, showIcons, useBlur, title, value, image }: ReportProps) {
+function RecordCard({
+  isFull,
+  showIcons,
+  useBlur,
+  title,
+  value,
+  image,
+}: ReportProps) {
   const brands = [
     {
       id: 1,
@@ -149,9 +156,14 @@ function RecordCard({ isFull, showIcons, useBlur, title, value, image }: ReportP
       ) : (
         <div className="bg-[#1C1B20] rounded-[30px] h-full z-30" />
       )}
-      <div className="z-[9999999%] absolute top-3 text-white p-3">
+      <div className="z-40 absolute top-3 text-white p-3">
         <div className="flex items-center text-[26px] sm:text-[26px] lg:text-[50px] unbounded gap-x-1">
-          <CountUp start={0} end={value} className="unbounded leading-[130%] z-9999 font-extrabold tracking-[-2%] text-[35px] lg:text-[40px]" />+
+          <CountUp
+            start={0}
+            end={value}
+            className="unbounded leading-[130%] z-9999 font-extrabold tracking-[-2%] text-[35px] lg:text-[40px]"
+          />
+          +
         </div>
         <p className="jost text-white/60 leading-[130%] z-50  tracking-[-2%] text-[25px] lg:text-[25px]">
           {title}

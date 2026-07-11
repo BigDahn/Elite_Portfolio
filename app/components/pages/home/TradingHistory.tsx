@@ -4,7 +4,7 @@ import SectionContainer from "../../SectionContainer";
 import Image from "next/image";
 import SectionContent from "../../SectionContent";
 
-const trades = ["/e1.png", "/e11.png", "/e10.png"];
+const trades = ["/e1.jpg", "/e11.jpg", "/e10.png"];
 
 const TradingHistory = () => {
   return (

@@ -84,9 +84,7 @@ function Header() {
         y: isMobileViewport && !isMobileNavVisible ? "-110%" : "0%",
       }}
       transition={{ duration: 0.25, ease: "easeOut" }}
-      className={cn(
-        "fixed top-0 left-0 right-0 z-9999 w-full bg-transparent",
-      )}
+      className={cn("fixed top-0 left-0 right-0 z-9999 w-full bg-transparent")}
     >
       <nav className="flex justify-between max-w-450 px-4 md:px-[3em] py-[2em] lg:py-[1em] items-center  mx-auto">
         <Link href="/">
@@ -101,16 +99,16 @@ function Header() {
         </Link>
         <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
-        <ul className=" hidden md:flex md:items-center lg:gap-[2em] uppercase border-2 border-black/10 backdrop-blur-3xl   text-[9px] lg:text-[11.76px] drop-shadow-2xl jost bg-black/50 px-3 lg:px-6 py-[1em] lg:py-[1.4em] rounded-full text-white">
+        <ul className="z-50 hidden md:flex md:items-center lg:gap-[2em] uppercase border-2 border-black/10 backdrop-blur-3xl   text-[9px] lg:text-[11.76px] drop-shadow-2xl jost bg-black/50 px-3 lg:px-6 py-[1em] lg:py-[1.4em] rounded-full text-white">
           {navItems.map((item) => {
             const activePaths = [item.href, ...(item.aliases ?? [])];
             const isActive = item.exact
               ? activePaths.includes(pathname)
               : activePaths.some(
-                (activePath) =>
-                  pathname === activePath ||
-                  pathname.startsWith(`${activePath}/`),
-              );
+                  (activePath) =>
+                    pathname === activePath ||
+                    pathname.startsWith(`${activePath}/`),
+                );
 
             return (
               <motion.li key={item.label} layout className="relative">

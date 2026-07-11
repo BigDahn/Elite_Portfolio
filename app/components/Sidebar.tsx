@@ -15,16 +15,13 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsOpen(false)}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
+            className="h-screen fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
           />
-
-          {/* Sidebar Content */}
           <motion.div
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
@@ -32,7 +29,6 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
             className="fixed top-0 right-0 w-full h-screen bg-blue-950 z-50 flex flex-col p-6 gap-4 md:hidden"
           >
-            {/* Logo + Close button */}
             <div className="flex items-center justify-between">
               <Image
                 alt="logo"
@@ -45,7 +41,6 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                 <X color="white" size={24} />
               </button>
             </div>
-            {/* Nav links */}
             <nav className="flex flex-col mx-auto justify-center w-full items-center gap-[1.4em] unbounded text-[18px] font-semibold capitalize text-white mt-8">
               {[
                 { href: "/", label: "Home" },

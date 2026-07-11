@@ -1,4 +1,6 @@
-"use client"; import FooterArc from "./components/FooterArc"; import Hero from "./components/Hero";
+import type { Metadata } from "next";
+import FooterArc from "./components/FooterArc";
+import Hero from "./components/Hero";
 import SectionContainer from "./components/SectionContainer";
 import FAQ from "./components/pages/home/Faq";
 import HomePageHero from "./components/pages/home/Hero";
@@ -7,6 +9,12 @@ import Testimonials from "./components/pages/home/Testimonials";
 import TrackRecord from "./components/pages/home/TrackRecord";
 import TradingHistory from "./components/pages/home/TradingHistory";
 import AboutMe from "./components/pages/home/aboutMe";
+
+export const metadata: Metadata = {
+  title: "Elite Ayomide",
+  description:
+    "Elite Ayomide is a crypto trader and mentor helping traders, investors, and brands grow with strategy, education, and risk-aware execution.",
+};
 
 export default function Page() {
   return (

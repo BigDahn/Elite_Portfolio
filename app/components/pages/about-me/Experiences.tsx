@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 
 const ExperiencesArray: IProfessionalExperience[] = [
   {
-    date: "2026 - PRESENT",
+    date: "2026",
     title: "Mubite Prop Firm — Brand Partner & Video Creator",
     achievements: [
       "Produced and edited short-form content showcasing trading benefits of the Prop Firm, driving a 30% follower growth on the brand’s African exposure within 3 months.",

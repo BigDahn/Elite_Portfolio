@@ -1,3 +1,5 @@
+"use client";
+
 import Headings from "../../headings";
 import Link from "next/link"
 import SectionContainer from "../../SectionContainer";

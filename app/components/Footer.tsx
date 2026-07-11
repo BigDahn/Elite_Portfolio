@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="space-y-5">
             <p className="text-xl select-none leading-[99%] tracking-[-8%] text-white/60 jost">
-              A crypto trader that makes you money.
+              The crypto trader that makes you money.
             </p>
             <Image
               src="/Ayomide Logo 1.png"
@@ -66,10 +66,35 @@ const Footer = () => {
           <div className="jost text-white/50 leading-[90%] tracking-[-8%] text-[20px]">
             <h3 className=" font-medium mb-4 ">Socials</h3>
             <ul className="space-y-4">
-              <li><Link href="https://www.youtube.com/@EliteAyomide " target="_blank">Youtube</Link></li>
-              <li><Link href="https://x.com/eliteayomide" target="_blank">Twitter</Link></li>
-              <li><Link href="https://www.instagram.com/eliteayomide" target="_blank">Instagram</Link></li>
-              <li><Link href="https://www.tiktok.com/@eliteayomide?_r=1&_t=ZS-95UTULUsSTC " target="_blank">TikTok</Link></li>
+              <li>
+                <Link
+                  href="https://www.youtube.com/@EliteAyomide "
+                  target="_blank"
+                >
+                  Youtube
+                </Link>
+              </li>
+              <li>
+                <Link href="https://x.com/eliteayomide" target="_blank">
+                  Twitter
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.instagram.com/eliteayomide"
+                  target="_blank"
+                >
+                  Instagram
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="https://www.tiktok.com/@eliteayomide?_r=1&_t=ZS-95UTULUsSTC "
+                  target="_blank"
+                >
+                  TikTok
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

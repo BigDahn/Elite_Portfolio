@@ -58,7 +58,7 @@ const TrackRecord = () => {
                   938+
                 </h3>
                 <small className="satoshi text-base text-[#fafafa]/50 w-full  md:max-w-[130px]">
-                  Crypto Projects Completed
+                  Projects Completed
                 </small>
               </div>
               <div className="flex items-center gap-x-3">

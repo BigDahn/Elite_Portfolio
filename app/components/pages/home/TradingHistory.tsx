@@ -56,14 +56,6 @@ const TradingHistory = () => {
             />
           ))}
         </div>
-        <div className="text-center w-full justify-center flex items-center">
-          <ExternalLinkButton
-            text="See More"
-            href="/"
-            className="md:w-54 w-fit px-5 py-4 gap-3.75!"
-            textClassName="text-base!"
-          />
-        </div>
       </SectionContent>
     </SectionContainer>
   );

@@ -3,6 +3,14 @@ import { Check } from "lucide-react";
 
 const ExperiencesArray: IProfessionalExperience[] = [
   {
+    date: "2025 - PRESENT",
+    title: "Pumpkin DEX - Brand Partner",
+    achievements: [
+      "Livestream 3 times a week on the platform, teaching and analysing the technical analysis of the crypto and the commodity Markets.",
+      "Collaborated with the internal team to drive narrative driven promotional contents to drive sign-ups and Volume on the DEX.",
+    ],
+  },
+  {
     date: "2026",
     title: "Mubite Prop Firm — Brand Partner & Video Creator",
     achievements: [
@@ -11,14 +19,7 @@ const ExperiencesArray: IProfessionalExperience[] = [
       "Collaborated with internal marketing teams to develop narrative-driven promotional videos that strengthened lead acquisition.",
     ],
   },
-  {
-    date: "2025 - PRESENT",
-    title: "Pumpkin DEX - Brand Partner",
-    achievements: [
-      "Livestream 3 times a week on the platform, teaching and analysing the technical analysis of the crypto and the commodity Markets.",
-      "Collaborated with the internal team to drive narrative driven promotional contents to drive sign-ups and Volume on the DEX.",
-    ],
-  },
+
   {
     date: "2025 - 2026",
     title: "Blueberry Funded — Brand Partner & Video Creator",

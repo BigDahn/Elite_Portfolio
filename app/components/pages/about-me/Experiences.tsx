@@ -98,7 +98,7 @@ function ProfessionalExperience({
           style={{ backgroundColor: "gold" }}
         />
       </div>
-      <div className="border-l border-l-white/5 flex flex-col space-y-3 p-10 px-15">
+      <div className="border-l border-l-white/5 flex flex-col space-y-3 p-10 sm:px-6 lg:px-15">
         <h3 className="unbounded font-medium text-[15px] md:text-2xl lg:text-2xl leading-[170%] tracking-[-6%] text-white">
           {title}
         </h3>

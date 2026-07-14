@@ -1,3 +1,5 @@
+"use client";
+
 import { StaticImageData } from "next/image";
 import CountUp from "react-countup";
 import Headings from "../../headings";
@@ -13,7 +15,7 @@ const records = [
     title: "Total Trades",
     useBlur: false,
     image: "/Vector 7729.png",
-    showIcons: true,
+    showIcons: false,
     isFull: true,
   },
   {
@@ -28,7 +30,7 @@ const records = [
     useBlur: true,
     title: "crypto community ",
     image: "/student.jpg",
-    showIcons: true,
+    showIcons: false,
   },
   {
     value: 15,
@@ -111,33 +113,40 @@ function RecordCard({
     {
       id: 1,
       name: "",
-      designation: "Binance",
-      image: "/binance.png",
+      designation: "Bybit",
+      image: "/bybit.png",
     },
     {
       id: 2,
       name: "",
-      designation: "Bitcoin",
-      image: "/bitcoin.png",
+      designation: "Binolla",
+      image: "/binolla.png",
     },
     {
       id: 3,
       name: "",
-      designation: "Ethereum",
-      image: "/ethereum.png",
+      designation: "MEXC",
+      image: "/mexc.png",
     },
     {
       id: 4,
       name: "",
-      designation: "Nav",
-      image: "/nav-coin-nav.png",
+      designation: "Tradelocker",
+      image: "/trade_locker.jpg",
     },
     {
       id: 5,
-      name: "+10",
-      designation: "",
-      image: "/Frame 2121452974.png",
+      name: "Muesli Swap",
+      designation: "Muesli Swap",
+      image: "/muesli_swap.jpg",
     },
+    {
+      id: 6,
+      name: "Binomo",
+      designation: "Binomo",
+      image: "/binomo.png",
+    },
+    ,
   ];
 
   return (

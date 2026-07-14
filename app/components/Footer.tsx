@@ -95,6 +95,14 @@ const Footer = () => {
                   TikTok
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="https://t.me/eliteayomidecryptoupdates"
+                  target="_blank"
+                >
+                  Telegram
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

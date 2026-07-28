@@ -1,10 +1,26 @@
-import ExternalLinkButton from "../../ExternalLinkButton";
+"use client";
+
 import Headings from "../../headings";
 import SectionContainer from "../../SectionContainer";
 import Image from "next/image";
 import SectionContent from "../../SectionContent";
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
-const trades = ["/e1.jpg", "/e11.jpg", "/e10.png"];
+import ProfitCalendar from "@/assets/images/100_record.jpg";
+import BlueberryPayout from "@/assets/images/Blueberry_payout.jpg";
+import BlueberryCert from "@/assets/images/blueberry_cert.png";
+import MubiteWithdrawal from "@/assets/images/mubite_pay.jpg";
+import WithdrawalOne from "@/assets/images/e1.jpg";
+import WithdrawalTwo from "@/assets/images/e8.jpg";
+
+const trades = [
+  ProfitCalendar,
+  BlueberryPayout,
+  BlueberryCert,
+  MubiteWithdrawal,
+  WithdrawalOne,
+  WithdrawalTwo,
+];
 
 const TradingHistory = () => {
   return (
@@ -36,26 +52,27 @@ const TradingHistory = () => {
             </div>
           </div>
         </div>
-        <div className="grid md:grid-cols-3 gap-x-5">
-          {trades.map((trade) => (
-            <Image
-              alt={trade}
-              src={trade}
-              width={521}
-              height={420}
-              key={trade}
-            />
-          ))}
-          {trades.map((trade) => (
-            <Image
-              alt={trade}
-              src={trade}
-              width={521}
-              height={420}
-              key={trade}
-            />
-          ))}
-        </div>
+        <ResponsiveMasonry
+          columnsCountBreakPoints={{
+            350: 1,
+            750: 2,
+            1024: 3,
+          }}
+        >
+          <Masonry gutter="20px">
+            {trades.map((image, index) => (
+              <div key={index} className="overflow-hidden rounded-xl">
+                <Image
+                  src={image.src}
+                  alt={`Trade ${index + 1}`}
+                  className="w-full h-auto transition-transform duration-300 hover:scale-105"
+                  width={image.width}
+                  height={image.height}
+                />
+              </div>
+            ))}
+          </Masonry>
+        </ResponsiveMasonry>
       </SectionContent>
     </SectionContainer>
   );

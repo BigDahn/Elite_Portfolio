@@ -46,7 +46,6 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                 { href: "/", label: "Home" },
                 { href: "/about-me", label: "About Me" },
                 { href: "/services", label: "Services" },
-                { href: "/blogs", label: "Blogs" },
                 { href: "/contact", label: "Contact" },
               ].map((link, i) => (
                 <motion.div

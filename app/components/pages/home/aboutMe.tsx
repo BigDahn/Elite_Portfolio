@@ -1,17 +1,20 @@
 "use client";
 
 import Headings from "../../headings";
-import Link from "next/link"
+import Link from "next/link";
 import SectionContainer from "../../SectionContainer";
 import { Send } from "lucide-react";
-import Check from "@/assets/svgs/check.svg"
+import Check from "@/assets/svgs/check.svg";
 import TypewriterText from "../../Typewriter";
 import dynamic from "next/dynamic";
 import SectionContent from "../../SectionContent";
 
-const World = dynamic(() => import("@/components/ui/globe").then((m) => m.World), {
-  ssr: false,
-});
+const World = dynamic(
+  () => import("@/components/ui/globe").then((m) => m.World),
+  {
+    ssr: false,
+  },
+);
 
 const AboutMe = () => {
   const globeConfig = {
@@ -414,9 +417,11 @@ const AboutMe = () => {
           <Headings text="About Me" textClassName="text-[#D9D9D9]" />
           <div className="border-b-2 border-gray-200/10 h-15  w-[96%] m-auto " />
         </div>
-        <section className="flex flex-col justify-center w-full m-auto py-4  ">
-          <div className=" flex flex-col-reverse lg:grid gap-3 lg:grid-cols-[450px_1fr] xl:grid-cols-[613px_1fr] items-center  w-full justify-center h-[900px] md:h-[720px] ">
-            <World data={sampleArcs} globeConfig={globeConfig} />
+        <section className="flex flex-col justify-center w-full m-auto py-4">
+          <div className=" flex flex-col-reverse p-5 py-16 lg:grid gap-3 lg:grid-cols-[450px_1fr] xl:grid-cols-[613px_1fr] items-center  w-full justify-end h-fit">
+            <div className="w-full h-full hidden lg:block lg:p-10 xl:p-0">
+              <World data={sampleArcs} globeConfig={globeConfig} />
+            </div>
             <div className="order-first md:order-last">
               <h3 className="unbounded uppercase text-[30px] md:text-[40px] xl:text-[45px] font-bold leading-[113%] tracking-[-11%] text-white">
                 Who is <span className="text-[#F8A308]">Elite ayomide?</span>
@@ -447,7 +452,10 @@ const AboutMe = () => {
                 ))}
               </div>
 
-              <Link href="/about-me" className="jost bg-white rounded-full py-[1.3em] flex items-center justify-center px-[2.8em] font-semibold flex items-center gap-3 mt-4 w-full md:max-w-[250px]">
+              <Link
+                href="/about-me"
+                className="jost bg-white rounded-full py-[1.3em] flex items-center justify-center px-[2.8em] font-semibold flex items-center gap-3 mt-4 w-full md:max-w-[250px]"
+              >
                 <Send
                   fill="black"
                   strokeWidth={1}

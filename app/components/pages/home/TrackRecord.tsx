@@ -53,7 +53,7 @@ const TrackRecord = () => {
             textClassName="text-white"
             text="Track Record At A Glance"
           />
-          <div className="flex flex-col space-y-5 md:flex lg:flex-row py-3 gap-y-4 gap-x-8 items-start border-b border-slate-50/10 md:items-center w-full md:justify-between">
+          <div className="flex flex-col space-y-5 p-5 py-10 md:flex lg:flex-row py-3 gap-y-4 gap-x-8 items-start border-b border-slate-50/10 md:items-center w-full md:justify-between">
             <div className="space-y-5 w-full text-white  flex flex-col lg:flex-row gap-3 md:gap-0 lg:items-start lg:items-center items-start lg:gap-[0em] justify-start lg:justify-between">
               <div className="flex items-center gap-x-3">
                 <h3 className="unbounded leading-[113%] text-[#D9D9D9] tracking-[-11%] text-[20px] sm:text-[26px] md:text-[50px] font-extrabold">

@@ -14,7 +14,6 @@ const navItems = [
   { label: "Home", href: "/", exact: true },
   { label: "About Me", href: "/about-me" },
   { label: "Services", href: "/services" },
-  { label: "Blogs", href: "/blogs" },
   { label: "Book Consultation", href: "/contact", aliases: ["/contact-us"] },
 ];
 

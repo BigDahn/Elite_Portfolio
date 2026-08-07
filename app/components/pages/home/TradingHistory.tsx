@@ -34,7 +34,7 @@ const TradingHistory = () => {
             />
             <hr className="md:border-t  md:border-slate-50/10 " />
           </div>
-          <div className="text-white w-full grid md:grid-cols-2 gap-3 md:gap-x-12 items-center justify-between">
+          <div className="text-white p-5 py-10 w-full grid md:grid-cols-2 gap-3 md:gap-x-12 items-center justify-between">
             <div>
               <h3 className="unbounded uppercase leading-[110%] text-[#D9D9D9] tracking-[-11%] text-[30px] md:text-[50px] font-extrabold">
                 Real Numbers.

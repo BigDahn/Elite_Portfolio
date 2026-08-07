@@ -21,7 +21,7 @@ const Services = () => {
           />
         </div>
         <div className="w-full ">
-          <div className="text-white w-full relative grid space-y-5 lg:space-y-0 lg:grid-cols-2 gap-x-12 gap-2 items-center z-20 justify-between ">
+          <div className="text-white w-full relative grid space-y-5 lg:space-y-0 lg:grid-cols-2 gap-x-12 gap-2 items-center z-20 justify-between p-5 py-10">
             <div className="relative z-30">
               <h3 className="unbounded uppercase leading-[113%] text-[#D9D9D9] tracking-[-11%] text-[30px] lg:text-[45px] font-extrabold">
                 Strategic Services.

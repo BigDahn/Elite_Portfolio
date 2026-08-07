@@ -1,10 +1,10 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { Play, Send } from "lucide-react";
 import { motion } from "motion/react";
 import AnimatedLine from "../../AnimatedBrush";
+import { openVimeoMiniPlayer } from "../../VimeoMiniPlayer";
 
 export default function HomePageHero() {
   const router = useRouter();
@@ -38,17 +38,18 @@ export default function HomePageHero() {
           onClick={() => router.push("/about-me#professional-experiences")}
           className=" py-[0.5em] md:py-[1em] order-last md:order-first bg-white text-[15px] w-[356px] md:w-65.5 flex items-center text-center rounded-full px-[2em] font-semibold gap-2 h-16.25"
         >
-          <Link
-            href="/about-me#professional-experience"
-            className="flex items-center justify-center w-full gap-x-3.75"
-          >
+          <span className="flex items-center justify-center w-full gap-x-3.75">
             <Send fill="black" className="rotate-290 size-4" />{" "}
             <h3 className="capitalize jost leading-[130%] tracking-[-2%] text-[15px]">
               view my portfolio
             </h3>
-          </Link>
+          </span>
         </button>
-        <div className="flex items-center relative gap-4 text-[14px] text-white font-semibold">
+        <button
+          type="button"
+          onClick={openVimeoMiniPlayer}
+          className="flex items-center relative gap-4 text-[14px] text-white font-semibold"
+        >
           <div className="flex items-center relative">
             <motion.div
               className="absolute inset-0 rounded-full bg-slate-50/30"
@@ -62,21 +63,12 @@ export default function HomePageHero() {
                 ease: "easeIn",
               }}
             />
-            <button className="w-[49.9px] h-[49.9px] justify-center bg-yellow-500 z-20 rounded-full flex items-center gap-2">
+            <span className="w-[49.9px] h-[49.9px] justify-center bg-yellow-500 z-20 rounded-full flex items-center gap-2">
               <Play size={30} fill="white" />
-            </button>
+            </span>
           </div>
           <h2>More Results</h2>
-        </div>
-      </div>
-      <div className="w-screen -bottom-24 z-50 bg-black">
-        <video
-          src="/47f6d05d-a120-471f-b8e4-55016c8548ea.mp4"
-          className="w-full"
-          controls={false}
-          autoPlay
-          loop
-        />
+        </button>
       </div>
     </div>
   );

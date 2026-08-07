@@ -5,6 +5,7 @@ import { jakarta, jost, satoshi, unbounded } from "./fonts";
 import Footer from "./components/Footer";
 import { cn } from "@/lib/utils";
 import PageTransitionOverlay from "./components/PageTransitionOverlay";
+import VimeoMiniPlayer from "./components/VimeoMiniPlayer";
 
 export const metadata: Metadata = {
   title: "Elite Ayomide",
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <Header />
         {children}
         <Footer />
+        <VimeoMiniPlayer />
       </body>
     </html>
   );

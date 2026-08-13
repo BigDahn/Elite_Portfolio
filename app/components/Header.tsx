@@ -74,17 +74,17 @@ function Header() {
   useEffect(() => {
     if (isOpen) {
       setIsMobileNavVisible(true);
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
     }
   }, [isOpen]);
 
   return (
     <motion.header
-      animate={{
-        y: isMobileViewport && !isMobileNavVisible ? "-110%" : "0%",
-      }}
       transition={{ duration: 0.25, ease: "easeOut" }}
       className={cn(
-        "fixed top-0 backdrop-blur-3xl left-0 right-0 z-999999 w-full bg-transparent",
+        "fixed top-0 backdrop-blur-3xl left-0 right-0 z-9999999999 w-full bg-transparent",
       )}
     >
       <nav className="flex justify-between max-w-450 px-4 md:px-[3em] py-[2em] lg:py-[1em] items-center  mx-auto">

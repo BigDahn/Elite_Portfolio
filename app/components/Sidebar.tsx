@@ -27,7 +27,7 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed top-0 right-0 w-full h-screen bg-blue-950 z-50 flex flex-col p-6 gap-4 md:hidden"
+            className="fixed top-0 right-0 w-full h-screen bg-blue-950 z-999 flex flex-col p-6 gap-4 md:hidden"
           >
             <div className="flex items-center justify-between">
               <Image
@@ -41,7 +41,7 @@ function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                 <X color="white" size={24} />
               </button>
             </div>
-            <nav className="flex flex-col mx-auto justify-center w-full items-center gap-[1.4em] unbounded text-[18px] font-semibold capitalize text-white mt-8">
+            <nav className="flex flex-col mx-auto justify-center h-screen w-full items-center gap-[1.4em] unbounded text-[18px] font-semibold capitalize text-white mt-8">
               {[
                 { href: "/", label: "Home" },
                 { href: "/about-me", label: "About Me" },

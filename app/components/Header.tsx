@@ -79,7 +79,9 @@ function Header() {
       document.body.style.overflow = "auto";
     }
 
-    return () => (document.body.style.overflow = "");
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [isOpen]);
 
   return (
